@@ -47,7 +47,6 @@ The TSV exports flatten lists into `; `-separated strings for spreadsheet users.
 convenience, not the source of truth; `data.json` is the faithful representation, and it
 carries the licence and build provenance in its top-level `licence` key.
 
-
 ## Contact and corrections
 
 Anything wrong, out of date, or missing? [Tell us](CONTRIBUTING.md) by email, through an
@@ -69,12 +68,3 @@ To cite it:
 
 > Marine Microbial Observatories. https://microbial-observatories.org (accessed *date*).
 > Licensed under CC BY 4.0.
-
-Two things in here are not ours to license. The banner photograph is a NASA Earth
-Observatory image using Landsat 8 data from the U.S. Geological Survey — public domain,
-credited at the top of every page. And the publications and archived datasets this
-catalogue points at carry their own licences from their publishers and archives; CC BY 4.0
-covers our description of them, not their contents.
-
-<!-- TODO: if the catalogue gets a Zenodo DOI, put it in the citation above so that people
-     can cite a versioned, archived snapshot rather than a moving target. -->

@@ -8,6 +8,14 @@ on:
       - 'site/**'
       - 'schema/**'
       - 'scripts/build.py'
+      - 'requirements.txt'
+      # These are rendered into the site's About and Contribute tabs, so a
+      # change to either has to redeploy. Easy to forget: they do not look
+      # like website files.
+      - 'ABOUT.md'
+      - 'CONTRIBUTING.md'
+      # Copied into dist/ next to the downloads.
+      - 'LICENSE'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 

@@ -7,6 +7,12 @@ on:
       - 'schema/**'
       - 'scripts/**'
       - 'requirements.txt'
+      # The build step below renders these into the site, so a pull request
+      # that breaks one should fail here rather than at deploy time.
+      - 'site/**'
+      - 'ABOUT.md'
+      - 'CONTRIBUTING.md'
+      - 'LICENSE'
       - '.github/workflows/validate.yml'
   push:
     branches: [main]
