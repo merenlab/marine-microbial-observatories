@@ -1,0 +1,45 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: helgoland
+name: Helgoland Roads
+acronym: HELGOLAND
+program-website: |-
+  https://www.awi.de/en/science/biosciences/shelf-sea-system-ecology/working-groups/translate-to-english-ag-langzeitbeobachtungen-lto.html
+affiliated-institutions: Alfred Wegener Institute Helmholtz Centre for Polar and Marine Research
+affiliated-institution-websites:
+  - https://www.awi.de/en/
+status: active
+sampling-start-year: 1962
+sampling-end-year: present
+dna-collection-start-year: 2016
+dna-collection-note: 2016 Watercolumn
+countries:
+  - Germany
+ocean-basins:
+  - North Sea
+sub-region: North Sea
+latitude: 54.1842
+longitude: 7.9
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface
+sampling-cadence: weekly-or-more
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+  - other-omics
+data-accessions:
+  - PRJEB38665
+  - PXD055396
+  - PRJEB2888
+contacts:
+  - name: Inga Kirstein
+    email: inga.kirstein@awi.de
+    role: Time-series Manager
+publications:
+  - 10.1594/PANGAEA.986500
+  - 10.1594/PANGAEA.960375
+  - 10.1594/PANGAEA.873032
+  - 10.1594/PANGAEA.960407
+notes: |-
+  week-daily physical, chemical, biological data. Omics data is only produced in the frame of associated projects. Since 2022 we are taking samples for a microbial biarchive.

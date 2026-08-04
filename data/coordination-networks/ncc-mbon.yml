@@ -1,0 +1,17 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: ncc-mbon
+name: Northern California Current MBON
+acronym: NCC MBON / Pacific Northwest MBON
+network-website: https://marinebon.org/network/northern-california-current-mbon/
+affiliated-institutions: |-
+  Oregon State University (lead), NOAA Northwest Fisheries Science Center, Northwest Association of Networked Ocean Observing Systems (NANOOS), Olympic Coast National Marine Sanctuary, Northwest Indian Fisheries Commission, NASA
+umbrella-organisation: MBON
+status: active
+established-year: 2014
+geographic-scope: Northern California Current - Oregon and Washington shelf
+mission-statement: |-
+  Extends the US MBON framework to the Pacific Northwest by combining in situ observations with satellite remote sensing in regionally tuned dynamic seascapes, testing how shelf width and upwelling regime drive plankton abundance, diversity and size structure, and feeding indicators into NOAA's Integrated Ecosystem Assessment.
+contacts:
+  - name: Maria Kavanaugh (Oregon State University)
+    role: Principal Investigator

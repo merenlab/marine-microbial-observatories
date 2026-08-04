@@ -1,0 +1,38 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: bbmo
+name: Blanes Bay Microbial Observatory
+acronym: BBMO
+program-website: http://bbmo.icm.csic.es/
+affiliated-institutions: Institut de Ciències del Mar (ICM-CSIC)
+affiliated-institution-websites:
+  - https://icm.csic.es/ca
+status: active
+sampling-start-year: 2001
+sampling-end-year: present
+countries:
+  - Spain
+ocean-basins:
+  - Mediterranean Sea
+sub-region: NW Mediterranean Sea (Coastal)
+latitude: 41.6694
+longitude: 2.8003
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+  - other-omics
+data-accessions:
+  - PRJEB48035
+  - PRJEB38773
+contacts:
+  - name: Pep Gasol
+    email: pepgasol@icm.csic.es
+    role: PI
+publications:
+  - 10.1111/1758-2229.13299
+  - 10.1038/s41396-021-01053-2
+  - 10.1101/2025.08.08.668683

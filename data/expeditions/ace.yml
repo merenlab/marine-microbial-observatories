@@ -1,0 +1,23 @@
+# Global or large-scale expedition program.
+# Schema: ../../schema/expeditions.schema.json
+id: ace
+name: Antarctic Circumnavigation Expedition
+acronym: ACE
+program-website: https://www.datascience.ch/projects/ace-data
+affiliated-institutions: Swiss Polar Institute (SPI), Brest UNiversity
+affiliated-institution-websites:
+  - https://swisspolar.ch
+data-accessions:
+  - PRJEB83083
+contacts:
+  - name: Loïs Maignien
+    email: Lois.Maignien@univ-brest.fr
+    role: PI ACE metagenomics
+publications:
+  - 10.1038/s41467-026-69584-w
+  - 10.5194/esd-12-1295-2021
+sample-metadata-source: Download from MGnify (PRJEB83083)
+verification:
+  checked-by:
+    - Loïs Maignien
+  checked-on: '2026-07-07'

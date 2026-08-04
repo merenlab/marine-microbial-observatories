@@ -1,0 +1,18 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: caledna
+name: The California Environmental DNA Program
+acronym: CALeDNA
+network-website: https://ucedna.com
+affiliated-institutions: |-
+  University of California Conservation Genomics Consortium, supported by the UCSC Genomics Institute, the University of California Office of the UC President through the Catalyst Grant Program, Metabolic Studio, the Howard Hughes Medical Institute, and the Global Genome Biodiversity Network.
+umbrella-organisation: University of California Conservation Genomics Consortium
+status: active
+geographic-scope: California, USA
+mission-statement: |-
+  Helps anyone collect, store, process, analyse and share eDNA samples from soil, sediment or water, using metabarcoding, qPCR, dPCR and metagenomics, and openly shares results defining California's biodiversity baseline.
+contacts:
+  - name: Rachel Meyer
+    email: rameyer@ucsc.edu
+    role: CALeDNA Program Director
+notes: unsure if microbes are included

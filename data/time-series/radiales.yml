@@ -1,0 +1,42 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: radiales
+name: RADIALES
+acronym: RADIALES
+program-website: https://www.seriestemporales-ieo.net/
+affiliated-institutions: INSTITUTO ESPAÑOL DE OCEANOGRAFÍA
+affiliated-institution-websites:
+  - https://www.ieo.es/en
+status: active
+sampling-start-year: 1990
+sampling-end-year: present
+dna-collection-start-year: 2012
+countries:
+  - Spain
+ocean-basins:
+  - Northeast Atlantic Ocean
+sub-region: Northern coast of Spain
+latitude: 43.422
+longitude: -8.437
+multiple-sampling-sites: true
+sampling-sites-note: 'section along north-western Spanish coast: A Coruña'
+sampling-depth: surface-and-deep
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+  - metatranscriptomics
+data-accessions:
+  - PRJEB6399
+contacts:
+  - name: Antonio Bode
+    email: antonio.bode@ieo.csic.es
+    role: RADIALES Coordinator of plankton
+publications:
+  - 10.3389/fmars.2022.901201
+  - 10.1111/1462-2920.14954
+  - 10.1111/1462-2920.12984
+  - 10.1111/1462-2920.12801
+verification:
+  checked-by:
+    - Antonio Bode
+  checked-on: '2026-06-12'

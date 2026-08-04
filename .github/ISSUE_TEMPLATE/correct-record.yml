@@ -1,0 +1,62 @@
+name: Correct an existing record
+description: Something in the catalogue is wrong, out of date, or missing.
+title: "Correction: "
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Corrections are as valuable as new records. If you would rather edit the file
+        yourself, every record on the website has an **Edit this record** link that opens
+        the YAML in GitHub's web editor — no clone or terminal needed.
+
+  - type: input
+    id: record
+    attributes:
+      label: Which record?
+      description: >
+        The program name, or the record id from the website (for example
+        `time-series/fram`).
+      placeholder: time-series/fram
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of problem is it?
+      options:
+        - A value is wrong
+        - A value is out of date
+        - Something is missing
+        - The contact person has changed or left
+        - This program is discontinued
+        - This record duplicates another record
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What should change?
+      description: >
+        Name the field if you can, and give the correct value. "The sampling cadence is
+        monthly, not quarterly" is plenty.
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: How do you know?
+      description: >
+        A publication, a program page, or "I run this program" — all equally good.
+
+  - type: input
+    id: your-name
+    attributes:
+      label: Your name
+      description: Recorded as the person who verified the change, with today's date.
+    validations:
+      required: true

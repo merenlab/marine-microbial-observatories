@@ -1,0 +1,20 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: ambon
+name: Arctic MBON
+acronym: AMBON
+network-website: https://marinebon.org/bons/arctic-mbon/
+additional-websites:
+  - https://ambon-us.org/
+affiliated-institutions: |-
+  National Oceanographic and Atmospheric Administration (NOAA), the Bureau of Ocean and Energy Management (BOEM), Shell Exploration and Production Company, and the National Science Foundation (NSF), Alaska Ocean Observing System (AOOS)
+umbrella-organisation: MBON
+status: active
+geographic-scope: Arctic Ocean, Chukchi Sea
+mission-statement: |-
+  AMBON builds sustained, multi-scale biodiversity observing in the Arctic's Chukchi Sea, adding new variables like microbes, invertebrates, and marine mammals onto existing long-term monitoring infrastructure. It publishes standardized data and partners with management agencies to inform Arctic ecosystem assessments, serving as a regional piece of a national and international marine biodiversity observing network.
+contacts:
+  - name: Katrin Iken
+    email: kbiken@alaska.edu
+    role: Lead investigator
+notes: includes microbes is eDNA

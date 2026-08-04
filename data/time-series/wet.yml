@@ -1,0 +1,36 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: wet
+name: Whycocomagh Euxinia Time Series
+acronym: WET
+affiliated-institutions: St. Francis Xavier University, Cape Breton University
+affiliated-institution-websites:
+  - https://www.stfxmicroeco.ca/
+status: active
+sampling-start-year: 2024
+sampling-end-year: present
+dna-collection-start-year: 2024
+countries:
+  - Canada
+ocean-basins:
+  - Northwest Atlantic Ocean
+sub-region: Bras d'Or Lakes
+latitude: 45.946123
+longitude: -61.124628
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+contacts:
+  - name: Jesse McNichol
+    email: jmcnicho@stfx.ca
+    role: Lead
+notes: |-
+  Sampled approximately monthly during ice-free season, with 5-8 samples taken from surface to bottom (~48 m) to monitor suboxic basin that has been euxinic prior to overturning event in winter 2025.
+verification:
+  checked-by:
+    - Jesse McNichol
+  checked-on: '2026-06-30'

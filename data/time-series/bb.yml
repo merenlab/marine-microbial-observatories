@@ -1,0 +1,50 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: bb
+name: Bedford Basin Time-Series
+acronym: BB
+program-website: https://www.dal.ca/diff/cerc/research/bbts.html
+additional-websites:
+  - https://www.bio.gc.ca/science/monitoring-monitorage/bbmp-pobb/bbmp-pobb-en.php
+affiliated-institutions: Dalhousie University; Department of Fisheries and Oceans
+affiliated-institution-websites:
+  - https://www.dfo-mpo.gc.ca/contact/regions/maritimes-eng.html
+status: active
+sampling-start-year: 1992
+sampling-end-year: present
+dna-collection-start-year: 2014
+countries:
+  - Canada
+ocean-basins:
+  - Northwest Atlantic Ocean
+sub-region: Nova Scotia
+latitude: 44.69
+longitude: -63.63
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface-and-deep
+sampling-cadence: weekly-or-more
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+data-accessions:
+  - PRJNA785606
+  - PRJNA785859
+  - PRJNA785872
+  - PRJNA725221
+contacts:
+  - name: Julie LaRoche
+    email: Julie.Laroche@Dal.Ca
+    role: JLR-PI
+  - name: Lindsay Beazley
+    email: Lindsay.Beazley@dfo-mpo.gc.ca
+    role: LB-Aquatic Science Biologist
+publications:
+  - 10.1038/s43705-022-00119-2
+  - 10.1038/s41598-022-19165-w
+notes: |-
+  Note: includes other data types (physical, chemical etc) but Julie is the main contact for microbial work. Collaborative with Coast Guard / Department of Fisheries and Oceans Canada; depths = 1, 5, 10, 60 m (more recently added 30 m); DNA was not size fractionated in 2014-2017 (0.2 um filters); then size fractionated in 2018-2021 (i.e. 3 and 0.2 um filters) and then non-size fractionated 2022 onwards; monthly transects for surface water samples at 5 stations since 2023; monthly samples since about 2016 for DNA/RNA extractions that are collected in a time fashion of 20 minutes from collection to LN2 freezing
+verification:
+  checked-by:
+    - Julie LaRoche
+  checked-on: '2026-06-25'

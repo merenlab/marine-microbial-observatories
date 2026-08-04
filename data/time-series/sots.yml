@@ -1,0 +1,43 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: sots
+name: IMOS Southern Ocean Time Series
+acronym: SOTS
+program-website: https://imos.org.au/facility/biomolecular-observing/marine-microbiome-initiative
+additional-websites:
+  - https://imos.org.au/facility/deep-water-moorings/southern-ocean-time-series-observatory
+affiliated-institutions: IMOS, BPA, CSIRO
+affiliated-institution-websites:
+  - https://www.csiro.au/
+  - https://bioplatforms.com/initiatives/
+  - https://imos.org.au/
+status: active
+sampling-start-year: 2017
+sampling-end-year: present
+dna-collection-start-year: 2017
+countries:
+  - Australia
+ocean-basins:
+  - Southern Ocean
+sub-region: Southern Ocean
+latitude: -47.0
+longitude: 142.0
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface-and-deep
+sampling-cadence: annually
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+data-accessions:
+  - PRJNA597010
+contacts:
+  - name: Jodie van de Kamp
+    email: jodie.vandekamp@csiro.au
+    role: Lead
+notes: |-
+  Metabarcoding for marine invertebrates (COI) and fishes (mitochondrial 16S and 12S) is in implementation phase.
+verification:
+  checked-by:
+    - Jodie van de Kamp
+  checked-note: 'original entry: Jodie van de Kamp 06/07/2026'

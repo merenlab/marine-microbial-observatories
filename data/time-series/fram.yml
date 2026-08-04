@@ -1,0 +1,59 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: fram
+name: FRAM Molecular Observatory
+acronym: FRAM
+program-website: https://www.awi.de/en/science/research-infrastructure/observatories/ocean-fram.html
+affiliated-institutions: Alfred Wegener Institute Helmholtz Centre for Polar and Marine Research
+affiliated-institution-websites:
+  - https://www.awi.de/en/
+status: active
+sampling-start-year: 2014
+sampling-end-year: present
+dna-collection-note: |-
+  Year-round water column sampling (moored RAS) for 16S / 18S sequencing; annual water column sampling (CTD) for 16S sequencing
+countries:
+  - Germany
+ocean-basins:
+  - Arctic Ocean
+sub-region: Fram Strait
+latitude: 79.023
+longitude: 4.2618
+multiple-sampling-sites: true
+sampling-sites-note: |-
+  Multiple stations across Atlantic and Arctic water masses, including benthic depth gradient. One transect along ~79°N from ~11°E to 5°W, one transect along ~4°E from 78.5°N to 80°N. Year-round water sampling in the photic zone via Remote Access Samplers at one station in Atlantic Water (West Spitsbergen Current, WSC) and one station in Polar Water (East Greenland Current, EGC). Year-round sampling of sinking particles via sediment traps in WSC and EGC. Traps and RAS are deployed on long-term moorings.
+sampling-depth: surface-and-deep
+sampling-cadence: weekly-or-more
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+data-accessions:
+  - PRJEB43905
+  - PRJEB67368
+  - PRJEB52171
+  - PRJEB82775
+  - PRJEB43086
+  - PRJEB43576
+contacts:
+  - name: Katja Metfies
+    email: Katja.Metfies@awi.de
+    role: PI
+  - name: Christina Bienhold
+    email: Christina.Bienhold@awi.de
+    role: PI
+  - name: Matthias Wietz
+    email: Matthias.Wietz@awi.de
+    role: PI
+publications:
+  - 10.1038/s41467-025-56203-3
+  - 10.1038/s41396-023-01461-6
+  - 10.1016/j.dsr2.2026.105604
+  - 10.1111/1462-2920.16568
+  - 10.1038/s43247-024-01782-0
+notes: |-
+  Annual and continuous sampling in the water column and at the deep seafloor, visual observations, in situ experimental work. FRAM is an expansion of LTER Hausgarten.
+verification:
+  checked-by:
+    - C. Bienhold
+    - M. Wietz
+  checked-note: 'original entry: C. BIenhold, M.Wietz (July 9th)'

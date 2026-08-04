@@ -1,0 +1,46 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: lmo
+name: Linnaeus Microbial Observatory
+acronym: LMO
+program-website: https://lnu.se/en/research/research-groups/linnaeus-microbial-observatory-lmo/
+affiliated-institutions: Linnaeus University
+affiliated-institution-websites:
+  - https://www.lnu.se/en/
+status: active
+sampling-start-year: 2011
+sampling-end-year: present
+dna-collection-start-year: 2011
+countries:
+  - Sweden
+ocean-basins:
+  - Baltic Sea
+sub-region: Baltic Sea
+latitude: 56.931
+longitude: 17.0607
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface
+sampling-cadence: weekly-or-more
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+  - other-omics
+data-accessions:
+  - PRJNA196396
+  - SRR2053273–SRR2053308
+  - PRJEB69280
+  - PRJEB82694
+contacts:
+  - name: Jarone Pinhassi
+    email: jarone.pinhassi@lnu.se
+    role: PI
+publications:
+  - 10.1111/1462-2920.12720
+  - 10.1186/s13059-015-0834-7
+  - 10.1038/s41598-023-38816-0
+  - 10.1186/s40793-025-00780-9
+verification:
+  checked-by:
+    - Jarone Pinhassi
+  checked-on: '2026-06-11'

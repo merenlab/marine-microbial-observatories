@@ -1,0 +1,23 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: marine-biodiversity-library-mpa-edna-monitoring
+name: Marine Biodiversity Library & MPA eDNA monitoring
+network-website: https://obon-ocean.org/project/marine-biodiversity-library-mpa-edna-monitoring/
+affiliated-institutions: Fisheries and Oceans Canada (DFO), Hakai Institute, Tula Foundation,
+  McGill University
+umbrella-organisation: OBON
+status: active
+established-year: 2022
+geographic-scope: Canada's Pacific and Atlantic regions
+mission-statement: |-
+  This project uses eDNA metabarcoding to establish baseline biodiversity and species distribution data across Marine Protected Areas and areas of interest in Canada's Pacific and Atlantic regions. It simultaneously builds a curated Canadian Marine DNA Library of high-quality reference sequences, pairing this resource with the biomonitoring surveys to accelerate eDNA's operational uptake for science-based advice and position Canada as a global leader in ocean conservation.
+contacts:
+  - name: Kristen Westfall
+    email: westfall.kristenm@gmail.com
+  - name: Emily Rubidge
+    email: Emily.Rubidge@dfo-mpo.gc.ca
+  - email: Kristen.Westfall@dfo-mpo.gc.ca
+publications:
+  - 10.1093/icesjms/fsad083
+notes: |-
+  eDNA focus, but in the connected paper I found they also use 16S rRNA (12S rRNA, 16S rRNA, 18S rRNA, and CO1)

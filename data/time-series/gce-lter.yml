@@ -1,0 +1,48 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: gce-lter
+name: Georgia Coastal Ecosystems LTER
+acronym: GCE-LTER
+program-website: http://gce-lter.marsci.uga.edu/
+affiliated-institutions: University of Georgia
+affiliated-institution-websites:
+  - https://www.uga.edu/
+status: active
+sampling-start-year: 2000
+sampling-end-year: present
+dna-collection-start-year: 2005
+countries:
+  - United States
+ocean-basins:
+  - Northwest Atlantic Ocean
+sub-region: coastal/southeastern USA
+latitude: 31.5
+longitude: -81.1
+multiple-sampling-sites: true
+sampling-sites-note: |-
+  Multiple sites within Altamaha River estuary complex, Georgia (sites GCE1–GCE10), partnered with Sapelo Island Microbial Observatory (SIMO)
+sampling-depth: surface
+sampling-cadence: quarterly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+  - other-omics
+data-accessions:
+  - PRJNA552566
+contacts:
+  - name: Merryl Alber
+    email: malber@uga.edu
+    role: Project Director
+  - name: Steve Pennings
+    email: scpennin@central.uh.edu
+    role: Field Director
+  - name: Wade Sheldon
+    email: sheldon@uga.edu
+    role: Database manager
+publications:
+  - 10.3389/fmicb.2014.00185
+  - 10.1128/mra.00934-19
+verification:
+  checked-by:
+    - JH
+  checked-note: 'original entry: JH, via email 6/20'

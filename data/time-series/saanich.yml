@@ -1,0 +1,42 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: saanich
+name: Saanich Inlet Time-Series
+acronym: SAANICH
+program-website: https://hallam.microbiology.ubc.ca/projects/saanich/
+affiliated-institutions: University of British Columbia
+status: active
+sampling-start-year: 2006
+sampling-end-year: present
+dna-collection-start-year: 2006
+countries:
+  - Canada
+ocean-basins:
+  - Northeast Pacific Ocean
+sub-region: Saanich Inlet
+latitude: 48.588333
+longitude: -123.503667
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface-and-deep
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+  - other-omics
+data-accessions:
+  - SRP043213
+  - PXD004433
+contacts:
+  - name: Steven Hallam
+    email: shallam@mail.ubc.ca
+    role: PI
+publications:
+  - 10.1038/sdata.2017.160
+  - 10.1038/sdata.2017.159
+notes: |-
+  Note: includes other data types (physical, chemical etc) but Steven is the main contact for microbial work.
+verification:
+  checked-by:
+    - Steven Hallam
+  checked-on: '2026-07-07'

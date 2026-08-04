@@ -1,0 +1,41 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: azti
+name: Basque Coastal Plankton Observatory
+acronym: AZTI
+program-website: https://www.st.nmfs.noaa.gov/copepod/time-series/es-30201/
+affiliated-institutions: AZTI
+affiliated-institution-websites:
+  - https://www.azti.es/en/
+status: active
+sampling-start-year: 1986
+sampling-end-year: present
+dna-collection-start-year: 2015
+countries:
+  - Spain
+ocean-basins:
+  - Northeast Atlantic Ocean
+sub-region: Eastern North Atlantic Ocean
+latitude: 43.45
+longitude: -1.91
+multiple-sampling-sites: false
+sampling-sites-note: 3 sites (D2 and D1 offshore, L-UR20 near-shore ajdacent to WWTP discharge)
+sampling-depth: surface
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+data-accessions:
+  - PRJEB54766
+contacts:
+  - name: Anders Lanzén
+    email: alanzen@azti.es
+    role: PI
+publications:
+  - 10.1111/1462-2920.16153
+notes: 16S and 18S sequence data available for samples from 2015 -- 2023 presently
+verification:
+  checked-by:
+    - Anders Lanzen
+  checked-on: '2026-06-11'
+  checked-note: via email

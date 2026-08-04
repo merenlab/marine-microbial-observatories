@@ -1,0 +1,46 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: somlit-astan
+name: SOMLIT-ASTAN
+acronym: SOMLIT-ASTAN
+program-website: https://www.sb-roscoff.fr/en/node/3593
+affiliated-institutions: Station Biologique de Roscoff (SBR), CNRS / Sorbonne Université
+affiliated-institution-websites:
+  - https://www.sb-roscoff.fr
+status: active
+sampling-start-year: 2001
+sampling-end-year: present
+dna-collection-start-year: 2005
+countries:
+  - France
+ocean-basins:
+  - Northeast Atlantic Ocean
+sub-region: Brittany coast
+latitude: 48.7486
+longitude: -3.9611
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface
+sampling-cadence: bimonthly
+omics-types:
+  - amplicon-sequencing
+data-accessions:
+  - PRJEB96022
+contacts:
+  - name: Nathalie Simon
+    email: simon@sb-roscoff.fr
+    role: PI
+  - name: Laurence Garczarek
+    email: garczare@sb-roscoff.fr
+    role: PI
+  - name: Nicolas Henry
+    email: nicolas.henry@sb-roscoff.fr
+    role: PI
+  - name: Fabienne Rigaut-Jalabert
+    email: jalabert@sb-roscoff.fr
+    role: PI
+publications:
+  - 10.1111/mec.16539
+  - 10.17882/107693
+notes: |-
+  Bimonthly ; more details on sampling: https://gitlab.sb-roscoff.fr/somlit-astan-metab/data-management#sampling_effort-directory

@@ -1,0 +1,18 @@
+# Global or large-scale expedition program.
+# Schema: ../../schema/expeditions.schema.json
+id: western-arctic-ocean-cruises-2019
+name: Western Arctic ocean cruises 2019
+affiliated-institutions: |-
+  Korea Polar Research Institute (KOPRI, Korea); National Centre for Polar and Ocean Research (NCPOR, India)
+affiliated-institution-websites:
+  - https://eng.kopri.re.kr/
+  - https://ncpor.res.in/arctics
+data-accessions:
+  - PRJNA770954
+contacts:
+  - name: Vipindas PUthiya Veettil
+    email: vipin@ncpor.res.in
+    role: PI microbial omics data
+publications:
+  - 10.1111/1462-2920.70154
+sample-metadata-source: Download from MGnify

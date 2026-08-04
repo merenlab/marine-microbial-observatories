@@ -1,0 +1,39 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: lor
+name: IMOS Coastal Microbial Sampling, Long Reef
+acronym: LOR
+program-website: https://imos.org.au/facility/biomolecular-observing/microbial-coastal-sampling
+affiliated-institutions: Deakin University, Environment Protection Agency Victoria, IMOS,
+  BPA, CSIRO
+affiliated-institution-websites:
+  - https://www.csiro.au/
+  - https://bioplatforms.com/initiatives/
+  - https://imos.org.au/
+status: active
+sampling-start-year: 2020
+sampling-end-year: present
+dna-collection-start-year: 2020
+countries:
+  - Australia
+ocean-basins:
+  - South Pacific Ocean
+sub-region: Port Phillip Bay
+latitude: -38.02932
+longitude: 144.592819
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface
+sampling-cadence: quarterly
+omics-types:
+  - amplicon-sequencing
+data-accessions:
+  - PRJNA597010
+contacts:
+  - name: Craig Sherman
+    email: craig.sherman@deakin.edu.au
+    role: Site Lead
+verification:
+  checked-by:
+    - Craig Sherman
+  checked-on: '2026-06-18'

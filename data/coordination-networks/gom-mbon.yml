@@ -1,0 +1,19 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: gom-mbon
+name: Gulf of Maine MBON
+acronym: GoM MBON
+network-website: https://marinebon.org/network/gulf-of-maine-mbon/
+affiliated-institutions: |-
+  Northeastern Regional Association of Coastal Ocean Observing Systems (NERACOOS), Northeast Regional Ocean Council (NROC) Integrated Sentinel Monitoring Network (ISMN), Gulf of Maine Research Institute (GMRI), University of Maine, Stellwagen Bank National Marine Sanctuary, NOAA
+umbrella-organisation: MBON
+status: active
+established-year: 2016
+geographic-scope: Gulf of Maine - Wilkinson Basin and Maine Coastal Current stations
+mission-statement: |-
+  Fills a gap in sub-annual plankton biodiversity time series in the rapidly warming Gulf of Maine, and integrates those observations with seascapes and circulation modelling to predict change in the planktonic 'lipidscape' underpinning forage fish and North Atlantic right whales.
+contacts:
+  - name: Jake Kritzer (NERACOOS)
+    role: Project lead
+  - name: earlier awards led by Ru Morrison (NERACOOS) and Jeffrey Runge (Univ. of Maine)
+    role: Project lead

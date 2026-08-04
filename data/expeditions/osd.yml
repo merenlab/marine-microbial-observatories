@@ -1,0 +1,27 @@
+# Global or large-scale expedition program.
+# Schema: ../../schema/expeditions.schema.json
+id: osd
+name: Ocean Sampling Day (2014-2015, 2018 and on)
+acronym: OSD
+program-website: https://www.microb3.eu/osd.html
+additional-websites:
+  - https://www.vliz.be/projects/assembleplus/node/2220.html
+affiliated-institutions: 'HCMR & EMBRC: 2018 and on; MicroB3/MPI-Bremen: 2014-2015'
+affiliated-institution-websites:
+  - https://www.hcmr.gr/en/
+  - https://www.mpi-bremen.de/en/Home.html
+  - https://www.embrc.eu/
+data-accessions:
+  - PRJEB5129
+contacts:
+  - name: Frank Oliver Glöckner (2014/15)
+    email: frank.oliver.gloeckner@awi.de
+    role: coordinator
+  - name: Georgios Kotoulas (2018 and on)
+    email: kotoulas@hcmr.gr
+    role: coordinator
+publications:
+  - 10.1186/s13742-015-0066-5
+sample-metadata-source: |-
+  https://metalog.embl.de/ (Study_Code: PRJEB40760_ocean_sampling_day_2018); OSD2014 from https://github.com/hurwitzlab/planet-microbe-datapackages/blob/master/OSD/osd_sample.tsv
+notes: Many people involved

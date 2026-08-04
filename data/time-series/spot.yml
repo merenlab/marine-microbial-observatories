@@ -1,0 +1,67 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: spot
+name: San Pedro Ocean Time Series
+acronym: SPOT
+program-website: https://dornsife.usc.edu/spot/
+affiliated-institutions: University of Southern California
+affiliated-institution-websites:
+  - https://dornsife.usc.edu/fuhrmanlab/
+status: active
+sampling-start-year: 2000
+sampling-end-year: present
+dna-collection-start-year: 2000
+countries:
+  - United States
+ocean-basins:
+  - Northeast Pacific Ocean
+sub-region: Northeast Pacific, Southern California Bight
+latitude: 33.55
+longitude: -118.4
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface-and-deep
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+  - other-omics
+data-accessions:
+  - PRJEB62141
+  - PRJNA814250
+  - PRJEB48162
+  - PRJNA311248
+  - PRJEB10834
+  - PRJEB12120
+  - PRJNA550983
+  - PRJEB12267
+  - PRJEB12215
+contacts:
+  - name: Jed Fuhrman
+    email: fuhrman@usc.edu
+    role: PI
+publications:
+  - 10.1038/s43705-022-00121-8
+  - 10.1111/1462-2920.14259
+  - 10.1038/s41467-019-09106-z
+  - 10.1038/s41467-022-35551-4
+  - 10.1038/s41564-019-0628-x
+  - 10.1038/ismej.2017.104
+  - 10.1038/ismej.2017.29
+  - 10.1038/nmicrobiol.2016.5
+  - 10.1111/1462-2920.13023
+  - 10.1038/ismej.2015.76
+  - 10.1038/ismej.2014.153
+  - 10.1038/ismej.2013.199
+  - 10.1038/ismej.2013.122
+  - 10.1038/ismej.2013.19
+  - 10.1111/j.1462-2920.2012.02744.x
+  - 10.1038/ismej.2011.24
+  - 10.1038/ismej.2010.204
+  - 10.1111/j.1462-2920.2010.02172.x
+notes: |-
+  several daily or weekly time series embedded within the monthly structure, sometimes nearby locations. Includes automated ESP sampling
+verification:
+  checked-by:
+    - Jed Fuhrman
+  checked-on: '2026-07-06'

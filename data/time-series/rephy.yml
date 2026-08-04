@@ -1,0 +1,40 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: rephy
+name: REPHY
+acronym: REPHY
+program-website: |-
+  https://coast.ifremer.fr/Reseaux-de-surveillance/Environnement/REPHY-la-surveillance-du-phytoplancton-et-des-phycotoxines
+affiliated-institutions: IFREMER
+affiliated-institution-websites:
+  - https://www.ifremer.fr/en
+status: active
+sampling-start-year: 1987
+sampling-end-year: present
+dna-collection-note: N/A
+countries:
+  - France
+ocean-basins:
+  - English Channel
+  - Biscay Bay
+  - Mediterranean Sea
+sub-region: N/A
+multiple-sampling-sites: true
+sampling-sites-note: |-
+  Multiple stations along English Channel, French Atlantic and Mediterranean coasts (>100 sites in network)
+sampling-depth: surface
+sampling-cadence: bimonthly
+contacts:
+  - name: Maud Lemoine
+    email: coord.rephy@ifremer.fr
+    role: coordinator REPHY
+publications:
+  - https://archimer.ifremer.fr/doc/00393/50389/
+  - https://archimer.ifremer.fr/doc/00617/72948/
+  - https://www.seanoe.org/data/00361/47248/
+notes: |-
+  There is no omics monitoring in the REPHY program. Still, there are side projects to try to implement metabarcoding (ROME project) and dPCR (Toxdiag project).
+verification:
+  checked-by:
+    - Maud Lemoine
+  checked-on: '2026-07-08'

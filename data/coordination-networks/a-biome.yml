@@ -1,0 +1,17 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: a-biome
+name: Observing and Promoting Atlantic Microbiomes
+acronym: A-biome
+network-website: https://obon-ocean.org/project/observing-and-promoting-atlantic-microbiomes/
+affiliated-institutions: |-
+  Dept of Fisheries and Oceans, Canada (DFO) - Atlantic, The Icelandic Centre for Research (Rannis), National Oceanic and Atmospheric Administration (NOAA)
+umbrella-organisation: OBON
+status: active
+established-year: 2022
+geographic-scope: Atlantic
+mission-statement: |-
+  Observing and Promoting Atlantic Microbiomes’s overarching objectives are 1) to promote microbiome research through collaboration with the Atlantic Ocean Marine Microbiome Working Group and 2) to contribute to the expansion of a sampling network in eastern Canada to generate new knowledge about the diversity, biogeography and functioning of marine microbiomes.
+contacts:
+  - name: Alice Ortmann
+    email: Alice.Ortmann@dfo-mpo.gc.ca

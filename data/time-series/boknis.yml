@@ -1,0 +1,43 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: boknis
+name: Boknis Eck
+acronym: BOKNIS
+program-website: https://www.bokniseck.de/
+affiliated-institutions: GEOMAR Helmholtz Centre for Ocean Research
+status: active
+sampling-start-year: 1957
+sampling-end-year: present
+countries:
+  - Germany
+ocean-basins:
+  - Baltic Sea
+sub-region: Eckernförde Bay
+latitude: 54.5167
+longitude: 10.0333
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+data-accessions:
+  - PRJEB22997
+  - PRJNA901661
+  - PRJNA1213115
+contacts:
+  - name: David Needham
+    email: dneedham@geomar.de
+    role: PI
+  - name: Hermann Bange
+    email: hbange@geomar.de
+    role: Coordinator
+publications:
+  - 10.3389/fmicb.2025.1565157
+  - 10.3389/fmicb.2022.1096062
+  - 10.1038/sdata.2018.146
+verification:
+  checked-by:
+    - Hermann Bange
+  checked-on: '2026-06-19'

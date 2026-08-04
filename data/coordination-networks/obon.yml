@@ -1,0 +1,20 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: obon
+name: Ocean Biomolecular Observing Network
+acronym: OBON
+network-website: http://obon-ocean.org
+affiliated-institutions: |-
+  Partnership for Observation of the Global Ocean (POGO), Scripps Institution of Oceanography (SIO), Monterey Bay Aquarium Research Institute (MBARI), National Oceanography Center (NOC), Commonwealth Scientific and Industrial Research Organisation (CSIRO)
+umbrella-organisation: UN Ocean Decade
+status: active
+established-year: 2021
+geographic-scope: Global
+mission-statement: |-
+  The programme will transform how we sense, harvest, protect, and manage ocean life, which faces multiple stresses including pollution, habitat loss, and climate change. OBON's objectives are: 1) to build a coastal-to-open ocean multi-omics biodiversity observing system; 2) to develop and transfer capacity between partners; 3) to enhance marine ecosystem digitization and modelling and 4) to coordinate action on pressing scientific, management, and policy questions.
+contacts:
+  - name: Margaret Leinen
+    email: mleinen@ucsd.edu
+    role: lead
+publications:
+  - 10.4031/MTSJ.56.3.20

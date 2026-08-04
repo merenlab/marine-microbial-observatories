@@ -1,0 +1,23 @@
+# Global or large-scale expedition program.
+# Schema: ../../schema/expeditions.schema.json
+id: gos
+name: Global Ocean Sampling (GOS) Expedition
+acronym: GOS
+program-website: https://www.jcvi.org/research/gos
+affiliated-institutions: J. Craig Venter Institute (JCVI)
+affiliated-institution-websites:
+  - https://www.jcvi.org/
+data-accessions:
+  - PRJNA13694
+  - PRJEB10418
+  - PRJNA320636
+contacts:
+  - name: Andrew Allen
+    email: aallen@jcvi.org
+    role: PI
+publications:
+  - 10.1371/journal.pbio.0050077
+  - 10.1128/mSystems.00125-16
+  - 10.1126/science.1093857
+sample-metadata-source: |-
+  Download from MGnify; for PRJEB10418 biosamples populated with metadata; need to follow up on PRJNA13694

@@ -1,0 +1,26 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: wc-obon
+name: West Coast Ocean Biomolecular Observing Network
+acronym: WC-OBON
+network-website: https://obon-ocean.org/project/west-coast-ocean-biomolecular-observing-network-wc-obon/
+affiliated-institutions: |-
+  Scripps Institution of Oceanography, UC San Diego, National Oceanic and Atmospheric Administration (NOAA), Southern California Coastal Water Research Project (SCCWRP), Monterey Bay Aquarium Research Institute (MBARI), Hakai Institute, California Cooperative Oceanic Fisheries Investigations, Soutern California Coastal Ocean Observing System, Natural History Museum Los Angeles County, NOAA PMEL
+umbrella-organisation: OBON
+status: active
+established-year: 2022
+geographic-scope: North American West Coast
+mission-statement: |-
+  WC OBON aims to harmonize methods and integrate data from ‘Omics platforms on the North American West Coast for sustainable marine management. Our goal is to facilitate the adoption and harmonization of molecular tools by biomonitoring programs to develop a comprehensive overview of marine ecosystem dynamics.
+contacts:
+  - name: Erin Satterthwaite
+    email: esatterthwaite@ucsd.edu
+  - name: Nastassia Patin
+    email: nastassia.patin@noaa.gov
+  - name: Zachary Gold
+    email: zachary.gold@noaa.gov
+  - name: Susanna Theroux
+    email: susannat@sccwrp.org
+publications:
+  - 10.5281/zenodo.14867763
+notes: eDNA but includes HABs

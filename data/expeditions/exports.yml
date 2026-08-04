@@ -1,0 +1,33 @@
+# Global or large-scale expedition program.
+# Schema: ../../schema/expeditions.schema.json
+id: exports
+name: EXPORTS
+acronym: EXPORTS
+program-website: https://oceanexports.org/
+affiliated-institutions: |-
+  University of California Santa Barbara, Woods Hole Oceanographic, Oregon State University, University of Maine, University of Rhode Island, University of North Carolina
+affiliated-institution-websites:
+  - https://oceanexports.org/
+data-accessions:
+  - PRJNA785357
+contacts:
+  - name: Craig Carlson
+    email: craig.carlson@bios.asu.edu
+    role: PIs of sub award
+  - name: Brandon Stephens
+    email: bstephens@ntu.edu.tw
+    role: PIs of sub award
+  - name: Alyson Santoro
+    email: asantoro@ucsb.edu
+    role: PIs of sub award
+publications:
+  - 10.1525/elementa.2022.00095
+  - 10.3389/fmars.2020.590273
+  - 10.1093/ismejo/wrad010
+sample-metadata-source: Download from MGnify
+notes: |-
+  Many people involved NASA project, 2 cruises over 3 years in the north pacific and eastern North Atlantic. Lead PI of project was Dave Siegel at UCSB. Amplicon sequencing of 16s rRNA gene
+verification:
+  checked-by:
+    - Craig Carlson
+  checked-on: '2026-07-07'

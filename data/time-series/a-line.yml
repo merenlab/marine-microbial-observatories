@@ -1,0 +1,41 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: a-line
+name: A-line off Hokkaido Island, Sendai Bay, Ofunato Bay
+acronym: A-LINE
+program-website: http://marine-meta.maoi-i.jp/omd/
+affiliated-institutions: Japan Science and Technology Agency (JST)
+affiliated-institution-websites:
+  - https://www.jst.go.jp/EN/
+status: unknown
+sampling-start-year: 1987
+sampling-end-year: present
+dna-collection-start-year: 2012
+countries:
+  - Japan
+ocean-basins:
+  - Northwest Pacific Ocean
+sub-region: Sendai Bay, Ofunato Bay, Akkeshi Bay
+latitude: 39.01903
+longitude: 141.7282
+multiple-sampling-sites: true
+sampling-sites-note: Sendai Bay, A-line, Ofunato Bay
+sampling-depth: surface
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+data-accessions:
+  - DRA005744
+  - DRA005425
+contacts:
+  - name: Takashi Gojobori
+    email: takashi.gojobori@kaust.edu.sa
+    role: PI
+  - name: Shugo Watabe
+    email: swatabe@kitasato-u.ac.jp
+    role: PI
+publications:
+  - 10.1038/s41598-021-96641-9
+  - 10.1038/s41598-021-91615-3
+  - 10.1016/j.gene.2018.04.074

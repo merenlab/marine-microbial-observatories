@@ -1,0 +1,26 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: am
+name: Australian Microbiome
+acronym: AM
+network-website: http://australianmicrobiome.com
+affiliated-institutions: |-
+  Bioplatforms Australia, Integrated Marine Observing System (IMOS), Commonwealth Scientific and Industrial Research Organisation (CSIRO), Parks Australia/BHP, National Collaborative Research Infrastructure Strategy (NCRIS)
+umbrella-organisation: OBON
+status: active
+established-year: 2019
+geographic-scope: Christmas Island to Antarctica
+data-accessions:
+  - PRJNA597010
+mission-statement: |-
+  The mission of the Australian Microbiome (AM) project is to develop a comprehensive, publicly-accessible database of microbial diversity across a geographically expansive and diverse range of Australian terrestrial and aquatic ecosystems. The AM database will deliver searchable information on the occurrence and distribution of potential microbiological resources, collated into a searchable public database that will allow researchers and other end-users to address a broad variety of questions in microbial ecology. By providing unprecedented access to environmental microbiological information across the Australian land- and sea-scape, the AM project will enable large spatial and temporal- scale examinations of ecosystem function, biogeochemistry, bio-discovery, within natural Australian habitats.
+contacts:
+  - name: Andrew Bissett
+    email: andrew.bissett@csiro.au
+    role: Lead
+publications:
+  - https://www.australianmicrobiome.com/publications/
+verification:
+  checked-by:
+    - Jodie van de Kamp
+  checked-note: 'original entry: Jodie van de Kamp 06/07/2026'

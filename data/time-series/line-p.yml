@@ -1,0 +1,39 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: line-p
+name: LINE P
+acronym: LINE P
+program-website: https://www.pmel.noaa.gov/ocs/papa-background
+affiliated-institutions: |-
+  Institute of Ocean Sciences from Fisheries and Oceans Canada (DFO), NSF Ocean Observatory Initiative (OOI)
+affiliated-institution-websites:
+  - https://www.pac.dfo-mpo.gc.ca/science/oceans/data-donnees/line-p/index-eng.html
+status: active
+sampling-start-year: 1956
+sampling-end-year: present
+countries:
+  - United States
+  - Canada
+ocean-basins:
+  - Northeast Pacific Ocean
+sub-region: Vancouver Island to Station Papa
+latitude: 50.1
+longitude: -144.9
+multiple-sampling-sites: true
+sampling-sites-note: P4, P12, P16, P20, P26 (Station Papa/OSP)
+sampling-depth: surface-and-deep
+sampling-cadence: quarterly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+data-accessions:
+  - PRJNA640752
+  - PRJNA785333
+contacts:
+  - name: Marie Robert
+    email: marie.robert@dfo-mpo.gc.ca
+    role: Program Coordinator
+publications:
+  - 10.1038/s43705-023-00314-9
+  - 10.1038/s42003-021-02731-9
+  - 10.1371/journal.pone.0057355

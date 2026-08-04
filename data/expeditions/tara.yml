@@ -1,0 +1,33 @@
+# Global or large-scale expedition program.
+# Schema: ../../schema/expeditions.schema.json
+id: tara
+name: Tara Oceans and Tara Pacific
+acronym: Tara
+program-website: https://www.tara-oceans-science.org
+affiliated-institutions: |-
+  Research institutions collaborating with the Tara Ocean Foundation, including EMBL, CNRS, CEA, ENS-PSL, Sorbonne Université
+affiliated-institution-websites:
+  - https://fondationtaraocean.org/en/foundation/
+data-accessions:
+  - PRJEB402
+  - PRJEB1787
+  - PRJEB6608
+  - PRJEB9740
+  - PRJEB9741
+  - PRJEB47249
+contacts:
+  - name: Chris Bowler
+    email: cbowler@biologie.ens.fr
+    role: Director of the expedition
+publications:
+  - 10.1038/sdata.2015.23
+  - 10.1038/s41586-022-04862-3
+  - 10.1126/science.1261605
+  - 10.1038/sdata.2017.93
+sample-metadata-source: |-
+  https://metalog.embl.de/ (Study_Code: TARA_Oceans_prokaryote; TARA_PolarCircle_prokaryote); Tara Pacific seawater metagenomes from (https://zenodo.org/records/6299409)
+notes: Multiple expeditions
+verification:
+  checked-by:
+    - Chris Bowler
+  checked-note: 'original entry: Chris Bowler 06/07/2026'

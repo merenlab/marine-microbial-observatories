@@ -1,0 +1,18 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: us-mbon
+name: US MBON
+acronym: US MBON
+network-website: https://marinebon.org/network/us-mbon/
+affiliated-institutions: |-
+  NOAA, NASA, BOEM and ONR via the National Oceanographic Partnership Program (NOPP); coordination by the US IOOS Program Office; regional nodes as listed
+umbrella-organisation: MBON
+status: active
+established-year: 2013
+geographic-scope: United States
+mission-statement: |-
+  The US partnership integrating historical and current biology and ecosystem surveys with new observations, expanding remote sensing, novel molecular (eDNA) technologies, traditional tools and coordinated experiments across regional MBON nodes.
+contacts:
+  - name: Gabrielle Canonico (NOAA / US IOOS)
+    email: gabrielle.canonico@noaa.gov
+    role: US MBON Program Manager

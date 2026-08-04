@@ -1,0 +1,56 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: kongsfjorden
+name: Kongsfjorden Svalbard
+acronym: KONGSFJORDEN
+program-website: https://nyalesundresearch.no/research-and-monitoring__trashed/kongsfjorden-system/
+affiliated-institutions: |-
+  Interdisciplinary Centre for Marine and Environmental Research (CIIMAR); Norwegian Polar Institute (NPI); National Centre for Polar and Ocean Research (NCPOR, India); Lehigh University
+affiliated-institution-websites:
+  - https://nyalesundresearch.no
+status: active
+sampling-start-year: 1996
+sampling-end-year: present
+dna-collection-start-year: 2016
+dna-collection-note: '2016: water column (surface: 15m and bottom: 300m) for 16S and 18S sequencing'
+countries:
+  - Norway
+ocean-basins:
+  - Arctic Ocean
+sub-region: Svalbard fjord
+latitude: 78.26
+longitude: 15.53
+multiple-sampling-sites: true
+sampling-sites-note: |-
+  Most of the data are concentrated at the KB3 station, although the dataset also includes samples collected along the Kongsfjorden transect, including stations KB1, KB4, and KB8. Data collected between 2016 and 2019 also include samples from Rijpfjorden, the coastal area of Rijpfjorden, Kongsfjorden, and the adjacent open ocean stations.
+sampling-depth: surface-and-deep
+sampling-cadence: weekly-or-more
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+data-accessions:
+  - PRJNA660592
+  - PRJEB72034
+  - PRJEB24517
+  - PRJEB60815
+  - PRJEB72025
+  - PRJEB72030
+contacts:
+  - name: Catarina Magalhães
+    email: catarina.magalhaes@fc.up.pt
+    role: 'Bailey: co-chair of Kongsfjorden System flagship'
+  - name: Allison Bailey
+    email: allison.bailey@npolar.no
+    role: 'Bailey: co-chair of Kongsfjorden System flagship'
+publications:
+  - 10.1007/s10482-021-01547-1
+  - 10.33265/polar.v38.3390
+  - 10.1111/1758-2229.70282
+  - 10.1186/s12866-026-04821-2
+  - |-
+    https://framforum.com/2026/03/12/year-round-monitoring-of-the-marine-ecosystem-in-kongsfjorden/?utm_source=chatgpt.com
+  - 10.1186/s13213-024-01767-6
+  - https://www.jstor.org/stable/27311557
+  - 10.1007/s11274-022-03493-0
+notes: |-
+  Annual (2016–2018) and weekly (2019–present) water column sampling has been conducted at a minimum of 15 and 300 m, with additional depths sampled on some occasions. The 2016–2020 dataset also includes samples collected from Rijpfjorden, the coastal area of Rijpfjorden, Kongsfjorden, and the adjacent open ocean.

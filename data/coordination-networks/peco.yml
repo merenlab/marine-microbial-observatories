@@ -1,0 +1,18 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: peco
+name: Pacific eDNA Coastal Observatory
+acronym: PECO
+network-website: https://obon-ocean.org/project/pacific-edna-coastal-observatory-peco/
+affiliated-institutions: |-
+  McGill University, Smithsonian Marine Global Earth Observatory (MarineGEO), University of California Davis (UC Davis), University of Washington, Hakai Institute
+umbrella-organisation: OBON
+status: active
+established-year: 2021
+geographic-scope: Alaska to Southern California
+mission-statement: |-
+  PECO is a multi-national eDNA network spanning 26 degrees of latitude from Alaska to Southern California, where partners pair eDNA collection with visual surveys and centralized metabarcoding to build capacity for large-scale biogeographic biodiversity assessment of nearshore fish and invertebrates. Its objectives include optimizing eDNA sampling effort, assessing the climate sensitivity of nearshore taxa and communities across latitude and traits, and developing updatable, publicly accessible forecasts of species range shifts to support biodiversity monitoring through the Ocean Decade.
+contacts:
+  - name: Jennifer Sunday
+    email: jennifer.sunday@mcgill.ca
+notes: collect environmental DNA alongside visual surveys, with centralized metabarcoding

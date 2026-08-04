@@ -1,0 +1,192 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://merenlab.github.io/marine-microbial-observatories/schema/expeditions.schema.json",
+  "title": "Global or large-scale expedition program",
+  "description": "One global or large-scale expedition program that generated marine microbial omics data. One record per file in data/expeditions/.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "contacts"
+  ],
+  "properties": {
+    "id": {
+      "description": "Stable identifier, also the filename and the URL fragment on the website. Do not change it after publication.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "minLength": 2,
+      "maxLength": 60
+    },
+    "name": {
+      "description": "Full name of the expedition program.",
+      "type": "string",
+      "minLength": 3
+    },
+    "acronym": {
+      "description": "Short name the expedition is usually known by.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 40
+    },
+    "program-website": {
+      "$ref": "#/$defs/url",
+      "description": "Main landing page for the expedition."
+    },
+    "additional-websites": {
+      "description": "Further URLs for the same program, when it is documented in more than one place. The first/canonical URL belongs in the primary website field.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/url"
+      },
+      "uniqueItems": true
+    },
+    "affiliated-institutions": {
+      "description": "Institutions and programs that ran or funded the expedition, as free text.",
+      "type": "string"
+    },
+    "affiliated-institution-websites": {
+      "description": "Websites of the affiliated institutions.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/url"
+      },
+      "uniqueItems": true
+    },
+    "data-accessions": {
+      "description": "Public archive accessions holding the expedition's molecular data.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/accession"
+      }
+    },
+    "data-accessions-note": {
+      "description": "Anything about data availability that is not itself an accession.",
+      "type": "string"
+    },
+    "sample-metadata-source": {
+      "description": "Where the per-sample metadata lives (BioProject, BioSample, latitude, longitude, sampling depth), including any caveats about how complete it is.",
+      "type": "string"
+    },
+    "contacts": {
+      "$ref": "#/$defs/contacts"
+    },
+    "publications": {
+      "$ref": "#/$defs/publications"
+    },
+    "notes": {
+      "description": "Anything else worth recording about this expedition.",
+      "type": "string"
+    },
+    "verification": {
+      "$ref": "#/$defs/verification"
+    }
+  },
+  "$defs": {
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://[^\\s]+$"
+    },
+    "accession": {
+      "type": "string",
+      "pattern": "^(?:SRR\\d+[-–]SRR\\d+|[A-Z]{2}\\d{6}[-–][A-Z]{2}\\d{6}|PRJ(?:NA|EB|EA|DB)\\d+|(?:SR|ER|DR)[APRSX]\\d+|PXD\\d+|[A-Z]{2}\\d{6})$",
+      "description": "An INSDC BioProject/study accession (PRJNA/PRJEB/PRJEA/PRJDB), an SRA/ENA/DDBJ accession, a PRIDE dataset (PXD), a GenBank nucleotide accession, or a hyphenated range of either. No archive name, no surrounding text."
+    },
+    "contacts": {
+      "description": "People to write to about this expedition.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "anyOf": [
+          {
+            "required": [
+              "name"
+            ]
+          },
+          {
+            "required": [
+              "email"
+            ]
+          }
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 2
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "pattern": "^[^@\\s]+@[^@\\s]+\\.[A-Za-z]{2,}$"
+          },
+          "role": {
+            "type": "string",
+            "minLength": 1
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Caveat about reaching this person, e.g. that the address bounced."
+          }
+        }
+      }
+    },
+    "publications": {
+      "description": "Example publications, preferably data papers. Bare DOI where one exists; URL as a fallback.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "oneOf": [
+          {
+            "type": "string",
+            "pattern": "^10\\.\\d{4,9}/[^\\s]+$"
+          },
+          {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https?://[^\\s]+$"
+          }
+        ]
+      }
+    },
+    "verification": {
+      "description": "Who last checked this record against reality, and when.",
+      "type": "object",
+      "additionalProperties": false,
+      "anyOf": [
+        {
+          "required": [
+            "checked-by"
+          ]
+        },
+        {
+          "required": [
+            "checked-note"
+          ]
+        }
+      ],
+      "properties": {
+        "checked-by": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 2
+          }
+        },
+        "checked-on": {
+          "type": "string",
+          "format": "date",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "checked-note": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

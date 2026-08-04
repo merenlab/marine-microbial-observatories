@@ -1,0 +1,43 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: nhl
+name: Newport Hydrographic Line
+acronym: NHL
+program-website: https://cimers.oregonstate.edu/our-research/marine-ecosystems/newport-hydrographic-line
+affiliated-institutions: |-
+  Northwest Fisheries Science Center ; Oregon State University ; North California Current MBON
+affiliated-institution-websites:
+  - |-
+    https://www.integratedecosystemassessment.noaa.gov/regions/california-current/newport-hydrographic-line
+  - https://oregonstate.edu/
+  - https://hmsc.oregonstate.edu/planktonlab/research/current-research/MBON-Project
+status: active
+sampling-start-year: 1996
+sampling-end-year: present
+dna-collection-start-year: 2019
+countries:
+  - United States
+ocean-basins:
+  - Northeast Pacific Ocean
+sub-region: Northwest U.S. Pacific Shelf
+latitude: 44.65
+longitude: -124.3
+multiple-sampling-sites: true
+sampling-sites-note: Multiple sites in heading offshore from Newport, Oregon
+sampling-depth: surface-and-deep
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+contacts:
+  - name: Jennifer Fisher
+    email: jennifer.fisher@noaa.gov
+    role: PI
+  - name: Maria Kavanaugh
+    email: maria.kavanaugh@oregonstate.edu
+    role: PI
+publications:
+  - 10.1016/j.pocean.2020.102418
+verification:
+  checked-by:
+    - Jennifer Fisher
+  checked-on: '2026-06-22'

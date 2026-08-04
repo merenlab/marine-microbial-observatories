@@ -1,0 +1,44 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: kbyt
+name: Kāneʻohe Bay Time-series
+acronym: KByT
+affiliated-institutions: Hawaiʻi Institute of Marine Biology
+affiliated-institution-websites:
+  - https://www.himb.hawaii.edu/
+status: active
+sampling-start-year: 2017
+sampling-end-year: present
+dna-collection-start-year: 2017
+countries:
+  - United States
+ocean-basins:
+  - North Pacific Ocean
+sub-region: coastal Hawaiʻi to offshore in the NPSG
+latitude: 21.45
+longitude: -157.77
+multiple-sampling-sites: true
+sampling-sites-note: Multiple stations within and adjancent to Kāneʻohe Bay, Oʻahu, Hawaiʻi
+sampling-depth: surface
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+  - other-omics
+data-accessions:
+  - PRJNA706753
+  - PRJNA971314
+  - PRJNA1201851
+contacts:
+  - name: Michael Rappé
+    email: rappe@hawaii.edu
+    role: PI
+publications:
+  - 10.7717/peerj.12274
+  - 10.1038/s41597-025-06166-3
+  - 10.1002/lno.70075
+notes: 10 stations, quasi-monthly (ca. 8-12 sample events per year)
+verification:
+  checked-by:
+    - Michael Rappe
+  checked-on: '2026-06-30'

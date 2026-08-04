@@ -1,0 +1,40 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: thau
+name: Coastal Mediterranean Thau Lagoon Observatory
+acronym: Thau
+program-website: https://www.st.nmfs.noaa.gov/copepod/time-series/fr-10201/
+affiliated-institutions: MARBEC (CNRS, Université de Montpellier, Ifremer, IRD)
+affiliated-institution-websites:
+  - https://umr-marbec.fr/
+status: active
+sampling-start-year: 1971
+sampling-end-year: present
+countries:
+  - France
+ocean-basins:
+  - Mediterranean Sea
+sub-region: Western Mediterranean Sea (Balearic Sea)
+latitude: 43.4
+longitude: 3.6
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface
+sampling-cadence: weekly-or-more
+omics-types:
+  - amplicon-sequencing
+contacts:
+  - name: Behzad Mostajir
+    email: behzad.mostajir@cnrs.fr
+    role: CNRS Research Director
+  - name: Vidussi Francesca
+    email: francesca.vidussi@cnrs.fr
+    role: PI
+publications:
+  - 10.3389/fmars.2022.858744
+  - 10.1038/s41598-021-97173-y
+  - 10.17882/58280
+verification:
+  checked-by:
+    - Francesca Vidussi
+  checked-on: '2026-06-25'

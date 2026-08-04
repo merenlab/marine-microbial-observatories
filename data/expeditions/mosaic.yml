@@ -1,0 +1,74 @@
+# Global or large-scale expedition program.
+# Schema: ../../schema/expeditions.schema.json
+id: mosaic
+name: MOSAiC
+acronym: MOSAiC
+program-website: https://mosaic-expedition.org/
+affiliated-institutions: |-
+  Alfred Wegener Institute (AWI); University of East Anglia (UEA); DOE Joint Genome Institute (JGI); German Research Foundation (DFG); Norwegian Polar Institute; University of Bergen; 80+ institutions from 20 countries. Omics component led by MOSAiC EcoOmics group
+affiliated-institution-websites:
+  - https://awi.de
+  - https://uea.ac.uk
+  - https://jgi.doe.gov
+  - https://www.norwegianpolarinstitute.no
+data-accessions:
+  - PRJNA1089658
+  - PRJNA1089668
+  - PRJNA1089659
+  - PRJNA1089671
+  - PRJNA1106864
+  - PRJNA1106865
+  - PRJNA1106866
+  - PRJNA1106867
+  - PRJNA1089669
+  - PRJNA1089666
+  - PRJNA1089670
+  - PRJNA1089672
+  - PRJNA1089667
+  - PRJNA1106868
+  - PRJNA1106869
+  - PRJNA1089673
+  - PRJNA1106871
+  - PRJNA1106872
+  - PRJNA1106873
+  - PRJNA1106876
+  - PRJNA1106877
+  - PRJNA1106856
+  - PRJNA1089682
+  - PRJNA1106858
+  - PRJNA1106859
+  - PRJNA1106860
+  - PRJNA1089692
+  - PRJNA1089693
+  - PRJNA1089694
+  - PRJNA1089695
+  - PRJNA1089696
+  - PRJNA1089697
+  - PRJNA1089698
+  - PRJNA1089699
+  - PRJNA1089700
+  - PRJNA1089701
+  - PRJNA1089702
+  - PRJNA1089654
+  - PRJNA1089655
+  - PRJNA1106862
+  - PRJNA1106863
+  - PRJNA1089656
+  - PRJNA1089657
+  - PRJNA1199044
+contacts:
+  - name: Thomas Mock
+    email: t.mock@uea.ac.uk
+    role: EcoOmics leads
+  - name: Katja Metfies
+    email: katja.metfies@awi.de
+    role: EcoOmics leads
+publications:
+  - 10.1038/s41597-025-04525-8
+  - 10.1371/journal.pbio.3001835
+  - 10.1038/s41597-025-05423-9
+sample-metadata-source: Boulton et al. 2025 Table S1 ; Download from MGnify (GRUMP Amplicons)
+verification:
+  checked-by:
+    - Thomas Mock
+  checked-on: '2026-06-11'

@@ -1,0 +1,29 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: emo-bon
+name: European Marine Omics Biodiversity Observation Network
+acronym: EMO BON
+network-website: https://www.embrc.eu/emo-bon/
+affiliated-institutions: European Marine Biological Resource Centre (EMBRC-ERIC)
+umbrella-organisation: EMBRC-ERIC / OBON (UN Ocean Decade project)
+status: active
+established-year: 2021
+geographic-scope: European (Baltic Sea, North Atlantic Ocean, Mediterranean Sea, Red Sea)
+data-accessions:
+  - PRJEB51688
+mission-statement: |-
+  EMBRC has united EU research stations under one centrally organised network that uses shared protocols, international standards and agreed policies. Currently, EMO BON includes 17 marine stations, located from the Arctic to the Red Sea, which systematically sample for genomic marine biodiversity. EMO BON data are openly available and FAIRified (Findable, Accessible, Interoperable and Reusable) with the aim of engaging with the broader scientific community and making data accessible to users from various research fields. Marine microorganisms are a key theme for the EMO BON network, with a focus on both plankton and benthic microbes.
+contacts:
+  - name: Nicolas Pade
+    email: emobon@embrc.eu
+    role: Lead
+publications:
+  - 10.3389/fmars.2023.1118120
+  - 10.25607/OBP-1743
+  - 10.25607/OBP-1653
+  - 10.3897/BDJ.13.e143585
+  - 10.3897/BDJ.14.e178484
+verification:
+  checked-by:
+    - Ioulia Santi
+  checked-on: '2026-07-07'

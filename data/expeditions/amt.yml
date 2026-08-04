@@ -1,0 +1,26 @@
+# Global or large-scale expedition program.
+# Schema: ../../schema/expeditions.schema.json
+id: amt
+name: Atlantic Meridional Transect
+acronym: AMT
+program-website: https://amt-uk.org/
+affiliated-institutions: Plymouth Marine Laboratory (PML)
+affiliated-institution-websites:
+  - https://pml.ac.uk
+  - https://amt-uk.org/
+data-accessions:
+  - PRJNA1226253
+contacts:
+  - name: Andy Rees
+    email: apre@pml.ac.uk
+    role: PI
+publications:
+  - 10.3389/fmars.2023.1241333
+  - 10.3389/fmars.2023.1051510
+  - 10.1038/s41597-025-05423-9
+sample-metadata-source: Download from MGnify (GRUMP Amplicons 2019 & 2020 cruise (surface))
+notes: 31 expeditions between 1995 and 2024. Currently suspended due to lack of funding
+verification:
+  checked-by:
+    - Andy Rees
+  checked-on: '2026-06-10'

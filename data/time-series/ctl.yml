@@ -1,0 +1,41 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: ctl
+name: IMOS Coastal Microbial Sampling, Cape Tribulation
+acronym: CTL
+program-website: https://imos.org.au/facility/biomolecular-observing/microbial-coastal-sampling
+affiliated-institutions: Australian Institute of Marine Science (AIMS), James Cook University,
+  IMOS, BPA, CSIRO
+affiliated-institution-websites:
+  - https://www.csiro.au/
+  - https://bioplatforms.com/initiatives/
+  - https://imos.org.au/
+  - https://www.aims.gov.au/
+status: active
+sampling-start-year: 2020
+sampling-end-year: present
+dna-collection-start-year: 2020
+countries:
+  - Australia
+ocean-basins:
+  - South Pacific Ocean
+sub-region: Inshore Great Barrier Reef
+latitude: -16.115
+longitude: 145.483
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface
+sampling-cadence: quarterly
+omics-types:
+  - amplicon-sequencing
+data-accessions:
+  - PRJNA597010
+contacts:
+  - name: Yun Kit Yeoh
+    email: Y.Yeoh@aims.gov.au
+    role: Site Lead
+notes: 16S and 18S metabarcoding
+verification:
+  checked-by:
+    - Yun Kit Yeoh
+  checked-on: '2026-06-16'

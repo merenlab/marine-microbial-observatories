@@ -1,0 +1,47 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: nemo
+name: Northwest Enhanced Moored Observatory
+acronym: NEMO
+program-website: https://nwem.apl.uw.edu/about_proj_NEMO.shtml
+affiliated-institutions: |-
+  NOAA Northwest Fisheries Science Center; NOAA Center for Coastal Environmental Health and Biomolecular Research; University of Washington; NANOOS
+affiliated-institution-websites:
+  - https://www.washington.edu/
+  - https://www.nanoos.org/products/habs/real-time/home.php
+status: active
+sampling-start-year: 2016
+sampling-end-year: present
+dna-collection-start-year: 2021
+countries:
+  - United States
+ocean-basins:
+  - Northeast Pacific Ocean
+sub-region: Eastern North Pacific Ocean (Strait of Juan de Fuca)
+latitude: 48.22
+longitude: -123.41
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface
+sampling-cadence: weekly-or-more
+omics-types:
+  - amplicon-sequencing
+contacts:
+  - name: Stephanie Moore
+    email: stephanie.moore@noaa.gov
+    role: PI
+  - name: Nicolaus Adams
+    role: PI
+  - name: Christina Mikulski
+    role: PI
+  - name: John Mickett
+    role: PI
+  - name: Nicolas Michel-Hart
+    role: PI
+publications:
+  - 10.15351/3068-2320.1149
+  - 10.3390/jmse9030336
+verification:
+  checked-by:
+    - SK Moore
+  checked-on: '2026-07-06'

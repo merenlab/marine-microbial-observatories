@@ -1,0 +1,23 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: edna-expeditions-ii
+name: Environmental DNA Expeditions in UNESCO World Heritage Marine Sites II
+acronym: eDNA Expeditions II
+network-website: https://www.unesco.org/en/edna-expeditions
+affiliated-institutions: |-
+  IOC UNESCO IODE (International Oceanographic Data and Information Exchange) Programme and Marine World Heritage Centre of UNESCO OBIS
+umbrella-organisation: OBON
+status: active
+established-year: 2025
+geographic-scope: Global
+mission-statement: |-
+  The “eDNA expeditions II” project is a citizen-science initiative designed to establish repeated eDNA sampling across marine protected areas. Education will be central to the initiative and will foster local ownership, and build technical capacity to monitor and protect marine biodiversity in the face of climate change.
+contacts:
+  - name: Ward Appeltans
+    email: w.appeltans@unesco.org
+  - name: Saara Suominen
+    email: s.suominen@unesco.org
+publications:
+  - |-
+    https://www.researchgate.net/publication/389876335_Engaging_communities_to_safeguard_ocean_life_UNESCO_Environmental_DNA_Expeditions_Preliminary_report_of_UNESCO_Environmental_DNA_Expeditions_in_Sundarbans
+notes: eDNA inclusive

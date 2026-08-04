@@ -1,0 +1,434 @@
+:root {
+  --bg: #fbfbfa;
+  --surface: #ffffff;
+  --surface-2: #f2f4f5;
+  --ink: #1a1f24;
+  --ink-2: #52616d;
+  --ink-3: #7d8b96;
+  --line: #dfe4e8;
+  --accent: #14657f;
+  --accent-ink: #ffffff;
+  --accent-soft: #e3eef2;
+  --warn: #8a5a00;
+  --radius: 6px;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12161a;
+    --surface: #191e24;
+    --surface-2: #212831;
+    --ink: #e8edf1;
+    --ink-2: #a7b4c0;
+    --ink-3: #7a8794;
+    --line: #2c353f;
+    --accent: #5fb8d6;
+    --accent-ink: #0e1418;
+    --accent-soft: #1d2b33;
+    --warn: #d8a13c;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 15px/1.55 var(--sans);
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
+
+.sr, .skip {
+  position: absolute; width: 1px; height: 1px; padding: 0;
+  margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+.skip:focus {
+  position: static; width: auto; height: auto; margin: 8px; padding: 8px 12px;
+  clip: auto; background: var(--accent); color: var(--accent-ink); border-radius: var(--radius);
+}
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+
+/* ---------------------------------------------------------------- masthead */
+
+/* A Landsat 8 image of a Baltic Sea cyanobacteria bloom sits behind the title:
+   marine microbes photographed from orbit. Public domain (NASA/USGS) --
+   provenance and credit in site/assets/README.md.
+
+   The banner is dark in both colour schemes, so its text colours are fixed
+   rather than taken from the theme variables.
+
+   The gradient is a scrim for legibility. It is deliberately lopsided: heavy
+   over the left ~60% where the title, tagline and counts sit, then falling away
+   so the bloom itself is actually visible on the right. A scrim heavy enough for
+   text everywhere flattens the photo into a dark smudge. Contrast was checked
+   against the brightest pixel in the region each text element can reach; the
+   ratios noted below are the worst case, not the average. */
+.masthead {
+  position: relative;
+  padding: 42px 0 38px;
+  border-bottom: 1px solid var(--line);
+  background-color: #051418;
+  background-image:
+    linear-gradient(100deg,
+      rgba(5, 20, 24, 0.96) 0%,
+      rgba(5, 20, 24, 0.94) 55%,
+      rgba(5, 20, 24, 0.58) 72%,
+      rgba(5, 20, 24, 0.20) 100%),
+    url("assets/masthead-baltic-bloom.jpg");
+  background-size: cover, cover;
+  background-position: center, center 42%;
+  background-repeat: no-repeat, no-repeat;
+}
+.masthead h1 {
+  margin: 0 0 6px;
+  font-size: clamp(1.35rem, 3.2vw, 1.9rem);
+  font-weight: 620;
+  letter-spacing: -0.015em;
+  color: #f4f9fa;                 /* 7.4:1 over the worst-case backdrop */
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.55);
+}
+.tagline {
+  margin: 0 0 10px;
+  max-width: 68ch;
+  color: #d8e7eb;                 /* 6.2:1 */
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+}
+.meta {
+  margin: 0;
+  font-size: 0.83rem;
+  color: #b8ccd2;                 /* 4.7:1 -- do not darken further */
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Credit for the banner image, bottom-right of the masthead. Small and quiet,
+   but present on every page: NASA asks to be acknowledged as the source. */
+/* The credit sits over the least-scrimmed part of the banner, so it carries its
+   own backing plate rather than relying on the gradient. 8.1:1 on the plate. */
+.masthead-credit {
+  position: absolute;
+  right: 14px;
+  bottom: 10px;
+  margin: 0;
+  padding: 4px 9px;
+  border-radius: 4px;
+  background: rgba(5, 20, 24, 0.58);
+  font-size: 0.66rem;
+  line-height: 1.45;
+  color: #e8f4f6;
+  text-align: right;
+  max-width: 44ch;
+  backdrop-filter: blur(2px);
+}
+.masthead-credit a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.masthead-credit a:hover { color: #ffffff; }
+
+@media (max-width: 860px) {
+  /* Narrow viewports crop the photo to its centre and the text spans the full
+     width, so the lopsided gradient no longer lines up with the text. Go back
+     to an almost uniform scrim, which every text colour clears comfortably. */
+  .masthead {
+    background-image:
+      linear-gradient(rgba(5, 20, 24, 0.90), rgba(5, 20, 24, 0.86)),
+      url("assets/masthead-baltic-bloom.jpg");
+  }
+  /* No room to float the credit beside the title on a phone. */
+  .masthead-credit {
+    position: static;
+    margin: 16px 0 0;
+    padding: 0;
+    background: none;
+    backdrop-filter: none;
+    text-align: left;
+    max-width: none;
+    color: #b8ccd2;
+  }
+}
+
+/* ------------------------------------------------------------------- tabs */
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  margin-top: 18px;
+  border-bottom: 1px solid var(--line);
+}
+.tab {
+  appearance: none;
+  border: 1px solid transparent;
+  border-bottom: none;
+  background: none;
+  color: var(--ink-2);
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 9px 14px;
+  cursor: pointer;
+  border-radius: var(--radius) var(--radius) 0 0;
+  margin-bottom: -1px;
+}
+.tab:hover { color: var(--ink); background: var(--surface-2); }
+.tab[aria-current="page"] {
+  background: var(--bg);
+  border-color: var(--line);
+  color: var(--ink);
+  font-weight: 560;
+}
+.tab .n { color: var(--ink-3); font-weight: 400; font-variant-numeric: tabular-nums; }
+
+main { padding: 22px 0 60px; }
+
+/* Every view panel (#panel-table, #panel-map, #panel-about, #panel-contribute,
+   and any page added later) needs breathing room below the tab strip's border. */
+main > section { padding-top: 10px; }
+
+/* ---------------------------------------------------------------- toolbar */
+
+.toolbar { display: grid; gap: 10px; margin-bottom: 14px; }
+
+.search input {
+  width: 100%;
+  padding: 9px 12px;
+  font: inherit;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.search input:focus-visible { outline: 2px solid var(--accent); outline-offset: -1px; }
+
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.filters label { display: flex; flex-direction: column; gap: 3px; font-size: 0.74rem; color: var(--ink-3); }
+.filters select {
+  font: inherit; font-size: 0.86rem; padding: 6px 8px; max-width: 15rem;
+  color: var(--ink); background: var(--surface);
+  border: 1px solid var(--line); border-radius: var(--radius);
+}
+
+.toolbar-end { display: flex; align-items: center; gap: 14px; }
+.count { font-size: 0.84rem; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.linky {
+  appearance: none; background: none; border: none; padding: 0;
+  color: var(--accent); font: inherit; font-size: 0.84rem; cursor: pointer;
+  text-decoration: underline; text-underline-offset: 2px;
+}
+
+/* ----------------------------------------------------------------- table */
+
+.table-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+
+thead th {
+  position: sticky; top: 0; z-index: 1;
+  background: var(--surface-2);
+  text-align: left;
+  font-weight: 580;
+  font-size: 0.76rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+}
+thead th:hover { color: var(--ink); }
+thead th[aria-sort] { color: var(--ink); }
+thead th .arrow { color: var(--accent); }
+
+tbody td { padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr { cursor: pointer; }
+tbody tr:hover td { background: var(--accent-soft); }
+
+td.name { font-weight: 550; min-width: 17rem; }
+td.name .acronym { display: block; font-size: 0.78rem; font-weight: 400; color: var(--ink-3); font-family: var(--mono); }
+td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.wrap-cell { min-width: 12rem; }
+
+.pill {
+  display: inline-block;
+  font-size: 0.72rem;
+  padding: 1px 7px;
+  border-radius: 10px;
+  background: var(--surface-2);
+  color: var(--ink-2);
+  border: 1px solid var(--line);
+  white-space: nowrap;
+}
+.pill.active { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
+.pill.discontinued { color: var(--ink-3); }
+.pill.unknown { color: var(--warn); border-color: var(--warn); }
+.pill-row { display: flex; flex-wrap: wrap; gap: 4px; }
+
+.empty { padding: 28px 0; color: var(--ink-3); text-align: center; }
+
+/* ------------------------------------------------------------------- map */
+
+/* The map is embedded in the About page's prose, at the position ABOUT.md puts
+   its <div id="map-embed"> placeholder. */
+#map-embed { margin: 16px 0 22px; }
+#map-embed .map-canvas {
+  height: min(58vh, 480px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-2);
+}
+#map-embed .map-caption {
+  margin: 7px 0 0;
+  font-size: 0.79rem;
+  color: var(--ink-3);
+}
+.note { margin: 0 0 12px; font-size: 0.86rem; color: var(--ink-2); }
+.leaflet-popup-content { font: 13px/1.45 var(--sans); margin: 10px 12px; }
+.leaflet-popup-content strong { display: block; }
+.leaflet-popup-content .sub { color: #555; font-size: 0.85em; }
+.leaflet-container { font: inherit; }
+
+/* ---------------------------------------------------------------- detail */
+
+dialog#detail {
+  width: min(760px, calc(100vw - 32px));
+  max-height: min(88vh, 900px);
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink);
+  overflow: auto;
+}
+dialog#detail::backdrop { background: rgba(10, 15, 20, 0.55); }
+
+.close {
+  position: sticky; top: 0; float: right;
+  appearance: none; background: none; border: none;
+  font-size: 1.7rem; line-height: 1; color: var(--ink-3);
+  cursor: pointer; padding: 10px 14px; z-index: 2;
+}
+.close:hover { color: var(--ink); }
+
+#detail-body { padding: 20px 24px 28px; }
+#detail-body h2 { margin: 0 0 2px; font-size: 1.2rem; letter-spacing: -0.01em; }
+#detail-body .rec-acronym { font-family: var(--mono); color: var(--ink-3); font-size: 0.85rem; margin: 0 0 14px; }
+
+dl.fields { display: grid; grid-template-columns: minmax(9rem, 13rem) 1fr; gap: 1px 18px; margin: 0; }
+dl.fields > dt {
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  color: var(--ink-3);
+  padding: 7px 0;
+  border-top: 1px solid var(--line);
+}
+dl.fields > dd { margin: 0; padding: 7px 0; border-top: 1px solid var(--line); min-width: 0; }
+dl.fields > dd ul { margin: 0; padding-left: 1.1em; }
+dl.fields > dd li { margin-bottom: 2px; }
+dl.fields a { word-break: break-word; }
+.contact { margin-bottom: 6px; }
+.contact .role { color: var(--ink-3); font-size: 0.85em; }
+.contact .cnote { color: var(--warn); font-size: 0.85em; }
+code { font-family: var(--mono); font-size: 0.86em; background: var(--surface-2); padding: 1px 4px; border-radius: 3px; }
+
+.rec-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 4px; }
+.btn {
+  display: inline-block;
+  font-size: 0.85rem;
+  padding: 7px 13px;
+  border-radius: var(--radius);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.btn:hover { background: var(--accent-soft); }
+.btn.primary { background: var(--accent); color: var(--accent-ink); }
+.btn.primary:hover { filter: brightness(1.08); }
+.unverified { color: var(--warn); font-size: 0.85em; }
+
+/* ------------------------------------------------------------------ prose */
+
+/* Rendered from ABOUT.md / CONTRIBUTING.md, so this has to cope with whatever
+   markdown those files use: headings, lists, code blocks, tables, blockquotes. */
+.prose { max-width: 76ch; }
+.prose > :first-child { margin-top: 0; }
+.prose h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 32px 0 8px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--line);
+}
+.prose h3 { font-size: 0.98rem; font-weight: 600; margin: 22px 0 6px; }
+.prose h4 { font-size: 0.9rem; font-weight: 600; margin: 18px 0 4px; color: var(--ink-2); }
+.prose p, .prose li { color: var(--ink-2); }
+.prose li { margin-bottom: 5px; }
+.prose ul, .prose ol { padding-left: 1.4em; }
+.prose li > ul, .prose li > ol { margin-top: 5px; }
+.prose strong { color: var(--ink); font-weight: 600; }
+.prose em { color: var(--ink-3); }
+.prose hr { border: none; border-top: 1px solid var(--line); margin: 28px 0; }
+
+.prose pre {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  overflow-x: auto;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+.prose pre code { background: none; padding: 0; font-size: inherit; }
+.prose :not(pre) > code { white-space: nowrap; }
+
+.prose blockquote {
+  margin: 14px 0;
+  padding: 2px 0 2px 14px;
+  border-left: 3px solid var(--accent);
+  color: var(--ink-2);
+}
+.prose blockquote p { margin: 6px 0; }
+
+.prose table {
+  font-size: 0.87rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin: 14px 0;
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+}
+.prose table th { position: static; text-transform: none; letter-spacing: 0; cursor: default; }
+.prose table td, .prose table th { white-space: normal; }
+
+/* Anchor targets sit below the sticky nothing, but give them breathing room
+   when linked to directly. */
+.prose [id] { scroll-margin-top: 16px; }
+
+/* 28px, not 18px: same breathing room below the rule as the view panels get
+   below the tab strip (main's 22px plus their own 10px). */
+footer { border-top: 1px solid var(--line); padding: 28px 0 40px; }
+footer p { margin: 0; font-size: 0.8rem; color: var(--ink-3); max-width: 74ch; }
+
+@media (min-width: 760px) {
+  .toolbar { grid-template-columns: minmax(16rem, 26rem) 1fr auto; align-items: end; }
+  .toolbar-end { justify-content: flex-end; }
+}
+@media (max-width: 600px) {
+  dl.fields { grid-template-columns: 1fr; gap: 0; }
+  dl.fields > dd { border-top: none; padding-top: 0; padding-bottom: 9px; }
+}

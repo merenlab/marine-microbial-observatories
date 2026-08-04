@@ -1,0 +1,49 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: bats
+name: Bermuda Atlantic Time Series
+acronym: BATS
+program-website: https://bios.asu.edu/bats
+affiliated-institutions: Arizona State University/ Bermuda Institute of Ocean Sciences / BIOS-SCOPE
+affiliated-institution-websites:
+  - https://bios.asu.edu/
+status: active
+sampling-start-year: 1988
+sampling-end-year: present
+dna-collection-start-year: 1991
+countries:
+  - Bermuda
+ocean-basins:
+  - Sargasso Sea
+sub-region: Atlantic Ocean
+latitude: 31.6667
+longitude: -64.1667
+multiple-sampling-sites: true
+sampling-sites-note: Station BATS; Hydrostation S
+sampling-depth: surface-and-deep
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+  - other-omics
+data-accessions:
+  - PRJNA675293
+  - PRJNA1066814
+  - PRJNA1111160
+  - PRJNA385855
+  - PRJNA40125
+contacts:
+  - name: Nicholas Bates
+    email: nick.bates@bios.asu.edu
+    role: PI
+publications:
+  - 10.3389/fmicb.2022.833252
+  - 10.1038/s43705-022-00198-1
+  - 10.1038/s41467-024-48300-6
+  - 10.1038/ismej.2013.32
+notes: |-
+  metaT exists for certain projects (e.g., BCO-DMO dataset 512782) and specific experiments; not currently a core long-term
+verification:
+  checked-by:
+    - Nick Bates
+  checked-on: '2026-07-06'

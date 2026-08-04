@@ -1,0 +1,37 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: nes-lter
+name: Northeast Shelf LTER
+acronym: NES LTER
+program-website: https://lternet.edu/site/northeast-u-s-shelf/
+affiliated-institutions: University of Rhode Island; Woods Hole Oceanographic Institution
+affiliated-institution-websites:
+  - https://web.uri.edu/gso/
+status: active
+sampling-start-year: 2018
+sampling-end-year: present
+dna-collection-start-year: 2018
+countries:
+  - United States
+ocean-basins:
+  - Northwest Atlantic Ocean
+sub-region: Northeast US Shelf
+latitude: 40.5
+longitude: -71.0
+multiple-sampling-sites: true
+sampling-sites-note: 11 fixed stations from shallow nearshore waters to the shelf break
+sampling-depth: surface
+sampling-cadence: quarterly
+omics-types:
+  - amplicon-sequencing
+contacts:
+  - name: Tatiana Rynearson
+    email: rynearson@uri.edu
+    role: PIs of the NES-LTER
+  - name: Heidi Sosik
+    email: hsosik@whoi.edu
+    role: PIs of the NES-LTER
+verification:
+  checked-by:
+    - Tatiana Rynearson
+  checked-on: '2026-06-29'

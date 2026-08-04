@@ -1,0 +1,25 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: citizens-of-the-sea
+name: Citizens of the Sea
+acronym: Citizens of the Sea
+network-website: https://obon-ocean.org/project/citizens-of-the-sea/
+additional-websites:
+  - https://www.citizensofthesea.org/
+affiliated-institutions: Citizens of the Sea, Cawthron Institute (CAWTHRON)
+umbrella-organisation: OBON
+status: active
+established-year: 2024
+geographic-scope: South Pacific
+mission-statement: |-
+  Our mission is to build a citizen-powered ocean observing network that generates large-scale, spatio-temporal biodiversity data from under-sampled offshore waters. By equipping cruising yachts and offshore racing teams with simple eDNA sampling kits, we transform voyages across the Pacific and the world's most remote oceans into scientific expeditions that expand our understanding of marine life.
+contacts:
+  - name: Erin Bomati
+    email: erin@citizensofthesea.org
+    role: Programme Lead
+  - name: Xavier Pochon
+    email: xavier@citizensofthesea.org
+    role: Science Lead
+publications:
+  - 10.5194/oos2025-207
+notes: eDNA, unsure if this includes microbes so feedback from them would be important

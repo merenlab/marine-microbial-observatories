@@ -1,0 +1,37 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: ecofoci
+name: Ecosystems & Fisheries Oceanography Coordinated Investigations (EcoFOCI)
+acronym: EcoFOCI
+program-website: https://www.ecofoci.noaa.gov/research-overview
+affiliated-institutions: UAF, UW CICOES, NOAA PMEL
+affiliated-institution-websites:
+  - https://pmel.noaa.gov/
+status: active
+sampling-start-year: 1984
+sampling-end-year: present
+countries:
+  - United States
+ocean-basins:
+  - Arctic Ocean
+sub-region: Arctic
+latitude: 64.459
+longitude: -168.96
+multiple-sampling-sites: true
+sampling-sites-note: Multiple transect stations across Chukchi Sea and eastern Bering Sea
+  shelf
+sampling-depth: surface-and-deep
+sampling-cadence: annually
+omics-types:
+  - amplicon-sequencing
+data-accessions:
+  - PRJNA982176
+contacts:
+  - name: Zach Gold
+    email: zachary.gold@noaa.gov
+    role: Principal Investigator AMBON
+  - name: Sean McAllister
+    email: sean.mcallister@noaa.gov
+    role: Research Coordinator EcoFOCI
+publications:
+  - 10.5670/oceanog.2023.221

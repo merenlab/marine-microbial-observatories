@@ -1,0 +1,40 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: wec
+name: Western Channel Observatory
+acronym: WEC
+program-website: https://www.westernchannelobservatory.org.uk/index.php
+affiliated-institutions: Plymouth Marine Laboratory and The Marine Biological Association
+affiliated-institution-websites:
+  - https://pml.ac.uk
+  - https://www.mba.ac.uk
+status: active
+sampling-start-year: 2001
+sampling-end-year: present
+countries:
+  - England
+ocean-basins:
+  - English Channel
+sub-region: western English Channel
+latitude: 50.25
+longitude: -4.2167
+multiple-sampling-sites: true
+sampling-sites-note: Station L4 & E1
+sampling-depth: surface
+sampling-cadence: weekly-or-more
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+  - other-omics
+data-accessions:
+  - PRJNA1045854
+  - PRJNA804019
+  - PRJEA46599
+contacts:
+  - name: Michael Cunliffe
+    email: micnli@mba.ac.uk
+    role: PI
+publications:
+  - 10.1093/ismejo/wrae216
+  - 10.1038/ismej.2011.107
+  - 10.4056/sigs.1202536

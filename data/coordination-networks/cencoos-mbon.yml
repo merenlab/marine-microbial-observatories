@@ -1,0 +1,17 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: cencoos-mbon
+name: Central California MBON
+acronym: CeNCOOS MBON / CenCal MBON
+network-website: https://marinebon.org/network/central-california-mbon/
+affiliated-institutions: |-
+  Monterey Bay Aquarium Research Institute (MBARI), Central & Northern California Ocean Observing System (CeNCOOS), NOAA California Current Integrated Ecosystem Assessment (CCIEA), NOAA Office of National Marine Sanctuaries, Bureau of Ocean Energy Management (BOEM), State of California, CalCOFI
+umbrella-organisation: MBON
+status: active
+established-year: 2014
+geographic-scope: Central California / Monterey Bay
+mission-statement: |-
+  Integrates satellite remote sensing, in situ observations and models to quantify relationships between climate, the physical/chemical ocean environment and marine food webs from microbes to top predators, in support of the NOAA California Current IEA, national marine sanctuaries, BOEM and the State of California.
+contacts:
+  - name: Francisco Chavez (MBARI)
+    role: Lead PI

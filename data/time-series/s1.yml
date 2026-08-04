@@ -1,0 +1,38 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: s1
+name: JAMSTEC station S1
+acronym: S1
+program-website: https://www.jamstec.go.jp/k2s1/en/
+affiliated-institutions: JAMSTEC
+affiliated-institution-websites:
+  - https://www.jamstec.go.jp/e/
+status: unknown
+sampling-start-year: 2010
+sampling-end-year: present
+countries:
+  - Japan
+ocean-basins:
+  - Northwest Pacific Ocean
+sub-region: Western North Pacific Ocean
+latitude: 30.0
+longitude: 145.0
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface-and-deep
+sampling-cadence: quarterly
+omics-types:
+  - amplicon-sequencing
+data-accessions:
+  - DRS060167
+  - DRA008479
+contacts:
+  - name: Miyako Sato
+    email: satom@jamstec.go.jp
+    role: Uknown
+publications:
+  - 10.1007/s10872-016-0372-2
+verification:
+  checked-by:
+    - Miyako Sato
+  checked-on: '2026-07-07'

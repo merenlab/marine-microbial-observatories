@@ -1,0 +1,39 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: siglunes
+name: Marine and Freshwater Research Institute of Iceland Hydrographic Survey Programme
+acronym: SIGLUNES
+program-website: https://www.hafogvatn.is/en/research/oceanograpy
+affiliated-institutions: |-
+  Microbes in the Icelandic Marine Environment (MIME); Marine and Freshwater Research Institute
+affiliated-institution-websites:
+  - https://iscar.matis.is/project/mime
+status: active
+sampling-start-year: 1960
+sampling-end-year: present
+countries:
+  - Iceland
+ocean-basins:
+  - Northeast Atlantic Ocean
+sub-region: Icelandic coastal waters
+latitude: 63.33
+longitude: -21.58
+multiple-sampling-sites: true
+sampling-sites-note: Stations within the Siglunes transect and the Selvogsbanki transect
+sampling-depth: surface-and-deep
+sampling-cadence: annually
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+data-accessions:
+  - PRJEB41565
+  - PRJEB44722
+contacts:
+  - name: Viggó Þór Marteinsson
+    email: viggo.th.marteinsson@matis.is
+    role: MIME PI
+  - email: matis@matis.is
+publications:
+  - 10.7717/peerj.11112
+  - 10.3389/fmars.2022.795835
+  - 10.1038/s41598-023-35537-2

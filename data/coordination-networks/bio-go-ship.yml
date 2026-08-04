@@ -1,0 +1,25 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: bio-go-ship
+name: Bio-Global Ocean Ship-Based Hydrographic Investigations Programme
+acronym: Bio-GO-SHIP
+network-website: https://biogoship.org
+affiliated-institutions: |-
+  The University of California Irvine, National Oceanic and Atmospheric Administration (NOAA), National Oceanography Centre (NOC), National Institute of Aquatic Resources (DTU Aqua), Laboratory for Ocean Sciences (Bigelow), Woods Hole Oceanographic Institution, Mississippi State University Northern Gulf Institute, Oregon State University
+umbrella-organisation: OBON
+status: active
+established-year: 2021
+geographic-scope: Global
+data-accessions:
+  - PRJNA656268
+mission-statement: |-
+  Bio-GO-SHIP is an international collaborative initiative integrating systematic biological observations into the global repeat hydrography network. The project collects standardized metagenomics, metatranscriptomics, pigments, imaging, and optical data alongside traditional physical and chemical oceanographic measurements to quantify pelagic plankton diversity and its feedback on global biogeochemical cycles.
+contacts:
+  - name: Adam Martiny
+    email: amartiny@uci.edu
+    role: Lead
+  - name: Luke Thompson
+    email: luke.thompson@noaa.gov
+    role: Lead
+publications:
+  - 10.1038/s41597-021-00889-9

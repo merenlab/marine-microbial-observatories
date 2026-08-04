@@ -1,0 +1,47 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: pico
+name: Piver's Island Coastal Observatory
+acronym: PICO
+program-website: https://sites.nicholas.duke.edu/johnson/research/pico/
+affiliated-institutions: Duke University
+affiliated-institution-websites:
+  - https://nicholas.duke.edu/
+  - https://oceanmicrobesgroup.org
+status: active
+sampling-start-year: 2010
+sampling-end-year: present
+dna-collection-start-year: 2011
+countries:
+  - United States
+ocean-basins:
+  - Northwest Atlantic Ocean
+sub-region: coastal/southeastern USA
+latitude: 34.7181
+longitude: -76.6707
+multiple-sampling-sites: true
+sampling-sites-note: |-
+  main near shore site sampled weekly; additional 4 stations sampled opportunitistically (details: https://doi.org/10.1111/1462-2920.14734
+sampling-depth: surface
+sampling-cadence: weekly-or-more
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+data-accessions:
+  - PRJNA803723
+  - PRJNA309156
+  - PRJNA437132
+contacts:
+  - name: Zackary Johnson
+    email: zackary.johnson@duke.edu
+    role: PI
+publications:
+  - 10.3389/fmars.2025.1505754
+  - 10.1038/ismej.2017.4
+  - 10.1128/AEM.00395-16
+  - 10.1111/1462-2920.14734
+notes: physical, chemical and biological data available
+verification:
+  checked-by:
+    - Zackary Johnson
+  checked-on: '2026-06-10'

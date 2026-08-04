@@ -1,0 +1,34 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: asts
+name: Arabian Sea Time Series (ASTS)
+acronym: ASTS
+affiliated-institutions: CSIR - National Institute Of Oceanography
+affiliated-institution-websites:
+  - http://www.nio.org/
+status: active
+sampling-start-year: 2007
+sampling-end-year: present
+countries:
+  - India
+ocean-basins:
+  - Arabian Sea
+sub-region: Indian Ocean (Arabian Sea)
+latitude: 17.0
+longitude: 68.0
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface-and-deep
+sampling-cadence: quarterly
+omics-types:
+  - amplicon-sequencing
+data-accessions:
+  - PRJNA508851
+contacts:
+  - name: Damodar M. Shenoy
+    email: dmshenoy.nio@csir.res.in
+    role: PI
+publications:
+  - 10.3389/fmicb.2019.03153
+  - 10.3354/ame01704
+notes: Collection of omics data done for few cruises, although time-series is still ongoing

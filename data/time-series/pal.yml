@@ -1,0 +1,44 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: pal
+name: Palmer LTER
+acronym: PAL
+program-website: https://pallter.marine.rutgers.edu/
+affiliated-institutions: NSF; Rutgers University
+affiliated-institution-websites:
+  - https://pallter.marine.rutgers.edu/
+status: active
+sampling-start-year: 1980
+sampling-end-year: present
+dna-collection-start-year: 2008
+countries:
+  - United States
+ocean-basins:
+  - Southern Ocean
+sub-region: Antarctic Peninsula, Southern Ocean
+latitude: -64.77
+longitude: -64.05
+multiple-sampling-sites: true
+sampling-sites-note: |-
+  Multiple stations in Palmer grid off western Antarctic Peninsula; includes nearshore, coastal, and offshore stations
+sampling-depth: surface
+sampling-cadence: quarterly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+data-accessions:
+  - PRJNA901488
+  - PRJNA1128025
+  - PRJNA344476
+  - PRJNA30543
+contacts:
+  - name: Hugh Ducklow
+    email: hducklow@ldeo.columbia.edu
+    role: PI (microbial data)
+publications:
+  - 10.1093/ismejo/wrae158
+  - 10.3389/fmicb.2023.1168507
+verification:
+  checked-by:
+    - HD
+  checked-note: 'original entry: HD, June 2026'

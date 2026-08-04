@@ -1,0 +1,38 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: copas
+name: COPAS Time-Series
+acronym: COPAS
+program-website: https://igmets.net/metabase/cl-30101/
+affiliated-institutions: |-
+  Center for Oceanographic Research in the Eastern South Pacific (COPAS), Universidad de Concepción
+affiliated-institution-websites:
+  - https://copas-coastal.cl/en/#copas
+status: active
+sampling-start-year: 2002
+sampling-end-year: present
+countries:
+  - Chile
+ocean-basins:
+  - South Pacific Ocean
+sub-region: Eastern South Pacific Ocean
+latitude: -36.5
+longitude: -73.1292
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+data-accessions:
+  - KM461719-KM461941
+contacts:
+  - name: Renato A. Quiñones
+    email: rquinone@udec.cl
+    role: PI
+  - name: Marcelo Gutierrez
+    email: magutier@udec.cl
+    role: PI
+publications:
+  - 10.1016/j.dsr2.2018.02.001
+  - 10.1111/1462-2920.13257

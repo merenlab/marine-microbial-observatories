@@ -1,0 +1,33 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: bobts
+name: Bay of Bengal Time Series
+acronym: BOBTS
+affiliated-institutions: CSIR - National Institute Of Oceanography
+affiliated-institution-websites:
+  - http://www.nio.org/
+status: discontinued
+sampling-start-year: 2010
+sampling-end-year: 2016
+countries:
+  - India
+ocean-basins:
+  - Bay of Bengal
+sub-region: Indian Ocean (Bay of Bengal)
+latitude: 18.0
+longitude: 89.0
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface-and-deep
+sampling-cadence: quarterly
+omics-types:
+  - amplicon-sequencing
+data-accessions:
+  - PRJNA508851
+contacts:
+  - name: Damodar M. Shenoy
+    email: dmshenoy.nio@csir.res.in
+    role: PI
+publications:
+  - 10.3389/fmicb.2019.03153
+notes: Collection of omics data done for few cruises

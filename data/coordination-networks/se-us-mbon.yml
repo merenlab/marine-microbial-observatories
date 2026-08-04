@@ -1,0 +1,21 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: se-us-mbon
+name: South Florida MBON (South Florida Ecosystem Restoration (SFER)/Southeast US MBON)
+acronym: SE US MBON
+network-website: https://marinebon.org/network/southeast-mbon/
+affiliated-institutions: |-
+  University of South Florida, NOAA Atlantic Oceanographic and Meteorological Laboratory (AOML), Florida Keys National Marine Sanctuary, Rookery Bay National Estuarine Research Reserve, Florida Fish and Wildlife Conservation Commission, NOAA Southeast Fisheries Science Center, NOAA Integrated Ecosystem Assessment, US IOOS, Animal Telemetry Network
+umbrella-organisation: MBON
+status: active
+established-year: 2014
+geographic-scope: Florida Keys, Biscayne Bay, West Florida Shelf and SE US EEZ
+mission-statement: |-
+  Integrates ground and satellite observations of biodiversity to inform ecosystem-based management in and around the Florida Keys National Marine Sanctuary, refines practical marine EBVs and EOVs, and serves as MBON team leader linking national and international efforts.
+contacts:
+  - name: Frank Muller-Karger (University of South Florida)
+    email: carib@usf.edu
+    role: Lead PI
+  - name: Enrique Montes (NOAA AOML)
+    email: enrique.montes@noaa.gov
+    role: Programme manager

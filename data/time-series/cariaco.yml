@@ -1,0 +1,54 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: cariaco
+name: CARIACO Ocean Time-Series Program
+acronym: CARIACO
+program-website: https://imars.usf.edu/cariaco/
+affiliated-institutions: |-
+  University of South Florida, Stony Brook University, University of South Carolina, Fundación La Salle, Universidad de Oriente, Universidad Simón Bolívar in Venezuela
+affiliated-institution-websites:
+  - https://www.usf.edu/
+status: discontinued
+sampling-start-year: 1994
+sampling-end-year: 2017
+dna-collection-start-year: 1996
+countries:
+  - Venezuela
+ocean-basins:
+  - Caribbean Sea
+sub-region: Cariaco Basin
+latitude: 10.5
+longitude: -64.67
+multiple-sampling-sites: false
+sampling-sites-note: |-
+  The CARIACO Ocean Time-Series conducted monthly sampling 1994-2017 at multiple depths from the surface to 1,380 m. The Cariaco basin is a permanently anoxic basin. Significant effort was conducted on sampling the microbial community composition, biomass and concentration, and productivity near the surface (phytoplankton, other microbes), across the oxic/anoxic interface, in the anoxic waters typically below 150-200 m through to the bottom of the basin. Selective sampling of the microbial community was also done in sediment trap samples, including some non-poisoned samples of the last cup in sediment traps, collected for 2 weeks every 6 months with traps anchored at 4 depths
+sampling-depth: surface-and-deep
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+  - other-omics
+data-accessions:
+  - PRJNA326482
+contacts:
+  - name: Frank Muller-Karger
+    email: carib@usf.edu
+    role: PIs
+  - name: Gordon T. Taylor
+    email: Gordon.Taylor@stonybrook.edu
+    role: PIs
+  - name: Virginia P. Edgcomb
+    email: vedgcomb@whoi.edu
+    role: PIs
+  - name: Mary Scranton
+    email: mary.scranton@stonybrook.edu
+    role: PIs
+  - name: Andrei Chistoserdov
+    email: andrei.chistoserdov@louisiana.edu
+    role: PIs
+publications:
+  - https://www.bco-dmo.org/dataset/716773
+verification:
+  checked-by:
+    - Gordon Taylor
+  checked-on: '2026-06-19'

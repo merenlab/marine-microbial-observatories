@@ -1,0 +1,46 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: hot
+name: Hawaii Ocean Times series
+acronym: HOT
+program-website: https://hahana.soest.hawaii.edu/hot/
+affiliated-institutions: University of Hawaiʻi at Mānoa
+affiliated-institution-websites:
+  - https://manoa.hawaii.edu/
+status: active
+sampling-start-year: 1988
+sampling-end-year: present
+dna-collection-note: Not a core measurement
+countries:
+  - United States
+ocean-basins:
+  - North Pacific Ocean
+sub-region: North Pacific Subtropical Gyre
+latitude: 22.75
+longitude: -158.0
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface-and-deep
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+  - other-omics
+data-accessions:
+  - PRJNA352737
+  - SRP050269
+  - PRJNA393172
+  - PRJNA492142
+contacts:
+  - name: Angelicque White
+    email: aewhite@hawaii.edu
+    role: PI
+publications:
+  - 10.1038/s41564-017-0008-3
+  - 10.1073/pnas.1502883112
+  - 10.3389/fmars.2018.00351
+  - 10.3389/fmicb.2021.682651
+verification:
+  checked-by:
+    - Angelicque E. White
+  checked-note: 'original entry: Angelicque E. White, 7/3/2026'

@@ -1,0 +1,19 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: mbon-europe
+name: MBON Europe
+acronym: MBON Europe
+network-website: https://marinebon.org/network/europe-mbon/
+additional-websites:
+  - https://euromarinenetwork.eu/activities/mbon-europe/
+affiliated-institutions: |-
+  EuroMarine Long-Term Series Working Group (LTSWG) and European marine monitoring organisations
+umbrella-organisation: MBON
+status: active
+established-year: 2018
+geographic-scope: Europe / North-East Atlantic and adjacent seas
+mission-statement: |-
+  Spearheads coordination of active marine biodiversity monitoring by organisations in Europe - formalising coordination through MoUs, collating what monitoring is done and how, harmonising methods, facilitating data publication and developing a coordination strategy.
+contacts:
+  - name: Mark John Costello
+    role: Working group contact

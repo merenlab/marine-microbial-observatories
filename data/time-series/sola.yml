@@ -1,0 +1,52 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: sola
+name: Service d’Observation du Laboratoire Arago
+acronym: SOLA
+program-website: https://www.somlit.fr/banyuls/
+affiliated-institutions: Observatoire Océanologique de Banyuls
+affiliated-institution-websites:
+  - https://www.obs-banyuls.fr/en/
+status: active
+sampling-start-year: 2001
+sampling-end-year: present
+countries:
+  - France
+ocean-basins:
+  - Mediterranean Sea
+sub-region: NW Mediterranean Sea (coastal)
+latitude: 42.488333
+longitude: 3.145
+multiple-sampling-sites: true
+sampling-sites-note: |-
+  Service d’Observation du Laboratoire Arago (SOLA), Microbial Observatory Laboratoire Arago (MOLA), Plateau Observatoire Laboratoire Arago (POLA)
+sampling-depth: surface-and-deep
+sampling-cadence: weekly-or-more
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+  - other-omics
+data-accessions:
+  - PRJEB75023
+  - PRJNA235253
+  - PRJEB87662
+  - PRJEB26919
+  - PRJNA449267
+  - PRJEB66489
+  - PRJNA579489
+contacts:
+  - name: Pierre Galand
+    email: pierre.galand@obs-banyuls.fr
+    role: PI
+publications:
+  - 10.1093/ismejo/wrag029
+  - 10.1038/s43705-023-00278-w
+  - 10.1038/s41396-020-00851-4
+  - 10.1111/1462-2920.15482
+  - 10.1038/s41396-018-0281-z
+  - 10.1111/1462-2920.16545
+  - 10.1038/s41396-018-0158-1
+verification:
+  checked-by:
+    - Pierre Galand
+  checked-on: '2026-06-11'

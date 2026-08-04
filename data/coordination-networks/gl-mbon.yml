@@ -1,0 +1,17 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: gl-mbon
+name: Great Lakes MBON
+acronym: GL-MBON
+network-website: https://marinebon.org/network/great-lakes-mbon/
+affiliated-institutions: |-
+  University of Michigan / Cooperative Institute for Great Lakes Research (CIGLR) (lead), NOAA Great Lakes Environmental Research Laboratory, Great Lakes Observing System (GLOS), Great Lakes CoastWatch, NOAA Office of National Marine Sanctuaries, Great Lakes Acoustic Telemetry Observation System (GLATOS), Great Lakes Fishery Commission, Oregon State University
+umbrella-organisation: MBON
+status: active
+established-year: 2020
+geographic-scope: Laurentian Great Lakes, USA/Canada - FRESHWATER
+mission-statement: |-
+  Creates a biodiversity observation network for the Great Lakes that links dynamic pelagic habitats ('lakescapes'), biodiversity across the tree of life, movement of key fishery species, and the role of diversity in supporting ecosystem function.
+contacts:
+  - name: Casey Godwin (University of Michigan / CIGLR)
+    role: Principal Investigator

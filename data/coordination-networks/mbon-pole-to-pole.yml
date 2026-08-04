@@ -1,0 +1,26 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: mbon-pole-to-pole
+name: MBON Pole to Pole of the Americas
+acronym: MBON Pole to Pole / P2P
+network-website: https://marinebon.org/network/pole-to-pole-americas/
+additional-websites:
+  - https://marinebon.org/p2p/index.html
+affiliated-institutions: |-
+  GEO BON, GOOS (IOC-UNESCO), OBIS, AIR Centre, NOAA AOML, University of South Florida and partner institutions in ~15 countries of the Americas
+umbrella-organisation: MBON
+status: active
+established-year: 2017
+geographic-scope: Pacific and Atlantic coasts of the Americas, Arctic to Antarctica
+mission-statement: |-
+  A knowledge-sharing network for coordinated, standardised collection and sharing of marine biodiversity data across the Americas, leveraging GOOS, GEO BON and OBIS infrastructure to support IPBES, CBD Global Biodiversity Framework and SDG reporting.
+contacts:
+  - name: Enrique Montes (NOAA AOML)
+    email: enrique.montes@noaa.gov
+    role: Coordinators
+  - name: Frank Muller-Karger (University of South Florida)
+    email: carib@usf.edu
+    role: Coordinators
+publications:
+  - 10.5670/oceanog.2025.137
+  - 10.3897/rio.11.e163815

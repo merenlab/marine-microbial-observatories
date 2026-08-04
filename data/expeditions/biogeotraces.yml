@@ -1,0 +1,28 @@
+# Global or large-scale expedition program.
+# Schema: ../../schema/expeditions.schema.json
+id: biogeotraces
+name: bioGEOTRACES
+acronym: bioGEOTRACES
+program-website: https://www.geotraces.org/biological-parameters/
+affiliated-institutions: Massachusetts Institute of Technology (MIT)
+affiliated-institution-websites:
+  - https://www.mit.edu/
+  - https://www.whoi.edu/
+data-accessions:
+  - PRJNA385854
+  - PRJEB14154
+contacts:
+  - name: Steve Biller
+    email: sbiller@wellesley.edu
+    role: PIs bioGEOTRACES omics
+  - name: Paul M Berube
+    email: pmberube@mit.edu
+    role: PIs bioGEOTRACES omics
+  - name: Penny Chisholm
+    email: chisholm@mit.edu
+    role: PIs bioGEOTRACES omics
+publications:
+  - 10.1038/sdata.2018.176
+  - 10.1002/lno.11310
+sample-metadata-source: |-
+  https://metalog.embl.de/ (Study_Code: Biller_2018_GEOTRACES_marine_pelagic ; Bowman_2020_GEOTRACES_Arctic)

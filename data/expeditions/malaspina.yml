@@ -1,0 +1,29 @@
+# Global or large-scale expedition program.
+# Schema: ../../schema/expeditions.schema.json
+id: malaspina
+name: Malaspina 2010 Circumnavigation Expedition
+acronym: MALASPINA
+program-website: http://www.expedicionmalaspina.es
+affiliated-institutions: Spanish National Research Council (CSIC)
+affiliated-institution-websites:
+  - https://www.csic.es/en
+data-accessions:
+  - PRJEB52452
+  - PRJNA330770
+  - PRJEB23913
+  - PRJEB36469
+  - PRJEB23771
+contacts:
+  - name: Carlos M. Duarte
+    email: carlos.duarte@kaust.edu.sa
+    role: PI DeepMalaspinomics
+  - name: Silvia G. Acinas
+    email: sacinas@icm.csic.es
+    role: PI DeepMalaspinomics
+publications:
+  - 10.1038/s41597-024-02974-1
+  - https://www.nature.com/articles/s42003-021-02112-2
+  - 10.1002/lob.10008
+sample-metadata-source: |-
+  https://metalog.embl.de/ (Study_Code: Sanchez_2024_marine_MALASPINA_vertical ). Deep Malaspinomics: The co-assembly for the MAG dataset construction can be found through ENA at https://www.ebi.ac.uk/ena with accession number PRJEB40454, the nucleotide sequence for each MAG and their annotation files can be found through BioStudies at https://www.ebi.ac.uk/biostudies with accession S-BSST457 and also in the companion website to this manuscript at https://malaspina-public.gitlab.io/malaspina-deep-ocean-microbiome/.
+notes: Many people involved

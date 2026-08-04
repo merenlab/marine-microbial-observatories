@@ -1,0 +1,43 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: sfer
+name: South Florida Ecosystem Restoration (SFER)/Southeast US MBON
+acronym: SFER
+program-website: |-
+  https://www.aoml.noaa.gov/noaa-cruises-set-the-foundation-for-restoring-crucial-florida-ecosystems/
+affiliated-institutions: NOAA Atlantic Oceanographic and Meteorological Laboratory (AOML)
+affiliated-institution-websites:
+  - https://www.aoml.noaa.gov/ecosystem-assessment-team/
+status: active
+sampling-start-year: 1998
+sampling-end-year: present
+dna-collection-start-year: 2015
+countries:
+  - United States
+ocean-basins:
+  - Northwest Atlantic Ocean
+sub-region: North Atlantic / Gulf of Mexico
+latitude: 24.8
+longitude: -80.8
+multiple-sampling-sites: true
+sampling-sites-note: Multiple sites from Florida Bay, Florida Keys and the West Florida Shelf
+sampling-depth: surface-and-deep
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+data-accessions:
+  - SRP134124
+contacts:
+  - name: Enrique Montes
+    email: enrique.montes@noaa.gov
+    role: PI
+publications:
+  - 10.3389/fmars.2026.1794793
+  - 10.1002/ece3.4742
+  - 10.1002/lom3.10237
+  - https://tos.org/oceanography/article/observing-life-in-the-sea-using-environmental-dna
+notes: Cruises are typically every 6 weeks for a total of 6 cruises a year.
+verification:
+  checked-by:
+    - Enrique Montes
+  checked-on: '2026-06-12'

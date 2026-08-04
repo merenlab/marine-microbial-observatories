@@ -1,0 +1,4 @@
+# Runtime dependencies for the validation and build scripts.
+PyYAML>=6.0
+jsonschema>=4.20
+Markdown>=3.5

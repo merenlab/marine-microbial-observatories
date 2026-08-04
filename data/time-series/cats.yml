@@ -1,0 +1,35 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: cats
+name: Candolim Time-Series
+acronym: CaTS
+affiliated-institutions: CSIR-National Institute of Oceanography
+affiliated-institution-websites:
+  - http://www.nio.org/
+status: active
+sampling-start-year: 1997
+sampling-end-year: present
+countries:
+  - India
+ocean-basins:
+  - Arabian Sea
+sub-region: Indian Ocean (Arabian Sea)
+latitude: 15.51
+longitude: 73.65
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+data-accessions:
+  - PRJNA706932
+contacts:
+  - name: Damodar M. Shenoy
+    email: dmshenoy.nio@csir.res.in
+    role: PI
+publications:
+  - 10.3389/fmars.2024.1301955
+  - 10.1016/j.jmarsys.2020.103308
+  - 10.1016/j.marenvres.2020.104926
+notes: Collection of omics data done for few field trips, although time-series is still ongoing

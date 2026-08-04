@@ -1,0 +1,20 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: nbdl
+name: National Biodiversity DNA Library
+acronym: NBDL
+network-website: https://obon-ocean.org/project/national-biodiversity-dna-library-nbdl/
+affiliated-institutions: |-
+  Commonwealth Scientific and Industrial Research Organisation (CSIRO), Bioplatforms Australia, Minderoo Foundation
+umbrella-organisation: OBON
+status: active
+established-year: 2022
+geographic-scope: Australia
+mission-statement: |-
+  Australia’s National Biodiversity DNA Library (NBDL) will use cutting edge technology to create DNA reference sequences for Australia’s species from expertly identified specimens held in Australian natural history collections, and make these freely available via an online portal.
+contacts:
+  - name: Jenny Giles
+    email: Jenny.Giles@csiro.au
+    role: Lead
+notes: |-
+  eDNA, could not conclusively say whether microbes are included. In this publication https://doi.org/10.1080/18366503.2026.2694228 they say across the tree of life..

@@ -1,0 +1,40 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: eut-hpmed
+name: 'Spanish Mediterranean MSFD: Eutrophication and Pelagic Habitats monitoring'
+acronym: EUT-HPMED
+program-website: https://laboratorioplancton.blogspot.com/
+affiliated-institutions: Spanish Insitute of Oceanography, Oceanographic Center of Málaga
+affiliated-institution-websites:
+  - https://ieo.csic.es/
+status: active
+sampling-start-year: 2020
+sampling-end-year: present
+dna-collection-start-year: 2020
+countries:
+  - Spain
+ocean-basins:
+  - Mediterranean Sea
+sub-region: Alboran Sea
+latitude: 36.4915
+longitude: -4.2187
+multiple-sampling-sites: true
+sampling-sites-note: 4 coast-to-offshore transects in Almeria, Malaga, Sotogrande and Algeciras
+sampling-depth: surface
+sampling-cadence: quarterly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+contacts:
+  - name: Isabel Ferrera
+    email: isabel.ferrera@ieo.csic.es
+    role: PI of the DNA monitoring
+  - name: Jesús Mercado
+    email: jesus.mercado@ieo.csic.es
+    role: PI of the DNA monitoring
+publications:
+  - 10.1093/ismeco/ycag120
+verification:
+  checked-by:
+    - Isabel Ferrera
+  checked-on: '2026-06-24'

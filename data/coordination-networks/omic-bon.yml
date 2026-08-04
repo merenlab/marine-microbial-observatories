@@ -1,0 +1,23 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: omic-bon
+name: Omic Biodiversity Observation Network
+acronym: Omic BON
+network-website: http://geobon.org/bons/thematic-bon/omic-bon
+affiliated-institutions: |-
+  The Group on Earth Observations Biodiversity Observation Network (GEO BON), Global Omics Observatory Network (GLOMICON), Genomic Observatories Network (GOs Network), European Marine Biological Resource Centre (EMBRC), National Ecological Observatory Network (NEON), Australian Microbiome Initiative (AM), Smithsonian Marine Global Earth Observatory (MarineGEO), Agriculture and Agri-Food Canada (AAFC), Global Biodiversity Information Facility (GBIF), Ocean Biodiversity Information System (OBIS), Global Genome Biodiversity Network (GGBN), Genomic Standards Consortium (GSC), Biodiversity Information Standards (TDWG), and IOC’s Ocean Best Practices System (OBPS), Global Ocean Observing System (GOOS)
+umbrella-organisation: The Group on Earth Observations Biodiversity Observation Network (GEO
+  BON)
+status: active
+established-year: 2022
+geographic-scope: Global
+mission-statement: |-
+  The Omic Biodiversity Observation Network (Omic BON) aims to promote coordinated biomolecular observations for global insight and action.
+contacts:
+  - name: Neil Davies
+    email: ndavies@berkeley.edu
+    role: lead
+publications:
+  - 10.1093/gigascience/giad068
+notes: |-
+  Thematic Biodiversity Observation Network under GEO BON. Emerged from the union of GLOMICON and the Genomic Observatories Network; first envisioned at GSC21, Vienna in 2019; formally endorsed by GEO BON in 2022; founding charter published 2023.

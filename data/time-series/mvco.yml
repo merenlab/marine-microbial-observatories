@@ -1,0 +1,35 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: mvco
+name: Martha's Vineyard Coastal Observatory
+acronym: MVCO
+program-website: https://mvco.whoi.edu/about/
+affiliated-institutions: WHOI; Northeast US Shelf Long-Term Ecological Research
+affiliated-institution-websites:
+  - https://www.whoi.edu/
+  - https://nes-lter.whoi.edu/
+status: active
+sampling-start-year: 2003
+sampling-end-year: present
+countries:
+  - United States
+ocean-basins:
+  - Northwest Atlantic Ocean
+sub-region: Cape Cod, MA
+latitude: 41.362
+longitude: -70.5225
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+data-accessions:
+  - PRJNA504617
+  - PRJNA1170325
+contacts:
+  - name: Heidi M. Sosik
+    email: hsosik@whoi.edu
+    role: Chief Scientist
+publications:
+  - 10.1111/1462-2920.70198

@@ -1,0 +1,44 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: bios-scope
+name: BIOS-SCOPE
+acronym: BIOS-SCOPE
+program-website: https://bios.asu.edu/scope
+affiliated-institutions: Bermuda Institute of Ocean Sciences/ BATS
+affiliated-institution-websites:
+  - https://bios.asu.edu
+status: active
+sampling-start-year: 2015
+sampling-end-year: present
+dna-collection-start-year: 1991
+countries:
+  - Bermuda
+ocean-basins:
+  - Sargasso Sea
+sub-region: Sargasso Sea
+latitude: 31.6667
+longitude: -64.1667
+multiple-sampling-sites: true
+sampling-sites-note: Station BATS; Hydrostation S
+sampling-depth: surface-and-deep
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+  - other-omics
+data-accessions:
+  - PRJNA769790
+  - PRJNA1066814
+contacts:
+  - name: Craig Carlson
+    email: craig.carlson@asu.edu
+    role: PI
+publications:
+  - 10.1093/ismeco/ycae090
+  - 10.1038/s41467-024-48300-6
+notes: |-
+  EU, UK, and USA institutions involved, some metaG, MetaT for certain projects. combination of experimental and field data all with supporting biogeochem variables. see listed pubs for details
+verification:
+  checked-by:
+    - Craig Carlson
+  checked-on: '2026-07-07'

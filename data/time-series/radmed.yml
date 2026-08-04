@@ -1,0 +1,43 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: radmed
+name: RADMED
+acronym: RADMED
+program-website: |-
+  http://www.ba.ieo.es/es/investigacion/grupos-de-investigacion/gmcc/proyectos/1089-radmed-dos-2012-2015
+affiliated-institutions: The Instituto Español de Oceanografía (IEO, Spanish Institute for
+  Oceanography)
+affiliated-institution-websites:
+  - https://www.ieo.es/es/
+status: active
+sampling-start-year: 2007
+sampling-end-year: present
+countries:
+  - Spain
+ocean-basins:
+  - Mediterranean Sea
+sub-region: Western Mediterranean Sea (Alboran Sea, Balearic Sea, Catalan Sea)
+latitude: 36.8
+longitude: -4.25
+multiple-sampling-sites: true
+sampling-sites-note: |-
+  ECOMALAGA project, ECOMURCIA project, ECOBALEARES project, and CIRBAL project, Circulación Regional en las aguas de las Islas Baleares unified under RADMED
+sampling-depth: surface-and-deep
+sampling-cadence: quarterly
+omics-types:
+  - amplicon-sequencing
+data-accessions:
+  - PRJNA612168
+  - PRJNA575848
+  - PRJNA638520
+contacts:
+  - name: Rosa Balbín Chamorro
+    email: rosa.balbin@ba.ieo.es
+    role: PI RADMED-DOS
+    note: email bounce back
+  - name: Enrique Ballesteros Fernandez
+    email: enrique.ballesteros@ieo.csic.es
+    role: PI RADMED-DOS
+publications:
+  - 10.3389/fmicb.2020.01749
+  - 10.1038/s41598-021-96992-3

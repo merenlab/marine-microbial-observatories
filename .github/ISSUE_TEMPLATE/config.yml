@@ -1,0 +1,12 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Propose a change by email
+    url: https://github.com/merenlab/marine-microbial-observatories/blob/main/CONTRIBUTING.md#by-email
+    about: >
+      If you would rather not use GitHub at all, write to the maintainers and someone will
+      enter the change for you. See CONTRIBUTING.md for the address.
+  - name: How to read the records
+    url: https://microbial-observatories.org/#about
+    about: >
+      What each field means, and which ones carry known caveats. Worth a look before
+      reporting a value as wrong.

@@ -1,0 +1,19 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: ma-mbon
+name: Mid-Atlantic MBON
+acronym: MA-MBON
+network-website: https://marinebon.org/network/mid-atlantic-mbon/
+affiliated-institutions: |-
+  Mid-Atlantic Regional Association Coastal Ocean Observing System (MARACOOS) and Smithsonian Environmental Research Center (co-leads), University of Delaware, Johns Hopkins University Applied Physics Laboratory, Smithsonian National Museum of Natural History, Rutgers University, University of Maryland Center for Environmental Science, RPS (Tetra Tech), Blue Wave Consulting Group
+umbrella-organisation: MBON
+status: active
+established-year: 2019
+geographic-scope: US Mid-Atlantic Bight
+mission-statement: |-
+  Creates a regionally unique archive of co-located biological data (eDNA, animal telemetry, passive acoustics) and oceanographic data (HF radar, gliders, satellites, models), and co-develops models and tools with stakeholders for fisheries, offshore energy and place-based management.
+contacts:
+  - name: Gerhard Kuska (MARACOOS / University of Delaware)
+    role: Co-leads
+  - name: Matthew Ogburn (Smithsonian Environmental Research Center)
+    role: Co-leads

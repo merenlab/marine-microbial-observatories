@@ -1,0 +1,24 @@
+# Global or large-scale expedition program.
+# Schema: ../../schema/expeditions.schema.json
+id: bio-go-ship
+name: Bio-GO-SHIP
+acronym: Bio-GO-SHIP
+program-website: https://biogoship.org/
+affiliated-institutions: |-
+  University of California, Irvine, NOAA AOML, Bigelow, Oregon State U, WHOI, Technical University of Denmark, JAMSTEC, NOAA GOMO
+data-accessions:
+  - PRJNA656268
+contacts:
+  - name: Adam Martiny
+    email: amartiny@uci.edu
+    role: PI
+publications:
+  - 10.1038/s41597-021-00889-9
+sample-metadata-source: 'https://metalog.embl.de/ (Study_Code: Larkin_2021_GO-SHIP_marine
+  )'
+notes: |-
+  Many people and institutions involved. Connected to GO-SHIP and OBON. Environmental data listed at CCHDO
+verification:
+  checked-by:
+    - Adam Martiny
+  checked-on: '2026-07-08'

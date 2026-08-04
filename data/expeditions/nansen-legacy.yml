@@ -1,0 +1,28 @@
+# Global or large-scale expedition program.
+# Schema: ../../schema/expeditions.schema.json
+id: nansen-legacy
+name: Nansen Legacy
+acronym: Nansen Legacy
+program-website: https://arvenetternansen.com/
+affiliated-institutions: 10 norwegian research institutions; partly financed by research council
+  of Norway
+affiliated-institution-websites:
+  - https://arvenetternansen.com/
+data-accessions:
+  - PRJEB57296
+  - PRJEB57292
+contacts:
+  - name: Anna Vader
+    email: annav@unis.no
+    role: PI microbial omics data
+  - name: Bente Edvardsen
+    email: bente.edvardsen@ibv.uio.no
+    role: PI microbial omics data
+  - name: Lise Øvreås
+    email: Lise.Ovreas@uib.no
+    role: PI microbial omics data
+publications:
+  - 10.3389/fmicb.2023.1213718
+  - 10.1016/j.pocean.2023.103054
+sample-metadata-source: Download from MGnify
+notes: Many people involved. Seasonal cruises along a transect in the Barents Sea

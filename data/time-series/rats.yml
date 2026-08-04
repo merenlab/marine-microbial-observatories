@@ -1,0 +1,38 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: rats
+name: Rothera Oceanographic and Biological Time Series
+acronym: RaTS
+program-website: https://www.bas.ac.uk/project/rats/
+affiliated-institutions: British Antarctic Survey, Natural Environment Research Council
+affiliated-institution-websites:
+  - https://www.bas.ac.uk/
+status: active
+sampling-start-year: 1997
+sampling-end-year: present
+countries:
+  - England
+ocean-basins:
+  - Southern Ocean
+sub-region: Southern Ocean
+latitude: -67.34
+longitude: -68.13
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface-and-deep
+sampling-cadence: quarterly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+data-accessions:
+  - PRJNA1128025
+  - SRP091049
+  - PRJEB71789
+contacts:
+  - name: Hugh Venables
+    email: hjv@bas.ac.uk
+    role: RaTS Project Manager
+publications:
+  - 10.1186/s40793-025-00663-z
+  - https://studenttheses.uu.nl/handle/20.500.12932/43988
+  - 10.1038/s41467-024-53317-y

@@ -1,0 +1,14 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: coastal-new-england-mbon
+name: Coastal New England MBON
+network-website: https://marinebon.org/network/coastal-new-england-mbon/
+affiliated-institutions: |-
+  University of New Hampshire / Shoals Marine Laboratory, NH Fish and Game Department, NOAA National Marine Fisheries Service, Maine Department of Marine Resources, National Audubon Society, Piscataqua Region Estuarine Partnership
+umbrella-organisation: MBON
+status: active
+established-year: 2018
+geographic-scope: Coastal New England - Long Island to Cape Cod; Isles of Shoals (NH) and
+  Casco Bay (ME)
+mission-statement: |-
+  Integrates acoustic telemetry, environmental DNA and active/passive acoustics with traditional fisheries sampling to quantify how changing water conditions affect individuals, populations and community structure, using Atlantic cod and common terns as focal predators.

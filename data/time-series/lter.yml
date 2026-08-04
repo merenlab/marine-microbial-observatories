@@ -1,0 +1,51 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: lter
+name: LTER-MareChiara
+acronym: LTER/MC
+program-website: https://deims.org/0b87459a-da3c-45af-a3e1-cb1508519411
+affiliated-institutions: Stazione Zoologica Anton Dohrn
+affiliated-institution-websites:
+  - https://szn.it/en/osservatorio-napoli
+status: active
+sampling-start-year: 1984
+sampling-end-year: present
+dna-collection-note: (2003-2004, 18 dates) 2010
+countries:
+  - Italy
+ocean-basins:
+  - Mediterranean Sea
+sub-region: Gulf of Naples
+latitude: 40.801389
+longitude: 14.25
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface
+sampling-cadence: weekly-or-more
+omics-types:
+  - amplicon-sequencing
+data-accessions:
+  - PRJEB56637
+contacts:
+  - name: Diana Sarno
+    email: diana.sarno@szn.it
+    role: Site manager
+  - name: Francesca Margiotta
+    email: francesca.margiotta@szn.it
+    role: Site manager
+publications:
+  - 10.1111/maec.12758
+  - 10.1038/s41598-024-56292-y
+  - 10.1111/maec.12726
+  - 10.1002/edn3.288
+  - 10.1111/1462-2920.14984
+  - 10.1093/femsec/fiw200
+  - 10.1038/s41598-024-69520-2
+  - 10.1093/icesjms/fsab059
+  - 10.1111/maec.12733
+notes: |-
+  Samples for the two projects - LTER MareChiara (LTER_MC) and NEREA - are collected on the same day at station MC; physical, chemical and biological data are the same. Samples for metabarcoding are kept separate in the two projects because of some methodological differences.
+verification:
+  checked-by:
+    - Diana Sarno
+  checked-on: '2026-06-23'

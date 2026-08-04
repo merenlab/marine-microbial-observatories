@@ -1,0 +1,45 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: isa
+name: Isfjorden Adventfjorden Time Series
+acronym: IsA
+program-website: https://www.unis.no/project/isa/
+affiliated-institutions: The University Center in Svalbard
+affiliated-institution-websites:
+  - https://www.unis.no/
+status: active
+sampling-start-year: 2011
+sampling-end-year: present
+dna-collection-start-year: 2011
+dna-collection-note: 2011 watercolumn (microbial eukaryotes and bacteria)
+countries:
+  - Norway
+ocean-basins:
+  - Arctic Ocean
+sub-region: Arctic fjords
+latitude: 78.26
+longitude: 15.53
+multiple-sampling-sites: true
+sampling-sites-note: Multiple stations in Isfjorden and Adventfjorden, Svalbard
+sampling-depth: surface
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+  - metatranscriptomics
+data-accessions:
+  - PRJEB58729
+contacts:
+  - name: Anna Vader
+    email: anna.vader@unis.no
+    role: PI
+publications:
+  - 10.1007/s10482-021-01547-1
+  - 10.33265/polar.v38.3390
+  - 10.1111/1758-2229.70282
+  - 10.1186/s12866-026-04821-2
+  - |-
+    https://framforum.com/2026/03/12/year-round-monitoring-of-the-marine-ecosystem-in-kongsfjorden/?utm_source=chatgpt.com
+  - 10.1186/s13213-024-01767-6
+  - https://www.jstor.org/stable/27311558
+notes: |-
+  physical, chemical, biological data. Monthly sampling at IsA, other stations sampled less frequently

@@ -1,0 +1,44 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: eec
+name: SOMLIT-Wimereux
+acronym: EEC
+program-website: https://www.somlit.fr/wimereux/
+affiliated-institutions: UMR LOG (Oceanology and Geosciences Laboratory)
+affiliated-institution-websites:
+  - https://log.cnrs.fr/
+status: active
+sampling-start-year: 1998
+sampling-end-year: present
+countries:
+  - France
+ocean-basins:
+  - English Channel
+sub-region: eastern English Channel
+latitude: 50.6792
+longitude: 1.5195
+multiple-sampling-sites: true
+sampling-sites-note: coastal S1 and offshore S2
+sampling-depth: surface
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+data-accessions:
+  - SRP039908
+  - SRX768577
+  - SRP136006
+  - PRJNA851611
+  - PRJNA917476
+  - SRP018834
+contacts:
+  - name: Elsa Breton
+    email: elsa.breton@univ-littoral.fr
+    role: Research Engineer
+publications:
+  - 10.1080/17451000.2015.1084425
+  - 10.1128/spectrum.02427-22
+  - 10.1111/1758-2229.13313
+  - 10.1371/journal.pone.0196987
+  - 10.1007/s00248-013-0290-4
+notes: Bimonthly ; more details on sampling:https://www.somlit.fr/parametres-et-protocoles/

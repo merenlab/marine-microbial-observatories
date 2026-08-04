@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marine Microbial Observatories</title>
+<meta name="description" content="Time-series programs, large-scale expeditions, and coordination networks generating molecular data on marine microbes.">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap">
+    <h1>Marine Microbial Observatories</h1>
+    <p class="tagline">
+      A living catalogue of time-series programs, large-scale expeditions, and coordination
+      networks that generate molecular data on marine microbes.
+    </p>
+    <p class="meta" id="corpus-meta">Loading…</p>
+    <p class="masthead-credit">
+      Cyanobacteria bloom in the Baltic Sea, 15 August 2020.
+      <a href="https://science.nasa.gov/earth/earth-observatory/beguiling-bloom-in-the-baltic-sea-147135"
+         rel="noopener noreferrer" target="_blank">NASA Earth Observatory</a>
+      image by Joshua Stevens, using Landsat&nbsp;8 data from the U.S. Geological Survey.
+    </p>
+  </div>
+</header>
+
+<nav class="tabs wrap" aria-label="Sections">
+  <button class="tab" data-view="about" aria-current="page">About</button>
+  <button class="tab" data-view="time-series">Time series</button>
+  <button class="tab" data-view="expeditions">Expeditions</button>
+  <button class="tab" data-view="coordination-networks">Coordination networks</button>
+  <button class="tab" data-view="contribute">Contribute</button>
+</nav>
+
+<main id="main" class="wrap">
+
+  <section id="panel-table" hidden>
+    <div class="toolbar">
+      <label class="search">
+        <span class="sr">Search</span>
+        <input type="search" id="search" placeholder="Search names, institutions, regions, people, accessions…"
+               autocomplete="off">
+      </label>
+      <div id="filters" class="filters"></div>
+      <div class="toolbar-end">
+        <span id="result-count" class="count" aria-live="polite"></span>
+        <button type="button" id="reset" class="linky">Reset</button>
+      </div>
+    </div>
+    <div class="table-scroll">
+      <table id="table">
+        <thead><tr id="table-head"></tr></thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+    <p id="empty" class="empty" hidden>Nothing matches those filters.</p>
+  </section>
+
+  <!-- Filled at runtime from dist/pages/*.html, which scripts/build.py renders
+       from ABOUT.md and CONTRIBUTING.md. Do not put prose here: it would be a
+       second copy that drifts out of step with the markdown.
+       The site map is built into the <div id="map-embed"> that ABOUT.md places
+       in its own prose, so moving that line moves the map. -->
+  <section id="panel-about" hidden class="prose" aria-busy="true"></section>
+  <section id="panel-contribute" hidden class="prose" aria-busy="true"></section>
+
+</main>
+
+<dialog id="detail" aria-labelledby="detail-title">
+  <button type="button" id="detail-close" class="close" aria-label="Close">&times;</button>
+  <div id="detail-body"></div>
+</dialog>
+
+<footer class="wrap">
+  <p>
+    Generated from <span id="rev">the repository</span>.
+    Contact details on this site are published because the people listed want to be
+    reachable about their programs.
+  </p>
+  <p>
+    This catalogue is licensed under
+    <a href="https://creativecommons.org/licenses/by/4.0/"
+       rel="license noopener noreferrer" target="_blank">CC&nbsp;BY&nbsp;4.0</a>.
+    Linked publications and archived datasets carry their own licences.
+    The banner photograph is public domain (NASA&nbsp;/&nbsp;USGS).
+  </p>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: nga
+name: Northern Gulf of Alaska LTER
+acronym: NGA
+program-website: https://lternet.edu/site/northern-gulf-alaska/
+affiliated-institutions: University of Alaska Fairbanks
+affiliated-institution-websites:
+  - https://nga.lternet.edu/
+status: active
+sampling-start-year: 2018
+sampling-end-year: present
+dna-collection-start-year: 2018
+dna-collection-note: 2018, intermittent a few years prior to that
+countries:
+  - United States
+ocean-basins:
+  - Northeast Pacific Ocean
+sub-region: Northern Gulf of Alaska
+latitude: 59.045
+longitude: -148.7
+multiple-sampling-sites: true
+sampling-sites-note: |-
+  Multiple stations across Gulf of Alaska (Seward Line and associated cross-shelf transects)
+sampling-depth: surface
+sampling-cadence: quarterly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+  - other-omics
+data-accessions:
+  - PRJNA887083
+  - PRJNA1401421
+contacts:
+  - name: Gwenn Hennon
+    email: gmhennon@alaska.edu
+    role: PI (microbial data)
+  - name: Russell Hopcroft
+    email: rrhopcroft@alaska.edu
+    role: PI Seward Line and LTER
+publications:
+  - 10.3389/fmars.2025.1646100
+verification:
+  checked-by:
+    - Russ Hopcroft
+  checked-on: '2026-07-09'

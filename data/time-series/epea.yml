@@ -1,0 +1,42 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: epea
+name: Estacion Permanente de Estudios Ambientales
+acronym: EPEA
+program-website: https://www.argentina.gob.ar/inidep/proyecto-series-de-tiempo-ecologicas-marinas
+affiliated-institutions: INIDEP
+affiliated-institution-websites:
+  - https://www.argentina.gob.ar/inidep
+status: active
+sampling-start-year: 2000
+sampling-end-year: present
+dna-collection-start-year: 2005
+countries:
+  - Argentina
+ocean-basins:
+  - South Atlantic Ocean
+sub-region: Western South Atlantic Ocean
+latitude: -38.46
+longitude: -57.68
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface
+sampling-cadence: quarterly
+omics-types:
+  - amplicon-sequencing
+contacts:
+  - name: Carla F Berghoff
+    email: cberghoff@inidep.edu.ar
+    role: PI
+  - email: mchozbor@inidep.edu.ar
+publications:
+  - 10.1007/s00203-010-0644-y
+  - 10.47193/mafis.3412021010304
+  - https://www.scielo.org.ar/scielo.php?pid=S0325-75412010000400010&script=sci_arttext
+  - 10.47193/mafis.3912026010104
+notes: |-
+  This time-series includes a comprehensive suite of physical, biogeochemical (dissolved oxygen, nutrients, carbonate system, and bio-optical properties), and biological observations, encompassing all plankton size fractions together with associated ecosystem processes, including primary production and the nutritional condition of fish larvae. Current EPEA protocols are located in: https://www.argentina.gob.ar/inidep/programa-dinamica-del-plancton-marino-y-cambio-climatico/protocolos-diplamcc EPEA metadata visualization: https://gipis.unp.edu.ar/EPEA/
+verification:
+  checked-by:
+    - Maria Constanza Hozbor
+  checked-on: '2026-07-08'

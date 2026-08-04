@@ -1,0 +1,22 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: scb-mbon
+name: Southern California Bight MBON
+acronym: SCB MBON
+network-website: https://sbc.marinebon.org
+additional-websites:
+  - https://marinebon.org/network/southern-california-bight-mbon/
+affiliated-institutions: |-
+  University of California Santa Barbara (lead), NASA, BOEM, NOAA (incl. Southwest Fisheries Science Center), Southern California Coastal Water Research Project (SCCWRP), CalCOFI, Channel Islands National Park, Santa Barbara Coastal LTER, Channel Islands National Marine Sanctuary
+umbrella-organisation: MBON
+status: active
+established-year: 2015
+geographic-scope: Southern California Bight, incl. Santa Barbara Channel
+mission-statement: |-
+  Extends the Santa Barbara Channel demonstration MBON to the whole Southern California Bight, using a 'pincer' strategy - remote sensing, optical and acoustic imagery from ecosystem scales downward, and genetics from genes and microbes upward - to build capacity for satellite observation of marine biodiversity.
+contacts:
+  - name: Robert (Bob) Miller (UCSB)
+    role: 'Miller: Lead PI'
+  - name: Craig Carlson (UCSB)
+    role: 'marine ecology. Carlson: Co-PI'
+  - email: sbcbon@msi.ucsb.edu

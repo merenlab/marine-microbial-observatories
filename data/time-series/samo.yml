@@ -1,0 +1,39 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: samo
+name: South Atlantic Microbial Observatory
+acronym: SAMO
+affiliated-institutions: MicroSudAqua ; Universidad de la República
+affiliated-institution-websites:
+  - https://microsudaqua.netlify.app/en/
+  - https://udelar.edu.uy/
+status: active
+sampling-start-year: 2018
+sampling-end-year: present
+dna-collection-start-year: 2018
+countries:
+  - Uruguay
+ocean-basins:
+  - South Atlantic Ocean
+sub-region: Uruguayan Shelf
+latitude: -34.7
+longitude: -54.25
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+contacts:
+  - name: Cecilia Alonso
+    email: calonso@cure.edu.uy
+    role: PI
+publications:
+  - 10.1111/1462-2920.70197
+  - 10.1101/2025.06.16.659933
+  - 10.1101/2025.06.19.660397
+verification:
+  checked-by:
+    - Cecilia Alonso
+  checked-on: '2026-06-30'

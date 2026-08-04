@@ -1,0 +1,39 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: golfo-nuevo
+name: Golfo Nuevo
+acronym: Golfo_Nuevo
+affiliated-institutions: Instituto de Biología de Organismos Marinos (IBIOMAR-CONICET) ; MicroSudAqua
+affiliated-institution-websites:
+  - https://ibiomar.conicet.gov.ar/
+  - https://microsudaqua.netlify.app/en/
+status: active
+sampling-start-year: 2021
+sampling-end-year: present
+dna-collection-start-year: 2021
+countries:
+  - Argentina
+ocean-basins:
+  - South Atlantic Ocean
+sub-region: Southwestern Atlantic, North Patagonian Gulfs
+latitude: -42.5
+longitude: -64.0
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+data-accessions:
+  - PRJNA622742
+contacts:
+  - name: Mariana Lozada
+    email: marianalozada@protonmail.com
+    role: PI
+publications:
+  - 10.1016/j.scitotenv.2022.154629
+  - 10.1007/s10530-021-02471-1
+verification:
+  checked-by:
+    - Mariana Lozada
+  checked-on: '2026-06-10'

@@ -1,0 +1,47 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: calcofi
+name: California Cooperative Oceanic Fisheries Investigations (CalCOFI)
+acronym: CalCOFI
+program-website: https://calcofi.org/sampling-info/
+affiliated-institutions: SIO, NOAA, CDFW, California Current Ecosystem LTER
+affiliated-institution-websites:
+  - https://calcofi.org/about/partners-collaborators/
+status: active
+sampling-start-year: 1949
+sampling-end-year: present
+dna-collection-start-year: 2014
+countries:
+  - United States
+ocean-basins:
+  - Northeast Pacific Ocean
+sub-region: California Current Ecosystem
+latitude: 33.381569
+longitude: -120.0943
+multiple-sampling-sites: true
+sampling-sites-note: |-
+  ~75 to 113 stations on CalCOFI grid off southern California (stations from nearshore to 500 km offshore)
+sampling-depth: surface-and-deep
+sampling-cadence: quarterly
+omics-types:
+  - amplicon-sequencing
+data-accessions:
+  - PRJNA555783
+  - PRJNA665326
+  - PRJNA804265
+contacts:
+  - name: Andrew Allen
+    email: aallen@ucsd.edu
+    role: PI microbial data
+  - name: Erin Satterthwaite
+    email: esatterthwaite@ucsd.edu
+    role: CA Sea Grant Extension Specialist for CalCOFI & CalCOFI Coordinator
+publications:
+  - 10.1038/s41467-022-30139-4
+  - 10.1038/s41598-024-69991-3
+  - 10.1371/journal.pone.0334209
+  - 10.5670/oceanog.2023.s1.29
+verification:
+  checked-by:
+    - EVS
+  checked-note: 'original entry: EVS 6/11'

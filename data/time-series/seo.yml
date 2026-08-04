@@ -1,0 +1,42 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: seo
+name: Scripps Ecological Observatory
+acronym: SEO
+program-website: https://ecoobs.ucsd.edu/about-2/
+affiliated-institutions: Scripps Institution of Oceanography (SIO); SCCOOS
+affiliated-institution-websites:
+  - https://scripps.ucsd.edu
+  - https://sccoos.org/
+status: active
+sampling-start-year: 2018
+sampling-end-year: present
+countries:
+  - United States
+ocean-basins:
+  - Northeast Pacific Ocean
+sub-region: Southern California Bight
+latitude: 32.87
+longitude: -117.257
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface
+sampling-cadence: weekly-or-more
+omics-types:
+  - amplicon-sequencing
+data-accessions:
+  - PRJNA66217
+  - PRJNA662174
+contacts:
+  - name: Jeff Bowman
+    email: jsbowman@ucsd.edu
+    role: PI
+publications:
+  - 10.1093/ismejo/wraf287
+  - 10.1111/1462-2920.15548
+notes: |-
+  Longer time series exist for opical (microscopy) observations of key phytoplankton, but the 16S + 18S timeseries was initiated in only 2018. Twice weekly collection.
+verification:
+  checked-by:
+    - Jeff Bowman
+  checked-on: '2026-06-10'

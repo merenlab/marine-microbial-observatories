@@ -1,0 +1,46 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: snmp
+name: Swedish National Marine Monitoring Program
+acronym: SNMP
+program-website: https://obis.org/dataset/38c4cdbe-1f73-44f1-bd22-b9d61cd9e7de
+affiliated-institutions: HELCOM COMBINE
+affiliated-institution-websites:
+  - |-
+    https://helcom.fi/baltic-sea-trends/monitoring-and-assessment/monitoring-programmes-and-guidelines/combine-manual/
+status: active
+sampling-start-year: 1983
+sampling-end-year: present
+dna-collection-start-year: 2015
+countries:
+  - Sweden
+ocean-basins:
+  - Baltic Sea
+sub-region: Baltic Sea
+latitude: 56.37082
+longitude: 16.20173
+multiple-sampling-sites: true
+sampling-sites-note: |-
+  Multiple stations around Sweden (Skagerrak, Kattegat, Baltic Sea, Bothnian Sea, Bothnian Bay)
+sampling-depth: surface
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+data-accessions:
+  - PRJEB55296
+  - PRJEB84926
+contacts:
+  - name: Karl Norling
+    email: Karl.Norling@havochvatten.se
+    role: Investigator
+  - name: Anders Andersson
+    email: anders.andersson@scilifelab.se
+    role: SNMP molecular time-series PI
+publications:
+  - 10.1038/s41597-023-02825-5
+  - 10.1101/2024.08.14.607742
+  - 10.1038/s43247-026-03715-5
+verification:
+  checked-by:
+    - Anders Andersson
+  checked-on: '2026-07-07'

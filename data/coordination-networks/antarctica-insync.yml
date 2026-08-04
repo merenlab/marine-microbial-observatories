@@ -1,0 +1,19 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: antarctica-insync
+name: Antarctica InSync
+acronym: Antarctica InSync
+network-website: https://www.antarctica-insync.org/
+affiliated-institutions: |-
+  Alfred Wegener Institute (coordination) with national Antarctic programmes and institutes from Australia, Canada, France, India, USA and others; ESA partnership; contributes to the SCAR-led Decade Collaborative Centre for the Southern Ocean Region
+umbrella-organisation: UN Decade of Ocean Science
+status: active
+established-year: 2023
+established-note: initiated
+geographic-scope: Antarctica and the Southern Ocean - circumpolar
+mission-statement: |-
+  A circumpolar, internationally synchronised assessment of the connections between ice, ocean, climate, environment and life, including human pressures and solutions such as marine protection, delivered through temporally and spatially coordinated multi-platform field campaigns and long-term monitoring.
+contacts:
+  - name: Alexander Haumann
+    email: alexander.haumann@awi.de
+  - email: info@antarctica-insync.org

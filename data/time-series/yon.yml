@@ -1,0 +1,43 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: yon
+name: IMOS Yongala National Reference Station
+acronym: YON
+program-website: https://imos.org.au/facility/biomolecular-observing/marine-microbiome-initiative
+affiliated-institutions: IMOS, BPA, CSIRO
+affiliated-institution-websites:
+  - https://www.csiro.au/
+  - https://bioplatforms.com/initiatives/
+  - https://imos.org.au/
+status: active
+sampling-start-year: 2015
+sampling-end-year: present
+dna-collection-start-year: 2015
+countries:
+  - Australia
+ocean-basins:
+  - South Pacific Ocean
+sub-region: Great Barrier Reef Lagoon
+latitude: -19.3142
+longitude: 147.6194
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+data-accessions:
+  - PRJNA597010
+contacts:
+  - name: Jodie van de Kamp
+    email: jodie.vandekamp@csiro.au
+    role: Lead
+publications:
+  - 10.1038/sdata.2018.130
+notes: |-
+  Metabarcoding for marine invertebrates (COI) and fishes (mitochondrial 16S and 12S) is in implementation phase.
+verification:
+  checked-by:
+    - Jodie van de Kamp
+  checked-note: 'original entry: Jodie van de Kamp 06/07/2026'

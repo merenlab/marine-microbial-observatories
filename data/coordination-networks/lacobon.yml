@@ -1,0 +1,17 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: lacobon
+name: Latin American and Caribbean Ocean Biomolecular Observation Network
+acronym: LACOBON
+network-website: |-
+  https://pogo-ocean.org/innovation-in-ocean-observing/activities/marine-edna-monitoring-network-in-latin-america-and-the-caribbean/
+affiliated-institutions: |-
+  Instituto de Investigaciones Marinas y Costeras (INVEMAR), Colombia (hub); Universidad de Concepcion / Instituto Milenio de Oceanografia and Universidad de Valparaiso, Chile; Ministerio de Medio Ambiente y Recursos Naturales, Dominican Republic; SPYGEN, France
+umbrella-organisation: OBON, POGO
+status: active
+established-year: 2024
+geographic-scope: Latin America and the Caribbean
+mission-statement: |-
+  Builds a marine eDNA monitoring network across Latin America and the Caribbean, centred on INVEMAR's patented eDNA laboratory, to fill biodiversity knowledge gaps, create an open interoperable resource for standardised biological data, and transfer eDNA capacity to countries without established monitoring programmes.
+contacts:
+  - name: Vanessa Yepes-Narvaez (INVEMAR)

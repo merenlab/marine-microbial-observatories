@@ -1,0 +1,37 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: eamo
+name: Equatorial Atlantic Microbial Observatory
+acronym: EAMO
+affiliated-institutions: Universidade Federal de São Carlos
+affiliated-institution-websites:
+  - https://www.lmpb.ufscar.br/
+status: discontinued
+sampling-start-year: 2013
+sampling-end-year: 2016
+dna-collection-start-year: 2013
+countries:
+  - Brazil
+ocean-basins:
+  - South Atlantic Ocean
+sub-region: western coast of Atlantic (Brazil)
+latitude: -5.99
+longitude: -35.08
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+data-accessions:
+  - PRJNA414763
+contacts:
+  - name: Hugo Sarmento
+    email: hsarmento@ufscar.br
+    role: PI
+publications:
+  - 10.1111/mec.70241
+verification:
+  checked-by:
+    - Hugo Sarmento
+  checked-on: '2026-06-10'

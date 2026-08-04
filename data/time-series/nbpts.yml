@@ -1,0 +1,41 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: nbpts
+name: Narragansett Bay Long-Term Plankton Time Series
+acronym: NBPTS
+program-website: https://web.uri.edu/gso/research/plankton/
+affiliated-institutions: University of Rhode Island
+affiliated-institution-websites:
+  - https://www.uri.edu/
+status: active
+sampling-start-year: 1957
+sampling-end-year: present
+dna-collection-start-year: 2008
+countries:
+  - United States
+ocean-basins:
+  - Northwest Atlantic Ocean
+sub-region: northeast coastal
+latitude: 41.57
+longitude: -71.39
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface
+sampling-cadence: weekly-or-more
+omics-types:
+  - amplicon-sequencing
+data-accessions:
+  - PRJNA327394
+contacts:
+  - name: Tatiana Rynearson
+    email: rynearson@uri.edu
+    role: PI
+publications:
+  - 10.1002/lno.12400
+  - 10.3390/biology9010019
+  - 10.3354/meps11843
+  - 10.1073/pnas.2311086121
+verification:
+  checked-by:
+    - Tatiana Rynearson
+  checked-on: '2026-06-19'

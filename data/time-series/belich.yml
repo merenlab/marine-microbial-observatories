@@ -1,0 +1,41 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: belich
+name: Mar Menor Monitoring Program
+acronym: BELICH
+program-website: https://belich.ieo.csic.es/
+affiliated-institutions: Spanish Insitute of Oceanography, Oceanographic Center of Málaga
+affiliated-institution-websites:
+  - https://ieo.csic.es/
+status: active
+sampling-start-year: 2016
+sampling-end-year: present
+dna-collection-start-year: 2019
+countries:
+  - Spain
+ocean-basins:
+  - Mediterranean Sea
+sub-region: Mar Menor coastal lagoon
+latitude: 37.7094
+longitude: -0.78552
+multiple-sampling-sites: true
+sampling-sites-note: 3 fixed stations in the lagoon
+sampling-depth: surface
+sampling-cadence: quarterly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+contacts:
+  - name: Isabel Ferrera
+    email: isabel.ferrera@ieo.csic.es
+    role: PI of the DNA monitoring
+  - name: Jesús Mercado
+    email: jesus.mercado@ieo.csic.es
+    role: PI of the DNA monitoring
+publications:
+  - 10.1186/s40793-026-00893-9
+  - 10.1093/ismeco/ycag110
+verification:
+  checked-by:
+    - Isabel Ferrera
+  checked-on: '2026-06-24'

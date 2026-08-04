@@ -1,0 +1,36 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: it12
+name: eLTER Senigallia-Susak transect
+acronym: IT12
+program-website: https://deims.org/be8971c2-c708-4d6e-a4c7-f49fcf1623c1
+affiliated-institutions: Università Politecnica delle Marche
+affiliated-institution-websites:
+  - https://www.univpm.it/Entra/
+status: active
+sampling-start-year: 1988
+sampling-end-year: present
+countries:
+  - Italy
+ocean-basins:
+  - Mediterranean Sea
+sub-region: Northern Adriatic Sea
+latitude: 43.7
+longitude: 13.2
+multiple-sampling-sites: true
+sampling-sites-note: |-
+  Multiple stations along Adriatic transect from Senigallia, Italy to Susak Island, Croatia
+sampling-depth: surface
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+  - other-omics
+contacts:
+  - name: Cecilia Maria Totti
+    email: c.m.totti@staff.univpm.it
+    role: Site Manager
+publications:
+  - 10.1007/s10750-024-05692-2
+  - 10.1093/eurpub/ckaf161.1408
+  - 10.3390/biology15060487

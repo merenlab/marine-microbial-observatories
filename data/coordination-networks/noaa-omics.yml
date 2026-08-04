@@ -1,0 +1,18 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: noaa-omics
+name: NOAA 'Omics Program
+acronym: NOAA 'Omics
+network-website: https://oceanexplorer.noaa.gov/noaa-omics/
+affiliated-institutions: NOAA line-offices, including NOS, OAR, NEDIS, & NMFS
+umbrella-organisation: NOAA (US Department of Commerce)
+status: active
+geographic-scope: US
+mission-statement: |-
+  NOAA Omics harnesses the power of this advanced technology to accelerate high-impact science, enhance decision making, and improve operational efficiency. NOAA Omics scientists, from across NOAA line-offices, including NOS, OAR, NEDIS, & NMFS drive innovation and integration of omics techniques - safeguarding marine resources, detecting threats, and reinforcing the United State’s leadership in ocean science and technology.
+contacts:
+  - name: Krista Nichols
+    email: krista.nichols@noaa.gov
+    role: NOAA Omics Working Group Chair
+  - name: Zachary Gold
+    role: NOAA Omics Working Group Chair

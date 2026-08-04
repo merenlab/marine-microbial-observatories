@@ -1,0 +1,49 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: nerea
+name: NEREA (Naples Ecological REsearch for Augmented observatories)
+acronym: NEREA
+affiliated-institutions: Stazione Zoologica Anton Dohrn
+affiliated-institution-websites:
+  - https://szn.it/en/osservatorio-napoli
+status: active
+sampling-start-year: 2019
+sampling-end-year: present
+dna-collection-start-year: 2019
+countries:
+  - Italy
+ocean-basins:
+  - Mediterranean Sea
+sub-region: Gulf of Naples
+latitude: 40.801389
+longitude: 14.25
+multiple-sampling-sites: true
+sampling-sites-note: LTER-MareChiara (MC); NEREA-Capri (NRC); NEREA-Sarno (NRS)
+sampling-depth: surface-and-deep
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+  - other-omics
+data-accessions:
+  - PRJEB74649
+  - PRJEB74641
+  - PRJEB74658
+  - PRJEB74659
+  - PRJEB98715
+contacts:
+  - name: Lucia Campese
+    email: lucia.campese@szn.it
+    role: JR
+  - name: Raffaella Casotti
+    email: raffaella.casotti@szn.it
+    role: PI
+publications:
+  - 10.1038/s41597-024-03787-y
+  - 10.1038/s41597-026-07571-y
+notes: |-
+  The coordinates refer to the main site (LTER-MC) sampled once a month (NRMC). The site Sarno (NRS; Lat 40°43′ N, Long 14°27′ E) is sampled on a seasonal base; the site Canyon (NRC; Lat 40°36′ N, Long 14°08′ E) is sampled twice a year
+verification:
+  checked-by:
+    - Lucia Campese
+  checked-on: '2026-06-15'

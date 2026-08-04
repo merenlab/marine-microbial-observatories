@@ -1,0 +1,35 @@
+# Global or large-scale expedition program.
+# Schema: ../../schema/expeditions.schema.json
+id: naames
+name: NAAMES
+acronym: NAAMES
+program-website: https://science.larc.nasa.gov/naames/
+affiliated-institutions: |-
+  Oregon State University, University of Maine, University of California Santa Barbara, University of Rhode Island
+affiliated-institution-websites:
+  - https://science.larc.nasa.gov/naames/
+data-accessions:
+  - PRJNA627189
+contacts:
+  - name: Steve Giovannoni
+    email: steve.giovannoni@oregonstate.edu
+    role: PI
+  - name: Luis Bolanos
+    email: L.Bolanos-Avellaneda@exeter.ac.uk
+    role: PI
+  - name: Craig Carlson
+    email: craig.carlson@bios.asu.edu
+    role: PI
+  - name: Nick Baetge
+    email: nbaetge@asu.edu
+    role: PI
+publications:
+  - 10.3389/fmars.2021.624164
+  - 10.1525/elementa.2021.00078
+sample-metadata-source: Download from MGnify
+notes: |-
+  Many people involved NASA / NSF project, 4 cruises over two years in the Western North Atlantic. Lead PI of project was Mike Behrenfeld, Amplicon sequencing of 16s rRNA gene
+verification:
+  checked-by:
+    - Craig Carlson
+  checked-on: '2026-07-07'

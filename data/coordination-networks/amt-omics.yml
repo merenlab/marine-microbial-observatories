@@ -1,0 +1,23 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: amt-omics
+name: Atlantic Meridional Transect ‘omics network
+acronym: AMT-omics
+network-website: https://obon-ocean.org/project/amt-omics-atlantic-meridional-transect-omics-network/
+additional-websites:
+  - https://amt-uk.org
+affiliated-institutions: |-
+  Plymouth Marine Laboratory (PML), University of Southern California, St Francis Xavier University, The University of California (Irvine), the University of Stellenbosch and the Marine Biological Association of the UK
+umbrella-organisation: OBON
+status: active
+established-year: 2024
+geographic-scope: Atlantic
+mission-statement: |-
+  Building on the Atlantic Meridional Transect (AMT) programme's three decades of ocean observations, AMT-omics aims to make molecular data collected since 2009 openly accessible and integrate diverse omics datasets into a unique long-term time series spanning the Atlantic Ocean, enabling new insights into marine ecosystem change.
+contacts:
+  - name: Karen Tait
+    email: ktait@pml.ac.uk
+publications:
+  - 10.1093/ismeco/ycaf131
+notes: |-
+  Molecular data has been collected since 2009 by several institutes, and a key aim of AMT-omics is to make these data more accessible in both raw and processed formats. we will determine how molecular data collected using a variety of methods can be integrated to provide invaluable long-term time-series of data across the entire Atlantic Ocean. The Atlantic Meridional Transect (AMT) programme, established in 1995 and coordinated by Plymouth Marine Laboratory, has now conducted 30 research cruises between the UK and the South Atlantic. But they are also kind of just doing observations

@@ -1,0 +1,22 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: hi-bon
+name: Hakai Institute Biomolecular Observing Network
+acronym: HI-BON
+network-website: https://obon-ocean.org/project/hakai-institute-biomolecular-observing-network/
+affiliated-institutions: |-
+  Hakai Institute, University of British Columbia, Smithsonian Marine Global Earth Observatory (MarineGEO), Fisheries and Oceans Canada (DFO), international Barcode of Life (iBOL), BioScan Canada, Tula Foundation, Ocean Decade Collaboration Center Northeast Pacific, Parks Canada
+umbrella-organisation: OBON
+status: active
+established-year: 2022
+geographic-scope: British Columbia, Canada
+mission-statement: |-
+  HI-BON is a partner-driven network across British Columbia that uses long-term genetic-based monitoring, including a 20+ partner community eDNA sampling program since 2019, to track fish, invertebrate, and microbial biodiversity along the BC coast and build local-scale baselines even in remote areas. It emphasizes standardized methods aligned with global OBON standards, capacity-building through community partnerships, and open data sharing (e.g., with GOOS), aiming to make eDNA-based monitoring a widely used, publicly accessible tool for conservation and management decisions at local, national, and international scales.
+contacts:
+  - name: Colleen Kellogg
+    email: colleen.kellogg@hakai.org
+  - name: Matt Lemay
+    email: matt.lemay@hakai.org
+publications:
+  - 10.1002/edn3.423
+notes: specifically includes microbes :)

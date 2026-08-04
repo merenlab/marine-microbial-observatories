@@ -1,0 +1,40 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: mots
+name: Munida Transect
+acronym: MOTS
+program-website: http://www.st.nmfs.noaa.gov/copepod/time-series/nz-10101/
+affiliated-institutions: University of Otago
+affiliated-institution-websites:
+  - https://www.otago.ac.nz/oceanography/research/co2
+status: active-omics-discontinued
+sampling-start-year: 1998
+sampling-end-year: present
+countries:
+  - New Zealand
+ocean-basins:
+  - South Pacific Ocean
+sub-region: south east coast of New Zealand
+latitude: -45.77
+longitude: 170.72
+multiple-sampling-sites: true
+sampling-sites-note: 8 stations from Otago to ~65 km offshore (into Subantarctic waters)
+sampling-depth: surface-and-deep
+sampling-cadence: quarterly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+data-accessions:
+  - PRJNA576923
+  - PRJNA430292
+  - PRJNA605648
+contacts:
+  - name: Sebastiaan Van De Velde
+    email: sebastiaan.vandevelde@otago.ac.nz
+    role: PI
+publications:
+  - 10.1111/1758-2229.12362
+  - 10.3389/fmars.2021.659641
+  - 10.1111/1758-2229.12618
+  - 10.1038/s41396-022-01266-z
+notes: Collection of omics data ceased around 2024, although time-series is still ongoing

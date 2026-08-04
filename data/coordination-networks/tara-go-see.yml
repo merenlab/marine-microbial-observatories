@@ -1,0 +1,31 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: tara-go-see
+name: Tara Oceans and Tara Pacific
+acronym: Tara GO SEE
+network-website: https://www.tara-oceans-science.org/
+affiliated-institutions: |-
+  Research institutions collaborating with the Tara Ocean Foundation, including EMBL, CNRS, CEA, ENS-PSL, Sorbonne Université
+umbrella-organisation: Tara Oceans consortium
+status: active
+established-year: 2009
+geographic-scope: Global
+data-accessions:
+  - PRJEB402
+  - PRJEB1787
+  - PRJEB6608
+  - PRJEB9740
+  - PRJEB9741
+  - PRJEB47249
+mission-statement: |-
+  Tara Oceans addresses biodiversity, evolution, ecology, and biogeochemistry of the global ocean. All data are openly accessible. Taken together, Tara Oceans perhaps represents the most comprehensive, integrated collection of datasets ever produced for any planetary biome.
+contacts:
+  - name: Chris Bowler
+    email: cbowler@biologie.ens.fr
+    role: Scientific director
+publications:
+  - https://www.tara-oceans-science.org/publications/
+verification:
+  checked-by:
+    - Chris Bowler
+  checked-note: 'original entry: Chris Bowler 06/07/2026'

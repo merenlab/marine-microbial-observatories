@@ -1,0 +1,51 @@
+name: Validate records
+
+on:
+  pull_request:
+    paths:
+      - 'data/**'
+      - 'schema/**'
+      - 'scripts/**'
+      - 'requirements.txt'
+      - '.github/workflows/validate.yml'
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Validate every record against its schema
+        run: python3 scripts/validate.py
+
+      - name: Confirm the site still builds
+        run: python3 scripts/build.py --built-on "$(date -u +%Y-%m-%d)"
+
+      - name: Summarise warnings
+        if: always()
+        run: |
+          {
+            echo '## Record validation'
+            echo
+            echo '```'
+            python3 scripts/validate.py 2>&1 | tail -n 40 || true
+            echo '```'
+            echo
+            echo 'Warnings do not block this pull request. They mark records that are'
+            echo 'incomplete or internally inconsistent, mostly inherited from the'
+            echo 'original spreadsheets. Fixing them is welcome but never required.'
+          } >> "$GITHUB_STEP_SUMMARY"

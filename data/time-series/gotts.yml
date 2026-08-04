@@ -1,0 +1,49 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: gotts
+name: Gulf of Trieste – Time-series
+acronym: GoTTs
+program-website: https://deims.org/96969205-cfdf-41d8-979f-ff881ea8dc8b
+affiliated-institutions: Italian National Institute of Oceanography and of Experimental Geophysics
+  - OGS
+affiliated-institution-websites:
+  - https://www.ogs.it/en
+status: active
+sampling-start-year: 1986
+sampling-end-year: present
+dna-collection-start-year: 2014
+countries:
+  - Italy
+ocean-basins:
+  - Mediterranean Sea
+sub-region: Gulf of Trieste
+latitude: 45.70083
+longitude: 13.71
+multiple-sampling-sites: false
+sampling-depth: surface
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+  - metagenomics
+  - other-omics
+data-accessions:
+  - PRJNA818117
+  - PRJNA767222
+  - PRJNA818144
+  - PRJNA1061483
+  - PRJNA1442017
+contacts:
+  - name: Valentina Tirelli
+    email: vtirelli@ogs.it
+    role: Site Manager LTER Gulf of Trieste
+  - name: Mauro Celussi
+    email: mcelussi@ogs.it
+    role: Site Manager LTER Gulf of Trieste
+publications:
+  - 10.1111/1462-2920.16595
+  - 10.1007/s11356-022-22752-z
+  - 10.1007/s00248-024-02394-z
+verification:
+  checked-by:
+    - Mauro Celussi
+  checked-on: '2026-07-08'

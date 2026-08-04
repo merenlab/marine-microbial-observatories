@@ -1,0 +1,41 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: micro
+name: MiCRO
+acronym: MiCRO
+affiliated-institutions: University of California, Irvine ; SCCOOS
+affiliated-institution-websites:
+  - https://www.ess.uci.edu/
+  - https://sccoos.org/
+status: active
+sampling-start-year: 2009
+sampling-end-year: present
+dna-collection-start-year: 2012
+countries:
+  - United States
+ocean-basins:
+  - Northeast Pacific Ocean
+sub-region: Southern California Bight
+latitude: 33.608
+longitude: -117.928
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface
+sampling-cadence: weekly-or-more
+omics-types:
+  - metagenomics
+data-accessions:
+  - PRJNA1220992
+  - PRJNA624320
+contacts:
+  - name: Adam Martiny
+    email: amartiny@uci.edu
+    role: PI
+publications:
+  - 10.1038/s41467-025-59382-1
+notes: |-
+  Integrated with SCCOOS + HABs time-series provided in situ instrumentation and phytoplankton counts
+verification:
+  checked-by:
+    - Adam Martiny
+  checked-on: '2026-07-08'

@@ -1,0 +1,46 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: mbts
+name: Monterey Bay Time Series
+acronym: MBTS
+program-website: https://www.mbari.org/project/mbts/
+affiliated-institutions: Monterey Bay Aquarium Research Institute; CeNCOOS MBON
+affiliated-institution-websites:
+  - https://www.mbari.org/
+  - https://marinebon.org/bons/central-california-mbon/
+status: active
+sampling-start-year: 1989
+sampling-end-year: present
+dna-collection-start-year: 2008
+countries:
+  - United States
+ocean-basins:
+  - Northeast Pacific Ocean
+sub-region: Monterey Bay, CA
+latitude: 36.7469
+longitude: -122.0219
+multiple-sampling-sites: true
+sampling-sites-note: C1 (nearshore), M1 (mooring site), M2 (offshore) ship stations
+sampling-depth: surface-and-deep
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+data-accessions:
+  - PRJNA433203
+  - PRJNA488312
+  - PRJNA533622
+contacts:
+  - name: Katie Pitz
+    email: kpitz@mbari.org
+    role: Data analysis
+  - name: Francisco Chavez (PI)
+    role: Data analysis
+publications:
+  - 10.1038/s41467-019-14105-1
+  - 10.3389/fmicb.2020.01075
+  - 10.1038/s41597-019-0132-4
+notes: 3 stations and 5 depths sampled monthly.
+verification:
+  checked-by:
+    - Katie Pitz
+  checked-on: '2026-06-26'

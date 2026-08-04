@@ -1,0 +1,39 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: trp
+name: IMOS Coastal Microbial Sampling, Towra Point
+acronym: TRP
+program-website: https://imos.org.au/facility/biomolecular-observing/microbial-coastal-sampling
+affiliated-institutions: University of Technology Sydney, IMOS, BPA, CSIRO
+affiliated-institution-websites:
+  - https://www.csiro.au/
+  - https://bioplatforms.com/initiatives/
+  - https://imos.org.au/
+status: active
+sampling-start-year: 2016
+sampling-end-year: present
+dna-collection-start-year: 2016
+countries:
+  - Australia
+ocean-basins:
+  - South Pacific Ocean
+sub-region: Botany Bay
+latitude: -34.006805
+longitude: 151.192103
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface
+sampling-cadence: monthly
+omics-types:
+  - amplicon-sequencing
+data-accessions:
+  - PRJNA597010
+contacts:
+  - name: Shauna Murray
+    email: Shauna.Murray@uts.edu.au
+    role: Site Lead
+notes: sampled bi-weekly
+verification:
+  checked-by:
+    - Jodie van de Kamp
+  checked-note: 'original entry: Jodie van de Kamp 06/07/2026'

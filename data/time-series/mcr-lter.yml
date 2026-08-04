@@ -1,0 +1,43 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: mcr-lter
+name: Moorea Coral Reef LTER
+acronym: MCR LTER
+program-website: http://mcr.lternet.edu/about/overview
+affiliated-institutions: Gump South Pacific Research Station
+affiliated-institution-websites:
+  - https://www.moorea.berkeley.edu/
+status: active
+sampling-start-year: 2004
+sampling-end-year: present
+dna-collection-start-year: 2016
+countries:
+  - French Polynesia
+ocean-basins:
+  - South Pacific Ocean
+sub-region: South Pacific Ocean (Moorea Island)
+latitude: -17.5
+longitude: -149.88
+multiple-sampling-sites: true
+sampling-sites-note: Multiple sites around Moorea island (fore reef, back reef, fringing reef,
+  lagoon)
+sampling-depth: surface
+sampling-cadence: quarterly
+omics-types:
+  - amplicon-sequencing
+data-accessions:
+  - SRA030397
+  - SRP007814
+  - SRP007926
+  - PRJNA773129
+contacts:
+  - name: Deron Burkepile
+    email: deron.burkepile@lifesci.ucsb.edu
+    role: PI
+publications:
+  - 10.1038/ismej.2011.108
+  - 10.1111/1462-2920.16092
+verification:
+  checked-by:
+    - Deron Burkepile
+  checked-on: '2026-06-19'

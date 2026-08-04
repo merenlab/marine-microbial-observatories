@@ -1,0 +1,43 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: mb
+name: MicroBrest
+acronym: MB
+program-website: https://www-iuem.univ-brest.fr/observation/observation-littorale-et-cotiere/microbrest/
+affiliated-institutions: IUEM (European Institute for Marine Studies), UBO, CNRS (SEE-Life)
+affiliated-institution-websites:
+  - https://www-iuem.univ-brest.fr/?lang=en
+  - https://www.inee.cnrs.fr/fr/see-life-suivis-long-terme-en-ecologie-et-evolution
+status: active
+sampling-start-year: 2014
+sampling-end-year: present
+dna-collection-start-year: 2014
+countries:
+  - France
+ocean-basins:
+  - Northeast Atlantic Ocean
+sub-region: Bay of Brest
+latitude: 48.35893611
+longitude: -4.552002778
+multiple-sampling-sites: false
+sampling-sites-note: N/A
+sampling-depth: surface
+sampling-cadence: monthly
+omics-types:
+  - metagenomics
+data-accessions-note: Accession number coming soon
+contacts:
+  - name: Loïs Maignien
+    email: lois.maignien@univ-brest.fr
+    role: PI
+  - name: Hugo Doré
+    email: hugo.dore@univ-brest.fr
+    role: PI
+publications:
+  - 10.70675/4b614b80zd738z49f9za49cz0138f938cb0e
+notes: |-
+  Monthly metagenomes for the 0.22 - 3 um size fraction since 2014. Amplicon sequencing is also available for years 2014-2016. The larger size fraction (> 3 um) is also collected and stored, but not sequenced. Physico-chemical characterization of concomittent water samples is performed by the SOMLIT network (https://www-iuem.univ-brest.fr/observation/observation-littorale-et-cotiere/somlit-brest/ ; https://doi.org/10.17882/91173)
+verification:
+  checked-by:
+    - Hugo Doré
+  checked-on: '2026-06-17'
