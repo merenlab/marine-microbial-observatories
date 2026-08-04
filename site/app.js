@@ -484,6 +484,8 @@ function renderMap() {
     groups.get(key).push(record);
   });
 
+  const bounds = [];
+
   groups.forEach((group, key) => {
     const [lat, lon] = key.split(',').map(Number);
     const marker = L.circleMarker([lat, lon], {
@@ -493,6 +495,8 @@ function renderMap() {
       fillColor: '#3aa8cc',
       fillOpacity: 0.85,
     }).addTo(map);
+
+    bounds.push([lat, lon]);
 
     const html = group.map((record) => `
       <strong><a href="#time-series/${esc(record.id)}" data-open="${esc(record.id)}">${
@@ -511,6 +515,8 @@ function renderMap() {
       });
     });
   });
+
+  if (bounds.length) map.fitBounds(bounds, { padding: [20, 20], maxZoom: 6 });
 }
 
 /* ------------------------------------------------------------------- pages */
