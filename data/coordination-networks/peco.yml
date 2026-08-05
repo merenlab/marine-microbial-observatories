@@ -3,16 +3,25 @@
 id: peco
 name: Pacific eDNA Coastal Observatory
 acronym: PECO
-network-website: https://obon-ocean.org/project/pacific-edna-coastal-observatory-peco/
+network-website: https://peco-project.weebly.com/
 affiliated-institutions: |-
-  McGill University, Smithsonian Marine Global Earth Observatory (MarineGEO), University of California Davis (UC Davis), University of Washington, Hakai Institute
+  McGill University, Hakai Institute, University of Washington, University of Oregon, NOAA National Marine Fisheries Service Alaska Fisheries Science Center, University of California, Davis, San Francisco State University, Council of the Haida Nation, Sonoma State University, University of Alaska Fairbanks, Cornell University, San Diego State University, Sonoma State University, Cal Poly Humboldt, Gwaii Haanas National Park Reserve, National Marine Conservation Area Re, Oregon State University, Morro Bay National Estuary Program, University of Alaska Southeast, Western Washington University, University of California, Davis, Pacific Rim National Park Reserve, Parks Canada Agency
 umbrella-organisation: OBON
 status: active
 established-year: 2021
 geographic-scope: Alaska to Southern California
+data-accessions:
+  - PRJNA1275805
 mission-statement: |-
   PECO is a multi-national eDNA network spanning 26 degrees of latitude from Alaska to Southern California, where partners pair eDNA collection with visual surveys and centralized metabarcoding to build capacity for large-scale biogeographic biodiversity assessment of nearshore fish and invertebrates. Its objectives include optimizing eDNA sampling effort, assessing the climate sensitivity of nearshore taxa and communities across latitude and traits, and developing updatable, publicly accessible forecasts of species range shifts to support biodiversity monitoring through the Ocean Decade.
 contacts:
   - name: Jennifer Sunday
     email: jennifer.sunday@mcgill.ca
-notes: collect environmental DNA alongside visual surveys, with centralized metabarcoding
+    role: Project Lead
+publications:
+  - https://doi.org/10.21203/rs.3.rs-10282151/v1
+verification:
+  checked-by:
+    - Jennifer Sunday
+  checked-on: '2026-08-05'
+  checked-note: 'original entry: Jennifer Sunday, Aug. 5th, 2026'
