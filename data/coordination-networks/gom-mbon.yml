@@ -14,6 +14,5 @@ mission-statement: |-
   Fills a gap in sub-annual plankton biodiversity time series in the rapidly warming Gulf of Maine, and integrates those observations with seascapes and circulation modelling to predict change in the planktonic 'lipidscape' underpinning forage fish and North Atlantic right whales.
 contacts:
   - name: Jake Kritzer (NERACOOS)
-    role: Project lead
-  - name: earlier awards led by Ru Morrison (NERACOOS) and Jeffrey Runge (Univ. of Maine)
+    email: jake@neracoos.org
     role: Project lead

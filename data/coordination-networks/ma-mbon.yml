@@ -14,6 +14,11 @@ mission-statement: |-
   Creates a regionally unique archive of co-located biological data (eDNA, animal telemetry, passive acoustics) and oceanographic data (HF radar, gliders, satellites, models), and co-develops models and tools with stakeholders for fisheries, offshore energy and place-based management.
 contacts:
   - name: Gerhard Kuska (MARACOOS / University of Delaware)
+    email: kuska@maracoos.org
     role: Co-leads
   - name: Matthew Ogburn (Smithsonian Environmental Research Center)
     role: Co-leads
+    email: OgburnM@si.edu
+  - name: MA-BON contact
+    role: contact
+    email: info@maracoos.org
