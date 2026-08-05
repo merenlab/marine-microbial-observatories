@@ -16,7 +16,10 @@ mission-statement: |-
   Extends the Santa Barbara Channel demonstration MBON to the whole Southern California Bight, using a 'pincer' strategy - remote sensing, optical and acoustic imagery from ecosystem scales downward, and genetics from genes and microbes upward - to build capacity for satellite observation of marine biodiversity.
 contacts:
   - name: Robert (Bob) Miller (UCSB)
-    role: 'Miller: Lead PI'
+    email: rjmiller@ucsb.edu 
+    role: Lead PI
   - name: Craig Carlson (UCSB)
-    role: 'marine ecology. Carlson: Co-PI'
-  - email: sbcbon@msi.ucsb.edu
+    email: carlson@lifesci.ucsb.edu
+    role:  Co-PI
+  - name: SCB MBON contact
+    email: sbcbon@msi.ucsb.edu

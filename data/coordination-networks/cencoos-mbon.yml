@@ -14,4 +14,5 @@ mission-statement: |-
   Integrates satellite remote sensing, in situ observations and models to quantify relationships between climate, the physical/chemical ocean environment and marine food webs from microbes to top predators, in support of the NOAA California Current IEA, national marine sanctuaries, BOEM and the State of California.
 contacts:
   - name: Francisco Chavez (MBARI)
+    email: chfr@mbari.org
     role: Lead PI

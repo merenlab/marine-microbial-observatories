@@ -12,3 +12,7 @@ geographic-scope: Coastal New England - Long Island to Cape Cod; Isles of Shoals
   Casco Bay (ME)
 mission-statement: |-
   Integrates acoustic telemetry, environmental DNA and active/passive acoustics with traditional fisheries sampling to quantify how changing water conditions affect individuals, populations and community structure, using Atlantic cod and common terns as focal predators.
+contacts:
+  - name: Nathan Furey (University of New Hampshire)
+    email: Nathan.Furey@unh.edu
+    role: PI

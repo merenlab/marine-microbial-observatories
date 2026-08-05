@@ -16,4 +16,5 @@ mission-statement: |-
 contacts:
   - name: Alexander Haumann
     email: alexander.haumann@awi.de
-  - email: info@antarctica-insync.org
+  - name: Antarctica InSync contact
+    email: info@antarctica-insync.org

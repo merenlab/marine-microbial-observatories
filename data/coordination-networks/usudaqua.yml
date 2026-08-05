@@ -14,12 +14,15 @@ mission-statement: |-
   Gathers researchers and students working on aquatic microbial ecology in Latin America to combine efforts, consolidate a collaborative space for the field in the region, and run shared observatories and standardised sampling.
 contacts:
   - name: Juan Pablo Nino-Garcia (Colombia)
+    email: juanpabloniga@gmail.com
     role: Network coordinators (node leads)
   - name: Michaela de Melo (Brazil)
+    email: ladeira_de_melo.michaela@uqam.ca
     role: Network coordinators (node leads)
   - name: Paula Huber (Argentina)
     role: Network coordinators (node leads)
-  - email: microsudaqua2017@gmail.com
+  - name: MicroSudAqua contact
+    email: microsudaqua2017@gmail.com
 publications:
   - 10.1038/s41597-022-01665-z
   - 10.25260/EA.24.34.3.0.2436
