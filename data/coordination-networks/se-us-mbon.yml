@@ -22,3 +22,7 @@ contacts:
   - name: Luke Thompson (NOAA/AOML)
     email: luke.thompson@noaa.gov
     role: Lead eDNA effort
+verification:
+  checked-by:
+    - Luke Thompson, Frank Muller-Karger
+  checked-on: '2026-08-06'
