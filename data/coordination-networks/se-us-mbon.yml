@@ -1,7 +1,7 @@
 # Ocean omics coordination network.
 # Schema: ../../schema/coordination-networks.schema.json
 id: se-us-mbon
-name: South Florida MBON (South Florida Ecosystem Restoration (SFER)/Southeast US MBON)
+name: Southeast US MBON (South Florida Ecosystem Restoration (SFER)/South Florida MBON)
 acronym: SE US MBON
 network-website: https://marinebon.org/network/southeast-mbon/
 affiliated-institutions: |-
@@ -9,7 +9,7 @@ affiliated-institutions: |-
 umbrella-organisation: MBON
 status: active
 established-year: 2014
-geographic-scope: Florida Keys, Biscayne Bay, West Florida Shelf and SE US EEZ
+geographic-scope: Florida Keys, Biscayne Bay, Floria Bay, West Florida Shelf and SE US EEZ
 mission-statement: |-
   Integrates ground and satellite observations of biodiversity to inform ecosystem-based management in and around the Florida Keys National Marine Sanctuary, refines practical marine EBVs and EOVs, and serves as MBON team leader linking national and international efforts.
 contacts:
@@ -19,3 +19,10 @@ contacts:
   - name: Enrique Montes (NOAA AOML)
     email: enrique.montes@noaa.gov
     role: Programme manager
+  - name: Luke Thompson (NOAA/AOML)
+    email: luke.thompson@noaa.gov
+    role: Lead eDNA effort
+verification:
+  checked-by:
+    - Luke Thompson, Frank Muller-Karger
+  checked-on: '2026-08-06'
