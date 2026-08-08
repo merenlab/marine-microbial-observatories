@@ -7,7 +7,7 @@ network-website: https://marinebon.org/network/pole-to-pole-americas/
 additional-websites:
   - https://marinebon.org/p2p/index.html
 affiliated-institutions: |-
-  GEO BON, GOOS (IOC-UNESCO), OBIS, AIR Centre, NOAA AOML, University of South Florida and partner institutions in ~15 countries of the Americas
+  GEO BON, GOOS (IOC-UNESCO), OBIS, AIR Centre, NOAA AOML, Univaersity of Miami, University of South Florida and partner institutions in ~15 countries of the Americas
 umbrella-organisation: MBON
 status: active
 established-year: 2017
@@ -21,6 +21,20 @@ contacts:
   - name: Frank Muller-Karger (University of South Florida)
     email: carib@usf.edu
     role: Coordinators
+  - name: Luke Thompson (NOAA AOML, Mississippi State University)
+    email: luke.thompson@noaa.gov
+    role: Coordinators
+  - name: Gregorio Bigatti (IBIOMAR-CONICET)
+    email: gbigatti@cenpat-conicet.gob.ar
+    role: Coordinators
 publications:
   - 10.5670/oceanog.2025.137
   - 10.3897/rio.11.e163815
+  - 10.3389/fmars.2021.589489
+  - 10.3389/fmars.2021.691313
+  - 10.5670/oceanog.2021.216
+  - https://marinebon.org/news/sea-of-cortez-fieldwork/
+verification:
+  checked-by:
+    - Enrique Montes
+  checked-on: '2026-08-07'
