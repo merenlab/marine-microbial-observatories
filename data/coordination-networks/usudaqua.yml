@@ -9,7 +9,7 @@ affiliated-institutions: |-
 umbrella-organisation: Self-organised research network
 status: active
 established-year: 2017
-geographic-scope: Latin America - continental/inland aquatic ecosystems (FRESHWATER)
+geographic-scope: Latin America - aquatic ecosystems
 mission-statement: |-
   Gathers researchers and students working on aquatic microbial ecology in Latin America to combine efforts, consolidate a collaborative space for the field in the region, and run shared observatories and standardised sampling.
 contacts:
@@ -27,3 +27,7 @@ publications:
   - 10.1038/s41597-022-01665-z
   - 10.25260/EA.24.34.3.0.2436
   - 10.5281/zenodo.11066937
+verification:
+  checked-by:
+    - Mariana Lozada (IBIOMAR CONICET, Argentina)
+  checked-on: '2026-08-07'
