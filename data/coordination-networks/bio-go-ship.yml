@@ -23,3 +23,7 @@ contacts:
     role: Lead
 publications:
   - 10.1038/s41597-021-00889-9
+verification:
+  checked-by:
+    - Adam Martiny
+  checked-on: '2026-08-06'
