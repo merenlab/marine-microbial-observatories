@@ -188,7 +188,12 @@ function searchBlob(record) {
     if (node == null) return;
     if (typeof node === 'string' || typeof node === 'number') { parts.push(String(node)); return; }
     if (Array.isArray(node)) { node.forEach(walk); return; }
-    if (typeof node === 'object') { Object.values(node).forEach(walk); }
+    if (typeof node === 'object') {
+      // `samples` holds thousands of accessions and coordinates per expedition.
+      // Folding those in would make a search for "50" match every expedition
+      // and would grow the blob far beyond anything a person types.
+      Object.entries(node).forEach(([key, value]) => { if (key !== 'samples') walk(value); });
+    }
   };
   walk(record);
   record.__blob = parts.join('  ').toLowerCase();
@@ -377,6 +382,16 @@ function renderDetail(view, record) {
   if (view === 'expeditions') {
     add('sample metadata', record['sample-metadata-source']
       ? esc(record['sample-metadata-source']) : '');
+    const samples = record.samples || [];
+    const placed = samples.filter((s) => s.latitude != null && s.longitude != null).length;
+    add('samples', samples.length
+      ? `${samples.length.toLocaleString()} samples` + (placed
+        ? `, ${placed === samples.length ? 'all' : placed.toLocaleString()} with coordinates
+           and shown as black dots on the <a href="#about" data-map="1">map</a>` : '') +
+        (placed < samples.length
+          ? ` <span class="unverified">${(samples.length - placed).toLocaleString()} without
+             coordinates</span>` : '')
+      : '');
   }
 
   add('data accessions', list(record['data-accessions'], accessionLink));
@@ -426,6 +441,19 @@ function renderDetail(view, record) {
     </div>`;
 
   const dialog = $('#detail');
+
+  // The map lives on the About page, so the sample-count link has to leave the
+  // dialog rather than just move the hash under it. Closing first lets the
+  // dialog's own close handler write its hash before setView writes the real one.
+  const toMap = $('#detail-body').querySelector('[data-map]');
+  if (toMap) {
+    toMap.addEventListener('click', (event) => {
+      event.preventDefault();
+      dialog.close();
+      setView('about', true);
+    });
+  }
+
   if (!dialog.open) dialog.showModal();
 }
 
@@ -452,13 +480,7 @@ function renderMap() {
     .filter((r) => r.latitude != null && r.longitude != null);
   const missing = (DATA.records['time-series'] || []).length - records.length;
 
-  const caption = `${records.length} time-series programs with coordinates.` +
-    (missing ? ` ${missing} record${missing === 1 ? '' : 's'} ` +
-      `${missing === 1 ? 'has' : 'have'} no coordinates and cannot be shown.` : '') +
-    ' Programs at identical coordinates share a marker.';
-
   host.innerHTML = '<div class="map-canvas"></div><p class="map-caption"></p>';
-  host.querySelector('.map-caption').textContent = caption;
   const canvas = host.querySelector('.map-canvas');
 
   // Leaflet comes from a CDN; some networks block it, and the rest of the
@@ -475,6 +497,40 @@ function renderMap() {
     maxZoom: 12,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(map);
+
+  /* Expeditions are ships in motion, so they have no single home coordinate the
+   * way an observatory does -- each one contributes hundreds of individual
+   * sample positions instead. Drawn as ordinary markers they would bury the
+   * observatories under thousands of circles, so they go down as 1px black dots
+   * that read as a track rather than as records you can click. Their own pane,
+   * below the overlay pane the station markers live in, keeps them underneath;
+   * a canvas renderer keeps panning smooth, which a few thousand SVG nodes
+   * would not. */
+  map.createPane('expedition-samples');
+  map.getPane('expedition-samples').style.zIndex = 350;
+  const dots = L.canvas({ pane: 'expedition-samples', padding: 0.5 });
+
+  let sampleCount = 0;
+  let expeditionCount = 0;
+  let unplacedCount = 0;
+  (DATA.records.expeditions || []).forEach((record) => {
+    const listed = record.samples || [];
+    const samples = listed.filter((s) => s.latitude != null && s.longitude != null);
+    unplacedCount += listed.length - samples.length;
+    if (samples.length) expeditionCount += 1;
+    samples.forEach((sample) => {
+      L.circleMarker([sample.latitude, sample.longitude], {
+        renderer: dots,
+        pane: 'expedition-samples',
+        radius: 1,
+        weight: 0,
+        fillColor: '#111',
+        fillOpacity: 0.6,
+        interactive: false,
+      }).addTo(map);
+      sampleCount += 1;
+    });
+  });
 
   /* Group by exact coordinate so co-located programs are all reachable. */
   const groups = new Map();
@@ -516,7 +572,21 @@ function renderMap() {
     });
   });
 
+  /* Only the observatories frame the view. Expedition samples are near-global,
+   * so fitting to them too would always zoom straight back out to the world. */
   if (bounds.length) map.fitBounds(bounds, { padding: [20, 20], maxZoom: 6 });
+
+  host.querySelector('.map-caption').textContent =
+    `${records.length} time-series programs with coordinates.` +
+    (missing ? ` ${missing} record${missing === 1 ? '' : 's'} ` +
+      `${missing === 1 ? 'has' : 'have'} no coordinates and cannot be shown.` : '') +
+    ' Programs at identical coordinates share a marker.' +
+    (sampleCount ? ` The small black dots are ${sampleCount.toLocaleString()} individual ` +
+      `samples from ${expeditionCount} large-scale expedition` +
+      `${expeditionCount === 1 ? '' : 's'}; they mark where an expedition sampled ` +
+      'rather than a program you can open.' : '') +
+    (unplacedCount ? ` ${unplacedCount.toLocaleString()} listed sample` +
+      `${unplacedCount === 1 ? ' has' : 's have'} no coordinates and cannot be shown.` : '');
 }
 
 /* ------------------------------------------------------------------- pages */
