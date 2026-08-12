@@ -14,7 +14,11 @@ geographic-scope: Antarctica and the Southern Ocean - circumpolar
 mission-statement: |-
   A circumpolar, internationally synchronised assessment of the connections between ice, ocean, climate, environment and life, including human pressures and solutions such as marine protection, delivered through temporally and spatially coordinated multi-platform field campaigns and long-term monitoring.
 contacts:
+  - name: Stefanie Arndt
+    email: stefanie.arndt@awi.de
   - name: Alexander Haumann
     email: alexander.haumann@awi.de
-  - name: Antarctica InSync contact
-    email: info@antarctica-insync.org
+verification:
+  checked-by:
+    - A. Murat Eren
+  checked-on: '2026-10-12'
