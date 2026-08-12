@@ -19,11 +19,13 @@ from __future__ import annotations
 
 import argparse
 import csv
+import html
 import json
 import re
 import shutil
 import subprocess
 import sys
+import unicodedata
 from pathlib import Path
 
 import markdown
@@ -200,6 +202,40 @@ def autolink_emails(html: str) -> str:
     return "".join(parts)
 
 
+def sort_key(name: str) -> str:
+    """Alphabetical the way a reader expects: Doré next to Dore, not after Z."""
+    folded = unicodedata.normalize("NFKD", name)
+    return "".join(c for c in folded if not unicodedata.combining(c)).lower()
+
+
+def verifier_block(records: dict[str, list[dict]]) -> str:
+    """The credits on the About page, rebuilt from the records themselves.
+
+    Hand-maintaining this list guarantees it goes stale: someone checks a record,
+    the YAML says so, and the prose still names whoever it named last year.
+    """
+    people: dict[str, int] = {}
+    verified = 0
+    for items in records.values():
+        for record in items:
+            checked_by = (record.get("verification") or {}).get("checked-by") or []
+            if checked_by:
+                verified += 1
+            for name in checked_by:
+                people[name] = people.get(name, 0) + 1
+
+    if not people:
+        return "<p>No record verifications are on file yet.</p>"
+
+    names = " · ".join(html.escape(n) for n in sorted(people, key=sort_key))
+    return (
+        f"<p>{verified} record verification{'' if verified == 1 else 's'} by "
+        f"{len(people)} {'person' if len(people) == 1 else 'people'} "
+        f"{'is' if verified == 1 else 'are'} recorded in the catalogue. "
+        f"In alphabetical order:</p>\n<p class=\"verifiers\">{names}</p>"
+    )
+
+
 def render_markdown(path: Path) -> str:
     """Render one markdown file to an HTML fragment with web-correct links."""
     text = path.read_text(encoding="utf-8")
@@ -226,7 +262,15 @@ def render_markdown(path: Path) -> str:
     return autolink_emails(html)
 
 
-def write_pages() -> list[Path]:
+# Placeholders the markdown carries so the generated blocks land in the prose
+# where their author put them. They stay empty on GitHub, which renders the same
+# markdown without this build step -- the same bargain <div id="map-embed"> makes.
+GENERATED_BLOCKS = {
+    '<div id="verifier-list"></div>': verifier_block,
+}
+
+
+def write_pages(records: dict[str, list[dict]]) -> list[Path]:
     out_dir = DIST / "pages"
     out_dir.mkdir(exist_ok=True)
     written = []
@@ -235,8 +279,12 @@ def write_pages() -> list[Path]:
         if not source.exists():
             print(f"missing page source: {source}", file=sys.stderr)
             raise SystemExit(1)
+        html_text = render_markdown(source)
+        for placeholder, generate in GENERATED_BLOCKS.items():
+            if placeholder in html_text:
+                html_text = html_text.replace(placeholder, generate(records))
         target = out_dir / f"{slug}.html"
-        target.write_text(render_markdown(source), encoding="utf-8")
+        target.write_text(html_text, encoding="utf-8")
         written.append(target)
         print(f"  dist/pages/{slug}.html  (from {page['source']})")
     return written
@@ -283,7 +331,7 @@ def main() -> int:
     )
     print(f"  dist/data.json  ({sum(payload['counts'].values())} records)")
 
-    write_pages()
+    write_pages(payload["records"])
 
     for name in ("index.html", "app.js", "style.css"):
         source = SITE / name
