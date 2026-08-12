@@ -48,7 +48,10 @@ jobs:
             echo '## Record validation'
             echo
             echo '```'
-            python3 scripts/validate.py 2>&1 | tail -n 40 || true
+            # From the top, not the tail: the report is grouped by category with
+            # errors first, so the head is the part worth reading. The cap is only
+            # there to keep a pathological run from flooding the summary.
+            python3 scripts/validate.py 2>&1 | head -n 250 || true
             echo '```'
             echo
             echo 'Warnings do not block this pull request. They mark records that are'
