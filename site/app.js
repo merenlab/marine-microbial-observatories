@@ -79,6 +79,12 @@ const COLUMNS = {
       cell: (r) => String((r['data-accessions'] || []).length || '—'),
     },
     {
+      key: 'samples', label: 'Samples', cls: 'num',
+      get: (r) => (r.samples || []).length,
+      cell: (r) => ((r.samples || []).length
+        ? (r.samples.length).toLocaleString() : '—'),
+    },
+    {
       key: 'publications', label: 'Publications', cls: 'num',
       get: (r) => (r.publications || []).length,
       cell: (r) => String((r.publications || []).length || '—'),
@@ -123,6 +129,7 @@ const state = {
 
 let DATA = null;
 let map = null;
+let detailMap = null;
 
 /* --------------------------------------------------------------- helpers */
 
@@ -329,7 +336,80 @@ function link(url) {
   return `<a href="${esc(url)}" rel="noopener noreferrer" target="_blank">${esc(url)}</a>`;
 }
 
+/* Every point one record puts on a map: a time-series program is its single
+ * representative station, an expedition is every sample it placed. */
+function recordPoints(view, record) {
+  if (view === 'expeditions') {
+    return (record.samples || [])
+      .filter((s) => s.latitude != null && s.longitude != null)
+      .map((s) => [s.latitude, s.longitude]);
+  }
+  if (record.latitude != null && record.longitude != null) {
+    return [[record.latitude, record.longitude]];
+  }
+  return [];
+}
+
+/* The record's own map, drawn inside the open dialog. Separate from the
+ * catalogue-wide map: one Leaflet instance per dialog, torn down when the
+ * dialog closes, since Leaflet cannot re-measure a container that has been
+ * replaced underneath it. */
+function renderDetailMap(view, record) {
+  const host = $('#detail-body .detail-map');
+  if (!host || typeof L === 'undefined') return;
+
+  const points = recordPoints(view, record);
+  if (!points.length) return;
+
+  // Scroll-wheel zoom is off on purpose: the dialog itself scrolls, and a map
+  // that swallows the wheel traps the reader halfway down a long record.
+  detailMap = L.map(host, { scrollWheelZoom: false, worldCopyJump: true });
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 12,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  }).addTo(detailMap);
+
+  if (view === 'expeditions') {
+    // Same reading as the catalogue map, one zoom level louder: this map shows
+    // one expedition, so its samples are the subject rather than the backdrop.
+    const dots = L.canvas({ padding: 0.5 });
+    points.forEach((point) => {
+      L.circleMarker(point, {
+        renderer: dots,
+        radius: 2,
+        weight: 0,
+        fillColor: '#111',
+        fillOpacity: 0.7,
+        interactive: false,
+      }).addTo(detailMap);
+    });
+  } else {
+    L.circleMarker(points[0], {
+      radius: 6,
+      weight: 1.5,
+      color: '#0e5670',
+      fillColor: '#3aa8cc',
+      fillOpacity: 0.85,
+      interactive: false,
+    }).addTo(detailMap);
+  }
+
+  if (points.length > 1) detailMap.fitBounds(points, { padding: [18, 18], maxZoom: 9 });
+  else detailMap.setView(points[0], 5);
+
+  // The dialog was hidden while this was being built, so Leaflet measured a
+  // zero-height box. Re-measure now that it is on screen.
+  detailMap.invalidateSize();
+}
+
 function renderDetail(view, record) {
+  // Opening a record straight from another one replaces #detail-body wholesale,
+  // so the previous map has to be released before its container disappears.
+  if (detailMap) {
+    detailMap.remove();
+    detailMap = null;
+  }
+
   const rows = [];
   const add = (label, html) => rows.push(field(label, html));
 
@@ -341,17 +421,28 @@ function renderDetail(view, record) {
     ? esc(record['affiliated-institutions']) : '');
   add('institution websites', list(record['affiliated-institution-websites'], link));
 
+  // Full width rather than a labelled row: at 13rem of label plus a shared
+  // column the map would be a letterbox. Filled after the dialog opens, since
+  // Leaflet cannot measure a container that is still display:none.
+  const points = recordPoints(view, record);
+  if (points.length) {
+    // The label carries the count, so the map needs no caption under it. Points
+    // are samples rather than distinct sites -- several samples routinely share
+    // one station -- and the count is of what is actually plotted.
+    const label = view === 'expeditions'
+      ? `${points.length.toLocaleString()} samples on the map`
+      : 'location on the map';
+    rows.push(`<dt class="map-label">${esc(label)}</dt>
+      <dd class="map-cell"><div class="detail-map"></div></dd>`);
+  }
+
   if (view === 'time-series') {
     add('status', statusPill(record.status));
     add('countries', esc((record.countries || []).join(', ')));
     add('ocean basins', esc((record['ocean-basins'] || []).join(', ')));
     add('sub-region', esc(record['sub-region'] || ''));
     if (record.latitude != null) {
-      add('coordinates',
-        `${record.latitude}, ${record.longitude}
-         <a href="https://www.openstreetmap.org/?mlat=${record.latitude}&mlon=${
-           record.longitude}#map=6/${record.latitude}/${record.longitude}"
-            rel="noopener noreferrer" target="_blank">map</a>`);
+      add('coordinates', `${esc(record.latitude)}, ${esc(record.longitude)}`);
     }
     const span = record['sampling-end-year'] === 'present'
       ? `${record['sampling-start-year']} – present`
@@ -383,14 +474,9 @@ function renderDetail(view, record) {
     add('sample metadata', record['sample-metadata-source']
       ? esc(record['sample-metadata-source']) : '');
     const samples = record.samples || [];
-    const placed = samples.filter((s) => s.latitude != null && s.longitude != null).length;
     add('samples', samples.length
-      ? `${samples.length.toLocaleString()} samples` + (placed
-        ? `, ${placed === samples.length ? 'all' : placed.toLocaleString()} with coordinates
-           and shown as black dots on the <a href="#about" data-map="1">map</a>` : '') +
-        (placed < samples.length
-          ? ` <span class="unverified">${(samples.length - placed).toLocaleString()} without
-             coordinates</span>` : '')
+      ? `${samples.length.toLocaleString()} samples
+         (<a href="#" class="copy-accessions" data-copy="accessions">copy all accessions</a>)`
       : '');
   }
 
@@ -440,21 +526,79 @@ function renderDetail(view, record) {
       <a class="btn" href="${esc(viewUrl)}" rel="noopener noreferrer" target="_blank">View YAML</a>
     </div>`;
 
-  const dialog = $('#detail');
-
-  // The map lives on the About page, so the sample-count link has to leave the
-  // dialog rather than just move the hash under it. Closing first lets the
-  // dialog's own close handler write its hash before setView writes the real one.
-  const toMap = $('#detail-body').querySelector('[data-map]');
-  if (toMap) {
-    toMap.addEventListener('click', (event) => {
+  const copy = $('#detail-body').querySelector('[data-copy="accessions"]');
+  if (copy) {
+    copy.addEventListener('click', (event) => {
       event.preventDefault();
-      dialog.close();
-      setView('about', true);
+      copyAccessions(copy, record);
     });
   }
 
+  const dialog = $('#detail');
   if (!dialog.open) dialog.showModal();
+
+  // After showModal, never before: the map needs a container with a real height.
+  renderDetailMap(view, record);
+}
+
+/* One accession per line -- the shape that pastes straight into a download
+ * script or an archive's batch search, which is what these ids are for. */
+function copyAccessions(anchor, record) {
+  const accessions = (record.samples || []).map((s) => s.accession).filter(Boolean);
+  if (!accessions.length) return;
+
+  const text = accessions.join('\n');
+  const done = (ok) => {
+    anchor.textContent = ok ? '✅' : 'copy failed';
+    anchor.classList.toggle('copied', ok);
+    anchor.classList.toggle('copy-failed', !ok);
+    // A tick is a result, not somewhere to go, so it stops being a link while
+    // it is showing. A failure stays one, since retrying is the obvious move.
+    if (ok) anchor.removeAttribute('href');
+    clearTimeout(anchor._resetTimer);
+    anchor._resetTimer = setTimeout(() => {
+      anchor.textContent = 'copy all accessions';
+      anchor.classList.remove('copied', 'copy-failed');
+      anchor.setAttribute('href', '#');
+    }, 2000);
+  };
+
+  // navigator.clipboard is unavailable outside a secure context and can reject
+  // when the document is not focused, so a failure here falls through to the
+  // older method rather than giving up.
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(
+      () => done(true),
+      () => done(copyViaTextarea(text, anchor)),
+    );
+    return;
+  }
+  done(copyViaTextarea(text, anchor));
+}
+
+/* execCommand('copy') acts on the window's selection, so it copies nothing
+ * unless the scratch field can actually take focus and be selected. Inside an
+ * open modal dialog everything outside the dialog is inert, so a field appended
+ * to document.body silently selects nothing -- and execCommand still reports
+ * success. Hence both the placement and the verification below. */
+function copyViaTextarea(text, anchor) {
+  const host = (anchor && anchor.closest && anchor.closest('dialog')) || document.body;
+  const active = document.activeElement;
+
+  const scratch = document.createElement('textarea');
+  scratch.value = text;
+  scratch.setAttribute('readonly', '');
+  scratch.style.cssText = 'position:absolute;left:-9999px;top:0';
+  host.appendChild(scratch);
+  scratch.select();
+
+  const selected = String(document.getSelection() || '') === text;
+  let ok = false;
+  try { ok = document.execCommand('copy') && selected; } catch (error) { ok = false; }
+
+  host.removeChild(scratch);
+  if (active && active.focus) active.focus();
+  return ok;
 }
 
 function openRecord(view, id, pushHash) {
@@ -708,6 +852,10 @@ function wire() {
     if (event.target === dialog) dialog.close();   // click on the backdrop
   });
   dialog.addEventListener('close', () => {
+    if (detailMap) {
+      detailMap.remove();
+      detailMap = null;
+    }
     history.replaceState(null, '', `#${state.view}`);
   });
 
