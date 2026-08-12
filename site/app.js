@@ -79,6 +79,12 @@ const COLUMNS = {
       cell: (r) => String((r['data-accessions'] || []).length || '—'),
     },
     {
+      key: 'samples', label: 'Samples', cls: 'num',
+      get: (r) => (r.samples || []).length,
+      cell: (r) => ((r.samples || []).length
+        ? (r.samples.length).toLocaleString() : '—'),
+    },
+    {
       key: 'publications', label: 'Publications', cls: 'num',
       get: (r) => (r.publications || []).length,
       cell: (r) => String((r.publications || []).length || '—'),
@@ -123,6 +129,7 @@ const state = {
 
 let DATA = null;
 let map = null;
+let detailMap = null;
 
 /* --------------------------------------------------------------- helpers */
 
@@ -188,7 +195,12 @@ function searchBlob(record) {
     if (node == null) return;
     if (typeof node === 'string' || typeof node === 'number') { parts.push(String(node)); return; }
     if (Array.isArray(node)) { node.forEach(walk); return; }
-    if (typeof node === 'object') { Object.values(node).forEach(walk); }
+    if (typeof node === 'object') {
+      // `samples` holds thousands of accessions and coordinates per expedition.
+      // Folding those in would make a search for "50" match every expedition
+      // and would grow the blob far beyond anything a person types.
+      Object.entries(node).forEach(([key, value]) => { if (key !== 'samples') walk(value); });
+    }
   };
   walk(record);
   record.__blob = parts.join('  ').toLowerCase();
@@ -324,7 +336,80 @@ function link(url) {
   return `<a href="${esc(url)}" rel="noopener noreferrer" target="_blank">${esc(url)}</a>`;
 }
 
+/* Every point one record puts on a map: a time-series program is its single
+ * representative station, an expedition is every sample it placed. */
+function recordPoints(view, record) {
+  if (view === 'expeditions') {
+    return (record.samples || [])
+      .filter((s) => s.latitude != null && s.longitude != null)
+      .map((s) => [s.latitude, s.longitude]);
+  }
+  if (record.latitude != null && record.longitude != null) {
+    return [[record.latitude, record.longitude]];
+  }
+  return [];
+}
+
+/* The record's own map, drawn inside the open dialog. Separate from the
+ * catalogue-wide map: one Leaflet instance per dialog, torn down when the
+ * dialog closes, since Leaflet cannot re-measure a container that has been
+ * replaced underneath it. */
+function renderDetailMap(view, record) {
+  const host = $('#detail-body .detail-map');
+  if (!host || typeof L === 'undefined') return;
+
+  const points = recordPoints(view, record);
+  if (!points.length) return;
+
+  // Scroll-wheel zoom is off on purpose: the dialog itself scrolls, and a map
+  // that swallows the wheel traps the reader halfway down a long record.
+  detailMap = L.map(host, { scrollWheelZoom: false, worldCopyJump: true });
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 12,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  }).addTo(detailMap);
+
+  if (view === 'expeditions') {
+    // Same reading as the catalogue map, one zoom level louder: this map shows
+    // one expedition, so its samples are the subject rather than the backdrop.
+    const dots = L.canvas({ padding: 0.5 });
+    points.forEach((point) => {
+      L.circleMarker(point, {
+        renderer: dots,
+        radius: 2,
+        weight: 0,
+        fillColor: '#111',
+        fillOpacity: 0.7,
+        interactive: false,
+      }).addTo(detailMap);
+    });
+  } else {
+    L.circleMarker(points[0], {
+      radius: 6,
+      weight: 1.5,
+      color: '#0e5670',
+      fillColor: '#3aa8cc',
+      fillOpacity: 0.85,
+      interactive: false,
+    }).addTo(detailMap);
+  }
+
+  if (points.length > 1) detailMap.fitBounds(points, { padding: [18, 18], maxZoom: 9 });
+  else detailMap.setView(points[0], 5);
+
+  // The dialog was hidden while this was being built, so Leaflet measured a
+  // zero-height box. Re-measure now that it is on screen.
+  detailMap.invalidateSize();
+}
+
 function renderDetail(view, record) {
+  // Opening a record straight from another one replaces #detail-body wholesale,
+  // so the previous map has to be released before its container disappears.
+  if (detailMap) {
+    detailMap.remove();
+    detailMap = null;
+  }
+
   const rows = [];
   const add = (label, html) => rows.push(field(label, html));
 
@@ -336,17 +421,28 @@ function renderDetail(view, record) {
     ? esc(record['affiliated-institutions']) : '');
   add('institution websites', list(record['affiliated-institution-websites'], link));
 
+  // Full width rather than a labelled row: at 13rem of label plus a shared
+  // column the map would be a letterbox. Filled after the dialog opens, since
+  // Leaflet cannot measure a container that is still display:none.
+  const points = recordPoints(view, record);
+  if (points.length) {
+    // The label carries the count, so the map needs no caption under it. Points
+    // are samples rather than distinct sites -- several samples routinely share
+    // one station -- and the count is of what is actually plotted.
+    const label = view === 'expeditions'
+      ? `${points.length.toLocaleString()} samples on the map`
+      : 'location on the map';
+    rows.push(`<dt class="map-label">${esc(label)}</dt>
+      <dd class="map-cell"><div class="detail-map"></div></dd>`);
+  }
+
   if (view === 'time-series') {
     add('status', statusPill(record.status));
     add('countries', esc((record.countries || []).join(', ')));
     add('ocean basins', esc((record['ocean-basins'] || []).join(', ')));
     add('sub-region', esc(record['sub-region'] || ''));
     if (record.latitude != null) {
-      add('coordinates',
-        `${record.latitude}, ${record.longitude}
-         <a href="https://www.openstreetmap.org/?mlat=${record.latitude}&mlon=${
-           record.longitude}#map=6/${record.latitude}/${record.longitude}"
-            rel="noopener noreferrer" target="_blank">map</a>`);
+      add('coordinates', `${esc(record.latitude)}, ${esc(record.longitude)}`);
     }
     const span = record['sampling-end-year'] === 'present'
       ? `${record['sampling-start-year']} – present`
@@ -377,6 +473,11 @@ function renderDetail(view, record) {
   if (view === 'expeditions') {
     add('sample metadata', record['sample-metadata-source']
       ? esc(record['sample-metadata-source']) : '');
+    const samples = record.samples || [];
+    add('samples', samples.length
+      ? `${samples.length.toLocaleString()} samples
+         (<a href="#" class="copy-accessions" data-copy="accessions">copy all accessions</a>)`
+      : '');
   }
 
   add('data accessions', list(record['data-accessions'], accessionLink));
@@ -425,8 +526,79 @@ function renderDetail(view, record) {
       <a class="btn" href="${esc(viewUrl)}" rel="noopener noreferrer" target="_blank">View YAML</a>
     </div>`;
 
+  const copy = $('#detail-body').querySelector('[data-copy="accessions"]');
+  if (copy) {
+    copy.addEventListener('click', (event) => {
+      event.preventDefault();
+      copyAccessions(copy, record);
+    });
+  }
+
   const dialog = $('#detail');
   if (!dialog.open) dialog.showModal();
+
+  // After showModal, never before: the map needs a container with a real height.
+  renderDetailMap(view, record);
+}
+
+/* One accession per line -- the shape that pastes straight into a download
+ * script or an archive's batch search, which is what these ids are for. */
+function copyAccessions(anchor, record) {
+  const accessions = (record.samples || []).map((s) => s.accession).filter(Boolean);
+  if (!accessions.length) return;
+
+  const text = accessions.join('\n');
+  const done = (ok) => {
+    anchor.textContent = ok ? '✅' : 'copy failed';
+    anchor.classList.toggle('copied', ok);
+    anchor.classList.toggle('copy-failed', !ok);
+    // A tick is a result, not somewhere to go, so it stops being a link while
+    // it is showing. A failure stays one, since retrying is the obvious move.
+    if (ok) anchor.removeAttribute('href');
+    clearTimeout(anchor._resetTimer);
+    anchor._resetTimer = setTimeout(() => {
+      anchor.textContent = 'copy all accessions';
+      anchor.classList.remove('copied', 'copy-failed');
+      anchor.setAttribute('href', '#');
+    }, 2000);
+  };
+
+  // navigator.clipboard is unavailable outside a secure context and can reject
+  // when the document is not focused, so a failure here falls through to the
+  // older method rather than giving up.
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(
+      () => done(true),
+      () => done(copyViaTextarea(text, anchor)),
+    );
+    return;
+  }
+  done(copyViaTextarea(text, anchor));
+}
+
+/* execCommand('copy') acts on the window's selection, so it copies nothing
+ * unless the scratch field can actually take focus and be selected. Inside an
+ * open modal dialog everything outside the dialog is inert, so a field appended
+ * to document.body silently selects nothing -- and execCommand still reports
+ * success. Hence both the placement and the verification below. */
+function copyViaTextarea(text, anchor) {
+  const host = (anchor && anchor.closest && anchor.closest('dialog')) || document.body;
+  const active = document.activeElement;
+
+  const scratch = document.createElement('textarea');
+  scratch.value = text;
+  scratch.setAttribute('readonly', '');
+  scratch.style.cssText = 'position:absolute;left:-9999px;top:0';
+  host.appendChild(scratch);
+  scratch.select();
+
+  const selected = String(document.getSelection() || '') === text;
+  let ok = false;
+  try { ok = document.execCommand('copy') && selected; } catch (error) { ok = false; }
+
+  host.removeChild(scratch);
+  if (active && active.focus) active.focus();
+  return ok;
 }
 
 function openRecord(view, id, pushHash) {
@@ -452,13 +624,7 @@ function renderMap() {
     .filter((r) => r.latitude != null && r.longitude != null);
   const missing = (DATA.records['time-series'] || []).length - records.length;
 
-  const caption = `${records.length} time-series programs with coordinates.` +
-    (missing ? ` ${missing} record${missing === 1 ? '' : 's'} ` +
-      `${missing === 1 ? 'has' : 'have'} no coordinates and cannot be shown.` : '') +
-    ' Programs at identical coordinates share a marker.';
-
   host.innerHTML = '<div class="map-canvas"></div><p class="map-caption"></p>';
-  host.querySelector('.map-caption').textContent = caption;
   const canvas = host.querySelector('.map-canvas');
 
   // Leaflet comes from a CDN; some networks block it, and the rest of the
@@ -475,6 +641,40 @@ function renderMap() {
     maxZoom: 12,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(map);
+
+  /* Expeditions are ships in motion, so they have no single home coordinate the
+   * way an observatory does -- each one contributes hundreds of individual
+   * sample positions instead. Drawn as ordinary markers they would bury the
+   * observatories under thousands of circles, so they go down as 1px black dots
+   * that read as a track rather than as records you can click. Their own pane,
+   * below the overlay pane the station markers live in, keeps them underneath;
+   * a canvas renderer keeps panning smooth, which a few thousand SVG nodes
+   * would not. */
+  map.createPane('expedition-samples');
+  map.getPane('expedition-samples').style.zIndex = 350;
+  const dots = L.canvas({ pane: 'expedition-samples', padding: 0.5 });
+
+  let sampleCount = 0;
+  let expeditionCount = 0;
+  let unplacedCount = 0;
+  (DATA.records.expeditions || []).forEach((record) => {
+    const listed = record.samples || [];
+    const samples = listed.filter((s) => s.latitude != null && s.longitude != null);
+    unplacedCount += listed.length - samples.length;
+    if (samples.length) expeditionCount += 1;
+    samples.forEach((sample) => {
+      L.circleMarker([sample.latitude, sample.longitude], {
+        renderer: dots,
+        pane: 'expedition-samples',
+        radius: 1,
+        weight: 0,
+        fillColor: '#111',
+        fillOpacity: 0.6,
+        interactive: false,
+      }).addTo(map);
+      sampleCount += 1;
+    });
+  });
 
   /* Group by exact coordinate so co-located programs are all reachable. */
   const groups = new Map();
@@ -516,7 +716,21 @@ function renderMap() {
     });
   });
 
+  /* Only the observatories frame the view. Expedition samples are near-global,
+   * so fitting to them too would always zoom straight back out to the world. */
   if (bounds.length) map.fitBounds(bounds, { padding: [20, 20], maxZoom: 6 });
+
+  host.querySelector('.map-caption').textContent =
+    `${records.length} time-series programs with coordinates.` +
+    (missing ? ` ${missing} record${missing === 1 ? '' : 's'} ` +
+      `${missing === 1 ? 'has' : 'have'} no coordinates and cannot be shown.` : '') +
+    ' Programs at identical coordinates share a marker.' +
+    (sampleCount ? ` The small black dots are ${sampleCount.toLocaleString()} individual ` +
+      `samples from ${expeditionCount} large-scale expedition` +
+      `${expeditionCount === 1 ? '' : 's'}; they mark where an expedition sampled ` +
+      'rather than a program you can open.' : '') +
+    (unplacedCount ? ` ${unplacedCount.toLocaleString()} listed sample` +
+      `${unplacedCount === 1 ? ' has' : 's have'} no coordinates and cannot be shown.` : '');
 }
 
 /* ------------------------------------------------------------------- pages */
@@ -638,6 +852,10 @@ function wire() {
     if (event.target === dialog) dialog.close();   // click on the backdrop
   });
   dialog.addEventListener('close', () => {
+    if (detailMap) {
+      detailMap.remove();
+      detailMap = null;
+    }
     history.replaceState(null, '', `#${state.view}`);
   });
 

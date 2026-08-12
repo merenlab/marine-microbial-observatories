@@ -81,6 +81,9 @@
     },
     "verification": {
       "$ref": "#/$defs/verification"
+    },
+    "samples": {
+      "$ref": "#/$defs/samples"
     }
   },
   "$defs": {
@@ -134,6 +137,46 @@
           }
         }
       }
+    },
+    "samples": {
+      "description": "Individual samples collected on the expedition, one entry per sample, each pinned to where it was taken. Expeditions move, so unlike a time-series observatory they have no single representative coordinate; this list is what lets their footprint be drawn on the map. Keep it last in the file, since it is long and machine-maintained. Each entry is written as a single-line flow mapping to keep files of several hundred samples readable.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "accession",
+          "latitude",
+          "longitude"
+        ],
+        "properties": {
+          "accession": {
+            "$ref": "#/$defs/sample-accession"
+          },
+          "latitude": {
+            "description": "Latitude of the sampling site in decimal degrees, WGS84. Required as a key, but may be left empty when the archive does not report it: the sample still belongs in the list, and the empty slot is what marks the gap as something to fill rather than something nobody noticed. Samples without coordinates are not drawn on the map, and validate.py warns about them.",
+            "type": ["number", "null"],
+            "minimum": -90,
+            "maximum": 90
+          },
+          "longitude": {
+            "description": "Longitude of the sampling site in decimal degrees, WGS84. East positive. May be left empty on the same terms as `latitude`.",
+            "type": ["number", "null"],
+            "minimum": -180,
+            "maximum": 180
+          },
+          "depth": {
+            "description": "Depth the sample was taken from, in metres below the surface.",
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "sample-accession": {
+      "type": "string",
+      "pattern": "^SAM(?:EA|EG|N|D)\\d+$",
+      "description": "An INSDC BioSample accession for one sample: SAMEA/SAMEG (ENA), SAMN (NCBI) or SAMD (DDBJ). This identifies the sample itself, unlike the study-level accessions in `data-accessions`."
     },
     "publications": {
       "description": "Example publications, preferably data papers. Bare DOI where one exists; URL as a fallback.",

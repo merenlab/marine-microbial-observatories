@@ -330,6 +330,28 @@ dl.fields > dd { margin: 0; padding: 7px 0; border-top: 1px solid var(--line); m
 dl.fields > dd ul { margin: 0; padding-left: 1.1em; }
 dl.fields > dd li { margin-bottom: 2px; }
 dl.fields a { word-break: break-word; }
+/* The record's own map takes the full width of both grid columns: squeezed into
+   the value column beside a 13rem label it would be a letterbox. Label and map
+   each span the grid, so they stack as two full-width rows. */
+dl.fields > dt.map-label { grid-column: 1 / -1; }
+dl.fields > dd.map-cell {
+  grid-column: 1 / -1;
+  border-top: none;
+  padding: 0 0 9px;
+}
+dd.map-cell .detail-map {
+  height: 260px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-2);
+}
+
+.copy-accessions { cursor: pointer; }
+.copy-accessions.copy-failed { color: var(--warn); }
+/* `a { color }` matches even after the href is dropped, so the confirmation
+   has to be told explicitly that it is no longer a link. */
+.copy-accessions.copied { color: inherit; text-decoration: none; cursor: default; }
+
 .contact { margin-bottom: 6px; }
 .contact .role { color: var(--ink-3); font-size: 0.85em; }
 .contact .cnote { color: var(--warn); font-size: 0.85em; }

@@ -65,8 +65,8 @@ TSV_COLUMNS = {
     ],
     "expeditions": [
         "id", "name", "acronym", "program-website", "affiliated-institutions",
-        "data-accessions", "sample-metadata-source", "contact-names", "contact-emails",
-        "publications", "checked-by", "checked-on", "notes",
+        "data-accessions", "sample-metadata-source", "sample-count", "contact-names",
+        "contact-emails", "publications", "checked-by", "checked-on", "notes",
     ],
     "coordination-networks": [
         "id", "name", "acronym", "status", "umbrella-organisation", "geographic-scope",
@@ -95,6 +95,10 @@ def flatten(record: dict, column: str):
         value = [c["email"] for c in record.get("contacts", []) if c.get("email")]
     elif column in ("checked-by", "checked-on"):
         value = record.get("verification", {}).get(column)
+    elif column == "sample-count":
+        # The samples themselves are per-coordinate rows and do not fit a
+        # one-record-per-line export; the count says whether they are there.
+        value = len(record.get("samples") or []) or None
     else:
         value = record.get(column)
 
