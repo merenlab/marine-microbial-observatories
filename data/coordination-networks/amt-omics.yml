@@ -19,5 +19,7 @@ contacts:
     email: ktait@pml.ac.uk
 publications:
   - 10.1093/ismeco/ycaf131
-notes: |-
-  Molecular data has been collected since 2009 by several institutes, and a key aim of AMT-omics is to make these data more accessible in both raw and processed formats. we will determine how molecular data collected using a variety of methods can be integrated to provide invaluable long-term time-series of data across the entire Atlantic Ocean. The Atlantic Meridional Transect (AMT) programme, established in 1995 and coordinated by Plymouth Marine Laboratory, has now conducted 30 research cruises between the UK and the South Atlantic. But they are also kind of just doing observations
+verification:
+  checked-by:
+    - Karen Tait
+  checked-on: '2026-08-13'
