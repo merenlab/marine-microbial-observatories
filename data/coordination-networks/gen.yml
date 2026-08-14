@@ -1,0 +1,22 @@
+# Ocean omics coordination network.
+# Schema: ../../schema/coordination-networks.schema.json
+id: gen
+name: Gulf eDNA network
+acronym: GeN
+network-website: https://gulf-edna-network.org/
+affiliated-institutions: |-
+  Texas A&M University at Galveston, Fundacion Biodiversa Colombia, Facultad de Química UNAM, University of Mississippi, Texas A&M University, University of South Alabama, Auburn University, University of Miami, The Water Institute, Lehigh University, NOAA Northern Gulf Institute, Mississippi State University, Genika Multiomics, UNC Charlotte, Florida State University and 55 other instsitutes that did not specifically state they were doing microbial work
+umbrella-organisation: eDNA alliance
+status: active
+established-year: 2025
+geographic-scope: Gulf of Mexico
+mission-statement: |-
+  We aim to compile comprehensive species inventories across the Gulf and generate DNA barcodes for underrepresented taxa to close gaps in existing reference databases. In addition, we provide a platform to share tools, protocols, and support to everyone engaging with eDNA research. At its core, this initiative is about community. By connecting researchers, exchanging data and resources, and enhancing accessibility, we strive to advance eDNA science and conservation outcomes across the Gulf region.
+contacts:
+  - name: Yasmina Shah Esmaeili
+    email: gulf.edna.network@gmail.com
+    role: Co-founder
+verification:
+  checked-by:
+    - Yasmina Shah Esmaeili
+  checked-on: '2026-08-10'
