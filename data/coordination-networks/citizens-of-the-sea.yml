@@ -22,4 +22,5 @@ contacts:
     role: Science Lead
 publications:
   - 10.5194/oos2025-207
-notes: eDNA, unsure if this includes microbes so feedback from them would be important
+  - https://doi.org/10.7717/peerj.21390
+notes: multi-marker (including microbial 16s) eDNA metabarcoding data  
