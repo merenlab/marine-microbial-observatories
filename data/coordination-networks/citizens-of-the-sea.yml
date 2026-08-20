@@ -24,3 +24,7 @@ publications:
   - 10.5194/oos2025-207
   - https://doi.org/10.7717/peerj.21390
 notes: multi-marker (including microbial 16s) eDNA metabarcoding data  
+verification:
+  checked-by:
+    - Erin Bomati
+  checked-on: '2026-08-20'
