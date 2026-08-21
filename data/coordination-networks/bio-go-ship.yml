@@ -1,7 +1,7 @@
 # Ocean omics coordination network.
 # Schema: ../../schema/coordination-networks.schema.json
 id: bio-go-ship
-name: Bio-Global Ocean Ship-Based Hydrographic Investigations Programme
+name: Biological Global Ocean Ship-Based Hydrographic Investigations Programme
 acronym: Bio-GO-SHIP
 network-website: https://biogoship.org
 affiliated-institutions: |-
