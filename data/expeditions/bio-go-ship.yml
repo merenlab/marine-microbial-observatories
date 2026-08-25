@@ -1,7 +1,7 @@
 # Global or large-scale expedition program.
 # Schema: ../../schema/expeditions.schema.json
 id: bio-go-ship
-name: Biological Global Ocean Ship-based Hydrographic Investigations Programme
+name: Biological Global Ocean Ship-Based Hydrographic Investigations Programme
 acronym: Bio-GO-SHIP
 program-website: https://biogoship.org/
 affiliated-institutions: |-
