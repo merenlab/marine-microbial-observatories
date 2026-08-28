@@ -87,6 +87,10 @@ pip install -r requirements.txt
 them into `dist/pages/about.html` and `dist/pages/contribute.html`, and the site loads them
 into its **About** and **Contribute** tabs.
 
+Two blocks in `ABOUT.md` are placeholders that the build fills from the records (the map
+and the names of curators). Do not edit/write those names by hand; correct the record
+that credits them and the page follows on the next time build.py runs.
+
 If you are a developer or a maintainer of this resource, please remember: links written
 for GitHub are rewritten for the web during the build. As in, `../../issues/...`
 becomes an absolute GitHub URL, repo-relative paths become `blob/`/`tree/` links, links

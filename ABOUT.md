@@ -21,18 +21,7 @@ you can get involved.
 
 ### People who have entered and or checked these records
 
-76 record verifications by 51 people are recorded in the catalogue. In alphabetical order:
-
-Adam Martiny · Anders Andersson · Anders Lanzen · Andy Rees · Angelicque E. White ·
-Antonio Bode · C. Bienhold · Cecilia Alonso · Chris Bowler · Craig Carlson ·
-Craig Sherman · Deron Burkepile · Diana Sarno · Enrique Montes · Francesca Vidussi ·
-Gordon Taylor · Hermann Bange · Hugo Doré · Hugo Sarmento · Ioulia Santi ·
-Isabel Ferrera · Jarone Pinhassi · Jed Fuhrman · Jeff Bowman · Jennifer Fisher ·
-Jesse McNichol · Jodie van de Kamp · Julie LaRoche · Katie Pitz · Loïs Maignien ·
-Lucia Campese · M. Wietz · Maria Constanza Hozbor · Mariana Lozada · Maud Lemoine ·
-Mauro Celussi · Michael Rappe · Miyako Sato · Nick Bates · Pierre Galand ·
-Russ Hopcroft · SK Moore · Steven Hallam · Tatiana Rynearson · Thomas Mock ·
-Torsten Thomas · Yun Kit Yeoh · Zackary Johnson
+<div id="verifier-list"></div>
 
 ## Downloads
 
