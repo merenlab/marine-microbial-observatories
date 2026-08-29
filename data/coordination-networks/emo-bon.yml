@@ -5,7 +5,7 @@ name: European Marine Omics Biodiversity Observation Network
 acronym: EMO BON
 network-website: https://www.embrc.eu/emo-bon/
 affiliated-institutions: European Marine Biological Resource Centre (EMBRC-ERIC)
-umbrella-organisation: EMBRC-ERIC / OBON (UN Ocean Decade project)
+umbrella-organisation: EMBRC-ERIC / OBON
 status: active
 established-year: 2021
 geographic-scope: European (Baltic Sea, North Atlantic Ocean, Mediterranean Sea, Red Sea)
@@ -26,4 +26,4 @@ publications:
 verification:
   checked-by:
     - Ioulia Santi
-  checked-on: '2026-07-07'
+  checked-on: '2026-08-27'
