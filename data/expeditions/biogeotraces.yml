@@ -26,6 +26,10 @@ publications:
   - 10.1002/lno.11310
 sample-metadata-source: |-
   https://metalog.embl.de/ (Study_Code: Biller_2018_GEOTRACES_marine_pelagic ; Bowman_2020_GEOTRACES_Arctic)
+verification:
+  checked-by:
+    - Paul Beurbe
+  checked-on: '2026-07-07'
 samples:
   - {accession: SAMN07136483, latitude: 49.7225, longitude: -42.4467, depth: 10}
   - {accession: SAMN07136484, latitude: 49.7225, longitude: -42.4467, depth: 50}
