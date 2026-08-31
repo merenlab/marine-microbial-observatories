@@ -10,7 +10,7 @@ This resource is a by-product of the [Marine Microbial Observatories for the Fut
 workshop that took place at the [Helmholtz Institute for Functional Marine Biodiversity](https://hifmb.de) (HIFMB) in Oldenburg,
 Germany.
 
-The records were compiled by Sarah Tucker and Raïssa Meyer, with contributions from Pedro Junger.
+The records were compiled by Sarah Tucker and Raïssa Meyer, with contributions from Pedro Junger, Luis Bolaños, and Christina Pavloudi.
 
 The catalogue is meant to track programs which start, stop, change contacts, and move
 their data between archives. Every record carries a 'verification' block naming who last
