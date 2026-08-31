@@ -25,6 +25,10 @@ publications:
 sample-metadata-source: |-
   https://metalog.embl.de/ (Study_Code: PRJEB40760_ocean_sampling_day_2018); OSD2014 from https://github.com/hurwitzlab/planet-microbe-datapackages/blob/master/OSD/osd_sample.tsv
 notes: Many people involved
+verification:
+  checked-by:
+    - Frank Oliver Glöckner
+  checked-on: '2026-07-07'
 samples:
   - {accession: SAMEA7392423, latitude: 37.87, longitude: 12.48, depth: 1}
   - {accession: SAMEA7392428, latitude: 42.23, longitude: -8.78, depth: 1}
