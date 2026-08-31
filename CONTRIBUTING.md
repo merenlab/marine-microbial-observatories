@@ -43,7 +43,7 @@ python3 scripts/validate.py
 ```
 
 This will list all the errors and warnings for existing or new YAML files based on our schema.
-If you are happy with the changes, commit and push them to your fork, then
+If you are happy with the changes, commit and push them to your fork, then open a pull request against the main repository. 
 
 ## Rules of thumb
 
