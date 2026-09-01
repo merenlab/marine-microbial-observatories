@@ -8,6 +8,7 @@ affiliated-institutions: |-
   GEO BON, GOOS, International Science Council Scientific Committee on Antarctic Research (SCAR), Seabed 2030, LifeWatch Eric, OBIS, ProtectedSeas, International Ocean Carbon Coordination Project (IOCCP), Marine GEO, European Research Infrastructure Consortium (ERIC), Conservation of Arctic Flora and Fauna (CAFF), Global Coral Reef Monitoring Network (GCRMN), Black in Marine Science (BIMS), International Association for Biological Oceanography (IABO), Atlantic International Research Centre (AirCentre), International Ocean Colour Coordination Group (CCG), International Oceanographic Commision Ocean Best Practices System (IOC-OBPS), Integrated Ocean Observing System (IOOS), Autonomous Reef Monitoring Structures Marine Biodiversity Observation Network (ARMS-MBON), MARine COastal BiOdiversity Long-term Observations (MARCO-BOLO), BioSound, BioTrack, BioEcoOcean
 umbrella-organisation: GEO BON
 status: active
+established-year: 2014
 geographic-scope: Global
 mission-statement: |-
   The Marine Biodiversity Observation Network (MBON) is a growing global initiative composed of regional networks of scientists, resource managers, and end-users working to integrate data from existing long-term programs to improve our understanding of changes and connections between marine biodiversity and ecosystem functions.
@@ -24,3 +25,7 @@ contacts:
   - name: Frank Muller-Karger
     email: carib@usf.edu
     role: US MBON Team Leader + GEO BON/MBON Co-chair
+verification:
+  checked-by:
+    - Joana Soares
+  checked-on: '2026-02-21'
