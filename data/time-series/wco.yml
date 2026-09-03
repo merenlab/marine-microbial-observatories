@@ -1,8 +1,8 @@
 # Omics time-series program / observatory.
 # Schema: ../../schema/time-series.schema.json
-id: wec
+id: wco
 name: Western Channel Observatory
-acronym: WEC
+acronym: WCO
 program-website: https://www.westernchannelobservatory.org.uk/index.php
 affiliated-institutions: Plymouth Marine Laboratory and The Marine Biological Association
 affiliated-institution-websites:
@@ -34,7 +34,16 @@ contacts:
   - name: Michael Cunliffe
     email: micnli@mba.ac.uk
     role: PI
+  - name: Karen Tait
+    email: ktait@pml.ac.uk
+    role: co-PO
 publications:
   - 10.1093/ismejo/wrae216
   - 10.1038/ismej.2011.107
   - 10.4056/sigs.1202536
+  - 10.1002/lol2.10422
+  - 10.1093/ismejo/wrae103
+verification:
+  checked-by:
+    - Karen Tait
+  checked-on: '2026-09-03'
