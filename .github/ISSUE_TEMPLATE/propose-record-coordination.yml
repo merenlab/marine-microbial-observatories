@@ -124,7 +124,7 @@ body:
         observing system; 2) to develop and transfer capacity between partners; 3) to enhance
         marine ecosystem digitization and modelling and 4) to coordinate action on pressing
         scientific, management, and policy questions.
-   validations:
+    validations:
       required: false
 
   - type: textarea
