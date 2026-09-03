@@ -1,0 +1,169 @@
+name: Propose a new omics observing coordination program
+description: Suggest a network for omics observing coordination to be added to the marine microbial observatories registry.
+title: "Add: "
+labels: ["new record"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for bodies that coordinate omics observing rather than for individual
+        observatories or sampling sites. Those go through the observatory or expedition form instead.
+
+        Thank you for adding to the catalogue. Fill in what you know — **nothing below is
+        required except the name of the program and the name of who is sharing this information**. 
+        A maintainer will turn this into a YAML record, and will ask you about anything that is missing.
+
+        You do not need to know YAML, git, or anything about GitHub beyond this form.
+
+  - type: input
+    id: name
+    attributes:
+      label: Full program name
+      placeholder: Ocean Biomolecular Observing Network
+    validations:
+      required: true
+
+  - type: input
+    id: acronym
+    attributes:
+      label: Acronym
+      placeholder: OBON
+    validations:
+      required: false
+
+  - type: input
+    id: website
+    attributes:
+      label: Program website
+      placeholder: http://obon-ocean.org
+    validations:
+      required: false
+
+  - type: input
+    id: institutions
+    attributes:
+      label: Affiliated institution(s)
+      description: Institutions that run or fund the program.
+      placeholder: Partnership for Observation of the Global Ocean (POGO), Scripps Institution of Oceanography (SIO), Monterey Bay Aquarium Research Institute (MBARI), National Oceanography Center (NOC), Commonwealth Scientific and Industrial Research Organisation (CSIRO)
+    validations:
+      required: false
+
+  - type: input
+    id: umbrella
+    attributes:
+      label: Umbrella organisation
+      description: The programme or organisation the network sits under, if any
+      placeholder: United Nations Decade of Ocean Science for Sustainable Development (UN Ocean Decade)
+    validations:
+      required: false
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      options:
+        - Active
+        - In formation
+        - Dormant
+        - Concluded
+    validations:
+      required: false
+
+  - type: input
+    id: date
+    attributes:
+      label: Year of establishment
+      description: Year the network was established, and year it concluded if applicable
+      placeholder: 2021
+    validations:
+      required: false
+
+  - type: input
+    id: scope
+    attributes: 
+      label: Geographic scope
+      placeholder: Global
+    validations:
+      required: false
+
+  - type: dropdown
+    id: omics
+    attributes:
+      label: Types of omics observations coordinated
+      description: Multiple options can be selected.
+      multiple: true
+      options:
+        - Amplicon sequencing
+        - Metagenomics
+        - Metatranscriptomics
+        - Other omics (proteomics, metabolomics, …)
+    validations:
+      required: false
+ 
+  - type: textarea
+    id: accessions
+    attributes:
+      label: Data accessions
+      description: >
+        BioProject, ENA, DDBJ, SRA or PRIDE accessions linked to this coordination network, 
+        one per line. Bare accessions please — no archive names or URLs.
+      placeholder: |
+        PRJ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: mission
+    attributes:
+      label: Mission statement
+      description: 1 to 2 sentences please.
+      placeholder: >-
+        The programme will transform how we sense, harvest, protect, and manage ocean life,
+        which faces multiple stresses including pollution, habitat loss, and climate change.
+        OBON's objectives are: 1) to build a coastal-to-open ocean multi-omics biodiversity
+        observing system; 2) to develop and transfer capacity between partners; 3) to enhance
+        marine ecosystem digitization and modelling and 4) to coordinate action on pressing
+        scientific, management, and policy questions.
+   validations:
+      required: false
+
+  - type: textarea
+    id: contacts
+    attributes:
+      label: Contacts
+      description: >
+        One person per line, as `Name <email> — role`. These addresses will be published
+        on the website, so please only list people who are willing to be contacted.
+      placeholder: |
+        Sophie Seeyave <ssve@pml.ac.uk> - POGO CEO
+        Margaret Leinen <mleinen@ucsd.edu> — Lead
+    validations:
+      required: false
+
+  - type: textarea
+    id: publications
+    attributes:
+      label: Example publications
+      description: DOIs of publications or governance documents describing the network, one per line.
+      placeholder: |
+        10.4031/MTSJ.56.3.20
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: >
+        Anything else we should know about this network.
+    validations:
+      required: false
+
+  - type: input
+    id: your-name
+    attributes:
+      label: Your name
+      description: >
+        Recorded as the person who verified this record, with today's date.
+    validations:
+      required: true

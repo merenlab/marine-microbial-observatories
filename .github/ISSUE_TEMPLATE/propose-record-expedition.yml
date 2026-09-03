@@ -1,0 +1,164 @@
+name: Propose a new expedition
+description: Suggest an expedition to be added to the marine microbial observatories registry.
+title: "Add: "
+labels: ["new record"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for discrete expeditions and cruises. For a time-series, use the 
+        observatory form. For a body that coordinates omics observing across sites,
+        use the network form.
+
+        Thank you for adding to the catalogue. Fill in what you know — **nothing below is required 
+        except the name of the program and the name of who is sharing this information**.
+        A maintainer will turn this into a YAML record, and will ask you about anything that is missing.
+
+        You do not need to know YAML, git, or anything about GitHub beyond this form.
+
+
+
+name: Propose a new time-series program
+description: Add a time-series program to the catalogue.
+title: "Add: "
+labels: ["new record"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for adding to the catalogue. Fill in what you know — **nothing below is
+        required except the name of the program and the name of who is sharing this information**. 
+        A maintainer will turn this into a YAML record, and will ask you about anything that is missing.
+
+        You do not need to know YAML, git, or anything about GitHub beyond this form.
+
+  - type: input
+    id: name
+    attributes:
+      label: Full program name
+      placeholder: FRAM Molecular Observatory
+    validations:
+      required: true
+
+  - type: input
+    id: acronym
+    attributes:
+      label: Acronym
+      placeholder: FRAM
+
+  - type: input
+    id: website
+    attributes:
+      label: Program website
+      placeholder: https://
+
+  - type: input
+    id: institutions
+    attributes:
+      label: Affiliated institution(s)
+      description: Institutions that run or fund the program.
+      placeholder: Alfred Wegener Institute Helmholtz Centre for Polar and Marine Research
+
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: >
+        For time series: latitude and longitude in decimal degrees, plus the ocean basin
+        and sub-region. If there are multiple sites for time-series programs, provide coordinates indicative of sampling area. For expeditions and networks, the geographic scope.
+      placeholder: 79.023, 4.2618 — Arctic Ocean, Fram Strait
+
+  - type: input
+    id: years
+    attributes:
+      label: Sampling years
+      description: When sampling started, and whether it is ongoing.
+      placeholder: 2014 – present
+
+  - type: input
+    id: dna-year
+    attributes:
+      label: Year DNA/omics collection started
+      description: Leave blank if it is the same as the sampling start year.
+      placeholder: "2014"
+
+  - type: dropdown
+    id: omics
+    attributes:
+      label: Types of omics produced
+      description: Multiple options can be selected.
+      multiple: true
+      options:
+        - Amplicon sequencing
+        - Metagenomics
+        - Metatranscriptomics
+        - Other omics (proteomics, metabolomics, …)
+
+  - type: dropdown
+    id: cadence
+    attributes:
+      label: Sampling cadence for omics
+      description: The frequency most representative of the program.
+      options:
+        - Weekly or more often
+        - Monthly
+        - Bimonthly
+        - Quarterly
+        - Annually
+        - Not applicable (expedition or network)
+
+  - type: dropdown
+    id: depth
+    attributes:
+      label: Sampling depth
+      options:
+        - Surface only (shallower than 100 m)
+        - Surface and deep (also below 100 m)
+        - Not applicable (expedition or network)
+
+  - type: textarea
+    id: accessions
+    attributes:
+      label: Data accessions
+      description: >
+        BioProject, ENA, DDBJ, SRA or PRIDE accessions, one per line. Bare accessions
+        please — no archive names or URLs.
+      placeholder: |
+        PRJEB43905
+        PRJEB67368
+
+  - type: textarea
+    id: contacts
+    attributes:
+      label: Contacts
+      description: >
+        One person per line, as `Name <email> — role`. These addresses will be published
+        on the website, so please only list people who are willing to be contacted.
+      placeholder: |
+        Katja Metfies <katja.metfies@awi.de> — PI
+        Christina Bienhold <christina.bienhold@awi.de> — PI
+
+  - type: textarea
+    id: publications
+    attributes:
+      label: Example publications
+      description: DOIs preferred, one per line.
+      placeholder: |
+        10.1038/s41467-025-56203-3
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: >
+        Sampling design, multiple stations, related programs, caveats — anything a
+        newcomer to this program would want to know.
+
+  - type: input
+    id: your-name
+    attributes:
+      label: Your name
+      description: >
+        Recorded as the person who verified this record, with today's date.
+    validations:
+      required: true
