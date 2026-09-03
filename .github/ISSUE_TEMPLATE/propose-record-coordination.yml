@@ -10,11 +10,11 @@ body:
         observatories or sampling sites. Those go through the observatory or expedition form instead.
 
         Thank you for adding to the catalogue. Fill in what you know — **nothing below is
-        required except the name of the program and the name of who is sharing this information**. 
-        A maintainer will turn this into a YAML record, and will ask you about anything that is missing.
+        required except the name of the program and your name**. A maintainer will turn this 
+        into a YAML record, and will ask you about anything that is missing.
 
         You do not need to know YAML, git, or anything about GitHub beyond this form.
-
+  
   - type: input
     id: name
     attributes:

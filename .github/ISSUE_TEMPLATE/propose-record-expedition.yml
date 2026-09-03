@@ -10,9 +10,9 @@ body:
         observatory form. For a body that coordinates omics observing across sites,
         use the network form.
 
-        Thank you for adding to the catalogue. Fill in what you know — **nothing below is required 
-        except the name of the program and the name of who is sharing this information**.
-        A maintainer will turn this into a YAML record, and will ask you about anything that is missing.
+        Thank you for adding to the catalogue. Fill in what you know — **nothing below is
+        required except the name of the program and your name**. A maintainer will turn this 
+        into a YAML record, and will ask you about anything that is missing.
 
         You do not need to know YAML, git, or anything about GitHub beyond this form.
 

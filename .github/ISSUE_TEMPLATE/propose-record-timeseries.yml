@@ -1,14 +1,18 @@
 name: Propose a new time-series program
-description: Add a time-series program to the catalogue.
+description: Suggest a repeat-sampling time-series that generates omics data
 title: "Add: "
 labels: ["new record"]
 body:
   - type: markdown
     attributes:
       value: |
+        Use this form for sustained repeat sampling at a fixed location. For a single expedition, 
+        use the expedition form. For networks coordinating omics ocean observing, use 
+        the coordination form.
+        
         Thank you for adding to the catalogue. Fill in what you know — **nothing below is
-        required except the name of the program and the name of who is sharing this information**. 
-        A maintainer will turn this into a YAML record, and will ask you about anything that is missing.
+        required except the name of the program and your name**. A maintainer will turn this 
+        into a YAML record, and will ask you about anything that is missing.
 
         You do not need to know YAML, git, or anything about GitHub beyond this form.
 
