@@ -1,5 +1,25 @@
-name: Propose a new program
-description: Add a time-series program, expedition, or coordination network to the catalogue.
+name: Propose a new expedition
+description: Suggest an expedition to be added to the marine microbial observatories registry.
+title: "Add: "
+labels: ["new record"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for discrete expeditions and cruises. For a time-series, use the 
+        observatory form. For a body that coordinates omics observing across sites,
+        use the network form.
+
+        Thank you for adding to the catalogue. Fill in what you know — **nothing below is
+        required except the name of the program and your name**. A maintainer will turn this 
+        into a YAML record, and will ask you about anything that is missing.
+
+        You do not need to know YAML, git, or anything about GitHub beyond this form.
+
+
+
+name: Propose a new time-series program
+description: Add a time-series program to the catalogue.
 title: "Add: "
 labels: ["new record"]
 body:
@@ -7,21 +27,10 @@ body:
     attributes:
       value: |
         Thank you for adding to the catalogue. Fill in what you know — **nothing below is
-        required except the name and which table it belongs in**. A maintainer will turn
-        this into a YAML record, and will ask you about anything that is missing.
+        required except the name of the program and the name of who is sharing this information**. 
+        A maintainer will turn this into a YAML record, and will ask you about anything that is missing.
 
         You do not need to know YAML, git, or anything about GitHub beyond this form.
-
-  - type: dropdown
-    id: table
-    attributes:
-      label: Which table does this belong in?
-      options:
-        - Time-series program / observatory (repeated sampling at fixed sites)
-        - Large-scale expedition (a cruise or campaign, not a fixed site)
-        - Coordination network (coordinates other programs)
-    validations:
-      required: true
 
   - type: input
     id: name
