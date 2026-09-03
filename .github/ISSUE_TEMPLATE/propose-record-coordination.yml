@@ -74,7 +74,7 @@ body:
     attributes:
       label: Year of establishment
       description: Year the network was established, and year it concluded if applicable
-      placeholder: 2021
+      placeholder: "2021"
     validations:
       required: false
 
