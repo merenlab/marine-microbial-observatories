@@ -43,13 +43,23 @@ body:
       description: Institutions that run or fund the program.
       placeholder: Alfred Wegener Institute Helmholtz Centre for Polar and Marine Research
 
+  - type: dropdown
+    id: status
+    attributes:
+      label: Observatory status
+      options:
+        - Active
+        - Discontinued
+        - Unknown
+        - Active, but omics discontinued
+
   - type: input
     id: location
     attributes:
       label: Location
       description: >
         For time series: latitude and longitude in decimal degrees, plus the ocean basin
-        and sub-region. If there are multiple sites for time-series programs, provide coordinates indicative of sampling area. For expeditions and networks, the geographic scope.
+        and sub-region. If there are multiple sites for time-series programs, provide coordinates indicative of sampling area.
       placeholder: 79.023, 4.2618 — Arctic Ocean, Fram Strait
 
   - type: input
@@ -89,7 +99,6 @@ body:
         - Bimonthly
         - Quarterly
         - Annually
-        - Not applicable (expedition or network)
 
   - type: dropdown
     id: depth
@@ -98,7 +107,21 @@ body:
       options:
         - Surface only (shallower than 100 m)
         - Surface and deep (also below 100 m)
-        - Not applicable (expedition or network)
+
+  - type: dropdown
+    id: multiple-sites
+    attributes:
+      label: Multiple Sampling Sites
+      options:
+        - Yes
+        - No
+
+  - type: input
+    id: sites-details
+    attributes:
+      label: Information about multiple sampling sites
+      description: Leave blank if there is one sampling site.
+      placeholder: "Multiple stations across Atlantic and Arctic water masses, including benthic depth gradient. One transect along ~79°N from ~11°E to 5°W, one transect along ~4°E from 78.5°N to 80°N."
 
   - type: textarea
     id: accessions
