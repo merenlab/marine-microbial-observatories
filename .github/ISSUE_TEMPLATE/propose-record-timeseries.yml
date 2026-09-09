@@ -113,8 +113,8 @@ body:
     attributes:
       label: Multiple Sampling Sites
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
 
   - type: input
     id: sites-details
