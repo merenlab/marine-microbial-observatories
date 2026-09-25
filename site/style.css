@@ -41,7 +41,7 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-.wrap { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 10px 20px; }
 
 .sr, .skip {
   position: absolute; width: 1px; height: 1px; padding: 0;
