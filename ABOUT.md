@@ -10,8 +10,6 @@ This resource is a by-product of the [Marine Microbial Observatories for the Fut
 workshop that took place at the [Helmholtz Institute for Functional Marine Biodiversity](https://hifmb.de) (HIFMB) in Oldenburg,
 Germany.
 
-The records were compiled by Sarah Tucker and Raïssa Meyer, with contributions from Pedro Junger, Luis Bolaños, and Christina Pavloudi.
-
 The catalogue is meant to track programs which start, stop, change contacts, and move
 their data between archives. Every record carries a 'verification' block naming who last
 confirmed the accuracy of the entry and when, so it is always possible to tell how stale a given entry is.
@@ -20,10 +18,6 @@ We welcome new entries or updates to existing ones! Please see our [contribution
 you can get involved.
 
 <div id="map-embed"></div>
-
-### People who have checked these records
-
-<div id="verifier-list"></div>
 
 ## Downloads
 
@@ -47,13 +41,21 @@ valuable as new records.
 If you are listed as a contact and would rather not be, email meren@hifmb.de and you will
 be removed.
 
+## Contributors
+
+The records were initially compiled by **Sarah Tucker** and **Raïssa Meyer**, with help
+from **Pedro Junger**, **Luis Bolaños**, and **Christina Pavloudi**. Now it is a
+a version-tracked community effort.
+
+<div id="verifier-list"></div>
+
 ## Licence and citation
 
 This catalogue is licensed under
 [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
 (CC BY 4.0). You are free to copy, redistribute, adapt and build on it for any purpose,
-including commercially, as long as you give appropriate credit. The
-[full licence text](LICENSE) is in the repository.
+including commercially, as long as you give appropriate credit. The [full licence text](LICENSE)
+is in the repository.
 
 To cite it:
 

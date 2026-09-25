@@ -229,10 +229,9 @@ def verifier_block(records: dict[str, list[dict]]) -> str:
 
     names = " · ".join(html.escape(n) for n in sorted(people, key=sort_key))
     return (
-        f"<p>{verified} record verification{'' if verified == 1 else 's'} by "
-        f"{len(people)} {'person' if len(people) == 1 else 'people'} "
-        f"{'is' if verified == 1 else 'are'} recorded in the catalogue. "
-        f"In alphabetical order:</p>\n<p class=\"verifiers\">{names}</p>"
+        f"<p>As of today, {len(people)} {'person' if len(people) == 1 else 'people'} "
+        f"contributed to the verification of {verified} records in this catalogue "
+        f"(in alphabetical order): </p>\n<p class=\"verifiers\">{names}</p>"
     )
 
 
