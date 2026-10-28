@@ -1,0 +1,39 @@
+# Omics time-series program / observatory.
+# Schema: ../../schema/time-series.schema.json
+id: sems-haifa
+name: Southeastern Mediterranean Sea microbial time-series - Haifa transect
+acronym: SEMS-Haifa
+program-website: https://isramar.ocean.org.il/isramar_data/
+affiliated-institutions: Israel Oceanographic and Limnological Research
+affiliated-institution-websites:
+  - https://www.ocean.org.il/en/
+status: active
+sampling-start-year: 2018
+sampling-end-year: present
+dna-collection-start-year: 2018
+countries:
+  - Israel
+ocean-basins:
+  - Mediterranean Sea
+sub-region: Southeastern Levantine Basin, off northern Israel
+latitude: 32.9
+longitude: 34.5
+multiple-sampling-sites: true
+sampling-sites-note: Eight stations along an offshore transect in the southeastern Mediterranean Sea, spanning coastal/shelf waters to the deep basin. Samples are collected from multiple depths at each station, from approximately 15 m to 1,700 m, with circa 50 water-column samples per cruise.
+sampling-depth: surface-and-deep
+sampling-cadence: annually
+omics-types:
+  - amplicon-sequencing
+data-accessions:
+  - PRJNA1215023
+  - PRJNA1522885
+contacts:
+  - name: Maxim Rubin-Blum
+    email: mrubin@ocean.org.il
+    role: PI
+notes: |-
+  Long-term depth-resolved microbial monitoring of the oligotrophic southeastern Mediterranean Sea. We conduct two seasonal cruises each year, sampling eight stations and multiple depths from the upper water column to ~1,700 m, yielding roughly 50 samples per cruise. We have conducted 16S rRNA gene V4 amplicon sequencing since 2018, and matching 18S rRNA gene V9 sequencing since 2022. The program captures both temporal variability and strong offshore/depth gradients from coastal and shelf waters to the deep Levantine Basin.
+verification:
+  checked-by:
+    - Maxim Rubin-Blum
+  checked-on: '2026-10-28'
