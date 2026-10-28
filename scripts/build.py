@@ -304,7 +304,19 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--built-on", default=None,
                         help="ISO date to stamp into data.json (CI passes the run date)")
+    parser.add_argument("--no-validate", action="store_true",
+                        help="skip scripts/validate.py (CI runs it as its own step)")
     args = parser.parse_args()
+
+    # Refuse to build from records that fail validation. Without this, a
+    # misnamed or malformed record is silently left out of the site.
+    if not args.no_validate:
+        result = subprocess.run(
+            [sys.executable, str(REPO / "scripts" / "validate.py"), "--quiet"]
+        )
+        if result.returncode != 0:
+            print("validation failed; not building (see above)", file=sys.stderr)
+            return result.returncode
 
     DIST.mkdir(exist_ok=True)
 

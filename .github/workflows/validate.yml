@@ -39,7 +39,7 @@ jobs:
         run: python3 scripts/validate.py
 
       - name: Confirm the site still builds
-        run: python3 scripts/build.py --built-on "$(date -u +%Y-%m-%d)"
+        run: python3 scripts/build.py --no-validate --built-on "$(date -u +%Y-%m-%d)"
 
       - name: Summarise warnings
         if: always()

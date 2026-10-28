@@ -47,7 +47,7 @@ jobs:
         run: python3 scripts/validate.py
 
       - name: Build
-        run: python3 scripts/build.py --built-on "$(date -u +%Y-%m-%d)"
+        run: python3 scripts/build.py --no-validate --built-on "$(date -u +%Y-%m-%d)"
 
       - uses: actions/configure-pages@v5
 
