@@ -387,8 +387,8 @@ function renderDetailMap(view, record) {
     L.circleMarker(points[0], {
       radius: 6,
       weight: 1.5,
-      color: '#0e5670',
-      fillColor: '#3aa8cc',
+      color: '#1f3a66',
+      fillColor: '#e5532a',
       fillOpacity: 0.85,
       interactive: false,
     }).addTo(detailMap);
@@ -691,8 +691,8 @@ function renderMap() {
     const marker = L.circleMarker([lat, lon], {
       radius: group.length > 1 ? 7 : 5,
       weight: 1.5,
-      color: '#0e5670',
-      fillColor: '#3aa8cc',
+      color: '#1f3a66',
+      fillColor: '#e5532a',
       fillOpacity: 0.85,
     }).addTo(map);
 
@@ -878,12 +878,13 @@ function renderChrome() {
     }
   });
 
-  const total = Object.values(counts).reduce((a, b) => a + b, 0);
-  const built = DATA['built-on'] ? `, built ${DATA['built-on']}` : '';
-  $('#corpus-meta').textContent =
-    `${total} records — ${counts['time-series'] || 0} time series, ` +
-    `${counts['expeditions'] || 0} expeditions, ` +
-    `${counts['coordination-networks'] || 0} coordination networks${built}.`;
+  const stamp = DATA['built-on']
+    ? `<br><span class="stamp">Last update: ${esc(DATA['built-on'])}.</span>`
+    : '';
+  $('#corpus-meta').innerHTML =
+    `<b>${counts['time-series'] || 0}</b> time series, ` +
+    `<b>${counts['expeditions'] || 0}</b> expeditions, ` +
+    `<b>${counts['coordination-networks'] || 0}</b> coordination networks.${stamp}`;
 
   // Tab labels for the prose pages come from the build, so renaming a page in
   // scripts/build.py renames its tab too.

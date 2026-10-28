@@ -5,6 +5,10 @@ networks that focus on generating molecular data on marine microbes.
 
 **Website:** https://microbial-observatories.org
 
+**Perspective:** [*Marine microbial observatories for the future: From samples and data to
+scientific and societal value*](https://doi.org/10.5281/zenodo.22957432) (Meyer, Tucker *et al.*, 2026), the paper this
+catalogue accompanies.
+
 | | records |
 |---|---|
 | [Time-series programs](data/time-series) | 84 |
@@ -45,9 +49,9 @@ for anything, including commercially, provided you give credit:
 
 Two things are not ours to license:
 
-- **The masthead photograph** is a NASA Earth Observatory image using Landsat 8 data from
-  the U.S. Geological Survey. It is public domain, credited on the site and documented in
-  [`site/assets/README.md`](site/assets/README.md).
+- **The masthead illustration** is by Charlotte Hintzmann, from the cover of the
+  Perspective. It is credited on the site and documented in
+  [`site/assets/README.md`](site/assets/README.md), along with the fonts.
 - **The linked publications and archived datasets** carry whatever licences their
   publishers and archives apply. CC BY 4.0 covers this catalogue's own description of
   them, not their contents.

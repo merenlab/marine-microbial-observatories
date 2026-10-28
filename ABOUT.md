@@ -10,6 +10,12 @@ This resource is a by-product of the [Marine Microbial Observatories for the Fut
 workshop that took place at the [Helmholtz Institute for Functional Marine Biodiversity](https://hifmb.de) (HIFMB) in Oldenburg,
 Germany.
 
+The same workshop produced a Perspective, [*Marine microbial observatories for the future:
+From samples and data to scientific and societal value*](https://doi.org/10.5281/zenodo.22957432), by 37 authors from 49
+institutions in 15 countries. It lays out a road map to 2075 for a globally coordinated,
+federated observatory of the ocean microbiome, and this catalogue is the inventory of
+current efforts that it builds on.
+
 The catalogue is meant to track programs which start, stop, change contacts, and move
 their data between archives. Every record carries a 'verification' block naming who last
 confirmed the accuracy of the entry and when, so it is always possible to tell how stale a given entry is.
@@ -61,3 +67,9 @@ To cite it:
 
 > Marine Microbial Observatories. https://microbial-observatories.org (accessed *date*).
 > Licensed under CC BY 4.0.
+
+If you use it in a publication, please also cite the Perspective it accompanies:
+
+> Meyer R., Tucker S. J., *et al.* (2026). Marine microbial observatories for the future:
+> From samples and data to scientific and societal value. Zenodo.
+> [doi:10.5281/zenodo.22957432](https://doi.org/10.5281/zenodo.22957432)
