@@ -113,10 +113,8 @@ a:hover { text-decoration-thickness: 2px; }
   text-transform: uppercase;
 }
 .kicker-a { color: var(--coral-ink); margin-right: 0.8em; }
-.kicker-b { color: var(--ink-3); }
 .kicker > span { white-space: nowrap; }
 .masthead .kicker-a { color: #c2411c; }
-.masthead .kicker-b { color: #4a7099; }
 
 .masthead h1 {
   margin: 0 0 8px;
@@ -179,7 +177,6 @@ a:hover { text-decoration-thickness: 2px; }
 }
 .perspective .kicker { margin-bottom: 4px; font-size: 0.68rem; }
 .perspective .kicker-a { color: #f59a7a; }
-.perspective .kicker-b { color: #96ccda; }
 .perspective-title {
   margin: 0 0 3px;
   font-family: var(--serif);

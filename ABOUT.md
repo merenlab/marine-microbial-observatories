@@ -68,7 +68,7 @@ To cite it:
 > Marine Microbial Observatories. https://microbial-observatories.org (accessed *date*).
 > Licensed under CC BY 4.0.
 
-If you use it in a publication, please also cite the Perspective it accompanies:
+If you use it in a publication, please also cite our pre-print that introduces the catalogue:
 
 > Meyer R., Tucker S. J., *et al.* (2026). Marine microbial observatories for the future:
 > From samples and data to scientific and societal value. Zenodo.
