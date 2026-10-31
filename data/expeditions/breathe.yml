@@ -1,0 +1,37 @@
+# Global or large-scale expedition program.
+# Schema: ../../schema/expeditions.schema.json
+
+id: breathe
+name: 'BREATHE: Bottom sea ice Respiration and nutrient Exchanges Assessed for THE Arctic'
+acronym: BREATHE
+program-website: https://www.breathearctic.com
+additional-websites:
+  - https://data.npolar.no/dataset/df42a46f-fdb2-4a1d-9bb0-54444951f564
+  - https://7a8b2ee0-dd7b-4b98-9310-aa2d13432df0.filesusr.com/ugd/658ed9_3de70c2f7d5e4d7e953a428fbad01539.pdf
+  - https://www.breathearctic.com
+affiliated-institutions: |-
+  UiT The Arctic University of Norway (project host), Norwegian Polar Institute, Aarhus University, University of Calgary. Funded by the Research Council of Norway (project no. 325405).
+affiliated-institution-websites:
+  - https://uit.no/
+  - https://www.npolar.no/en/
+  - https://international.au.dk/
+  - https://www.ucalgary.ca/
+data-accessions:
+  - PRJNA1227241
+data-accessions-note: |-
+  PRJNA1227241 holds the Oxford Nanopore reads and assembled contigs from the stepped-sackhole brines of the 2023 ice floe, plus the adjacent ice-core melts used for co-assembly (Kanaan & Deming 2025). The cruise report lists further molecular samples (ice-core and brine meta-omics filters, viral concentrates, mixotrophy and RuBisCO filters) that are not covered by this accession. Non-molecular sea-ice, snow and ocean data from the cruise are archived at the Norwegian Polar Institute data centre, which also holds the cruise report.
+sample-metadata-source: |-
+  BioSample records under PRJNA1227241 (per-sample coordinates and depth). Positions and dates for the 2023 floe station are tabulated in the cruise report (Table 1.1 and Table 9.2, CTD stations 87-108); the brine sampling site is given in Kanaan & Deming 2025 as 81.0489 N, 10.4783 E (21 May 2023).
+contacts:
+  - name: Georges Kanaan
+    role: Participant in the 2023 cruise (bacterial meta-omics sampling); submitter of the PRJNA1227241 sea-ice brine metagenomes
+publications:
+  - 10.1093/ismejo/wraf198
+  - 10.21334/npolar.2025.df42a46f
+notes: |-
+  BREATHE is a Research Council of Norway project hosted at UiT, with partners in Norway, Denmark and Canada, studying sea-ice microbiology and biogeochemistry, in particular respiration and nutrient exchange at the bottom of sea ice. The molecular data catalogued here come from the BREATHE 2023 field-school cruise (IMR cruise ID 2023007008, cruise code BR7008) on RV Kronprins Haakon, Tromsø to Longyearbyen, 11-30 May 2023. The ship stayed moored to a single drifting floe on the Yermak Plateau north of Svalbard (about 81 N, 10-11 E) from 17 to 27 May 2023, working through three 3-day cycles of snow, sea-ice (cores and sackholes), under-ice water and CTD/rosette sampling. Three further CTD casts were made on 28 May at ADBO stations V6, V10 and KB3 on the return transit. Other BREATHE campaigns (for example Cambridge Bay 2022 and AO-2022) have non-molecular data only and are not part of this record.
+verification:
+  checked-by:
+    - Georges Kanaan
+  checked-on: 2026-10-31
+  checked-note: 'original entry: Georges Kanaan 2026-10-31 (from the BREATHE 2023 cruise report, project site and Kanaan & Deming 2025)'
